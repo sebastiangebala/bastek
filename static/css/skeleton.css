@@ -1,66 +1,102 @@
 body {
-font-family: 'Della Respira'; 
+font-family: 'Della Respira';
 font-size: 18px;
-width: 100%; 
-height: 100%; 
-margin: auto; 
-overflow-x: hidden; 
+width: 100%;
+height: 100%;
+margin: auto;
+overflow-x: hidden;
 overflow-y: hidden;
 }
-.fa-bars {position: fixed; top: 3vh; right: 4vh; color: white; z-index: 9999;}
 
-section {width: 100%; height: 100vh;}
+/*navigation button*/
+#fa-bars {position: fixed; top: 3vh; right: 4vh; width: 10vh; height: 10vh; z-index: 9999;}
+
+/* navigation site */
+
+#nav_wrap {
+z-index: 9998;
+background: #2200FF; /* For browsers that do not support gradients */
+background: -webkit-linear-gradient(left top, #2200FF, #000000); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(bottom right, #2200FF, #000000); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(bottom right, #2200FF, #000000); /* For Firefox 3.6 to 15 */
+background: linear-gradient(to bottom right, #2200FF, #000000); /* Standard syntax */
+position: absolute; display: table; top: -100%; width: 100%; height: 100vh;
+}
+
+#section_nav {display:table-cell; vertical-align:middle; text-align: center;}
+#section_nav p {font-size: 35px; color: white;}
+
+/*section_1*/
+
 #sec1_wrap {
-position: absolute;
-width: 100%; 
-height: 100vh;
 background: #004ED4; /* For browsers that do not support gradients */
 background: -webkit-linear-gradient(left top, #DCF7F5, #004ED4); /* For Safari 5.1 to 6.0 */
 background: -o-linear-gradient(bottom right, #DCF7F5, #004ED4); /* For Opera 11.1 to 12.0 */
 background: -moz-linear-gradient(bottom right, #DCF7F5, #004ED4); /* For Firefox 3.6 to 15 */
 background: linear-gradient(to bottom right, #DCF7F5, #004ED4); /* Standard syntax */
+position: absolute;
+display: table;
+width: 100%;
+height: 100vh;
+}
+
+#intro {
+display: table-cell; 
+vertical-align: middle; 
+text-align: center;
+background: yellow;
 }
 
 #section1 {
-background-image: url('../img/my_img.png'); 
-background-size: cover; 
-background-repeat: no-repeat; 
+position: absolute;
+width: 100%; 
+height: 100vh;
+background-image: url('../img/my_img.png');
+background-size: cover;
+background-repeat: no-repeat;
 background-position: right;
 }
-#intro {
-background-size: 100% 100%; 
-width: 400px;
-height: 400px;
-left: 40%;   
-position: absolute;
-top: 20vh;
-}
+
 
 #path12, #path37, #path58, #path72, #path94, #bastek {visibility: hidden;}
 
-
 #main-text {
 position: absolute;
-top: 0; 
-margin-left: 70vh;
-margin-right: 50vh;
-margin-top: 20vh;
+top: 0;
+margin-left: 60vh;
+margin-right: 40vh;
+margin-top: 35vh;
 text-align: justify;
 }
 #btn1 {
 position: absolute;
 bottom: 10vh;
-left: 0; 
-right: 0; 
-margin-left: auto; 
-margin-right: auto; 
+left: 0;
+right: 0;
+margin-left: auto;
+margin-right: auto;
 width: 100px;
 text-align: center;
 border: 2px solid #0C00ED;
+z-index: 10;
 }
 #btn1 p {margin: 0;}
 
-#sec2_wrap {background-color: red;}
-#sec3_wrap {background-color: orange}
+/*seconde page (section_2)*/
+
+#sec2_wrap {position: absolute; top: 100%; width: 100%; height: 100vh; background-color: #ADADAD;}
+.btn_wrap {position: absolute; bottom: 25px; text-align: center; width: 100%; height: 50px;}
+.btn_wrap div {display: inline-block; border: 1px solid blue; width: 200px; height: 50px; z-index: 10;}
+.btn_wrap div ul p {visibility: hidden; margin: 0}
+
+ul {padding: 0px;}
+
+/*contact (section_3)*/
+#contact_wrap {position: absolute; top: 100%; width: 100%; height: 100vh; background-color: orange}
 
 
+/*other*/
+#drawn_line_left {position: fixed; left: 9vh; top: 8vh; bottom: 8vh; border-left: 1px solid #DEDEDE;}
+#drawn_line_top {position: fixed; left: 9vh; top: 8vh; right: 14vh; border-top: 1px solid #DEDEDE;}
+#drawn_line_bottom {position: fixed; left: 9vh; bottom: 8vh; right: 9vh; border-bottom: 1px solid #DEDEDE;}
+#drawn_line_right {position: fixed; right: 9vh; top: 13vh; bottom: 8vh; border-right: 1px solid #DEDEDE;}
