@@ -15,7 +15,8 @@
 
         <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Della+Respira" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
         <script src="{% static "jquery/modernizr-2.8.3-respond-1.4.2.min.js" %}"></script>
         <script src="https://use.fontawesome.com/116e10d08c.js"></script>
@@ -31,9 +32,11 @@
         <section id="section_nav">
             <p id='about'>About</p>
             <p id='labolatory'>Labolatory</p>
-            <p id='content1'>Content1</p>
-            <p id='content2'>Content2</p>
-            <p id='content3'>Content3</p>
+            <p id='content1'>Scrool Me</p>
+            <p id='content2'>Drawings</p>
+            <p id='content3'>Standard</p>
+            <p id='i_made_it'>I made it</p>
+            <p id='familiar_with'>Familiar with</p>
             <p id='contact'>Contact</p>
         </section>
     </div>
@@ -42,23 +45,38 @@
 
 	<div id="fa-bars">
 	    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7">
-	        <polyline class="poly" points="0,0 7,0" style="fill:none;stroke:white;stroke-width:0.5" />
-	        <polyline class="poly" points="7,0 7,7" style="fill:none;stroke:white;stroke-width:0.5" />
-	        <polyline class="poly" points="7,7 0,7" style="fill:none;stroke:white;stroke-width:0.5" />
-	        <polyline class="poly" points="0,7 0,0" style="fill:none;stroke:white;stroke-width:0.5" />
-	        <polyline id="poly_5" points="1,2 6,2" style="fill:none;stroke:white;stroke-width:0.7" />
-	        <polyline id="poly_6" points="1,3.5 6,3.5" style="fill:none;stroke:white;stroke-width:0.7" />
-	        <polyline id="poly_7" points="1,5 6,5" style="fill:none;stroke:white;stroke-width:0.7" />
+	        <polyline class="poly poly_color" points="0,0 7,0" style="stroke:white;stroke-width:0.2" />
+	        <polyline class="poly poly_color" points="7,0 7,7" style="stroke:white;stroke-width:0.2" />
+	        <polyline class="poly poly_color" points="7,7 0,7" style="stroke:white;stroke-width:0.2" />
+	        <polyline class="poly poly_color" points="0,7 0,0" style="stroke:white;stroke-width:0.2" />
+	        <polyline class="poly_black" id="poly_5" points="1,2 6,2" style="stroke:rgb(3,75,210);stroke-width:0.7" />
+	        <polyline class="poly_black" id="poly_6" points="1,3.5 6,3.5" style="stroke:rgb(17,126,218);stroke-width:0.7" />
+	        <polyline class="poly_black" id="poly_7" points="1,5 6,5" style="stroke:rgb(102,187,209);stroke-width:0.7" />
 	    </svg>
 	</div>
 
+
+
     <div id="sec1_wrap">
-    	<div id="intro">
-	    	<svg width='500' height='500' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+
+        <p id='last_upadate'>LAST UPDATE: <b>MARCH 2017</b></p>
+        <p class='rotation' id='seb_geb'>SEBASTIAN GĘBALA</b></p>
+        <p class='rotation' id='web_dev'>WEB DEVELOPER</b></p>
+
+        <div class="center_center">
+    	    <h1 id="intro">
+	    	    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
 	    					<defs>
 	    					    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-	    					      <stop offset="0%" style="stop-color:rgb(20,49,181);stop-opacity:1" />
-	    					      <stop offset="100%" style="stop-color:rgb(0,0,0);stop-opacity:1" />
+	    					      <stop offset="0%" style="stop-color:rgb(2,8,32);stop-opacity:1" />
+	    					      <stop offset="12.5%" style="stop-color:rgb(3,75,210);stop-opacity:1" />
+	    					      <stop offset="25%" style="stop-color:rgb(17,126,218);stop-opacity:1" />
+	    					      <stop offset="37.5%" style="stop-color:rgb(102,187,209);stop-opacity:1" />
+	    					      <stop offset="50%" style="stop-color:rgb(168,234,189);stop-opacity:1" />
+	    					      <stop offset="62.5%" style="stop-color:rgb(189,204,74);stop-opacity:1" />
+	    					      <stop offset="75%" style="stop-color:rgb(240,208,10);stop-opacity:1" />
+	    					      <stop offset="87.5%" style="stop-color:rgb(245,184,34);stop-opacity:1" />
+	    					      <stop offset="100%" style="stop-color:rgb(243,117,3);stop-opacity:1" />
 	    					    </linearGradient>
 	    					  </defs>
 	    					<path
@@ -80,48 +98,137 @@
 	    					<path
 	    					     id="bastek"
 	    					     d="m 173.062,452.00029 c -24.40221,-4.64572 -37.04881,-10.83933 -51.32447,-25.1359 -7.91049,-7.92209 -11.27592,-12.46851 -15.31981,-20.69587 C 97.817134,388.67051 95.886581,379.17811 95.75691,353.75 c -0.128611,-25.22019 1.282813,-32.63339 9.51967,-50 4.16928,-8.79053 6.90168,-12.45948 15.82567,-21.25 12.38786,-12.20261 24.04397,-19.01249 42.02275,-24.55106 10.62509,-3.27319 12.60397,-3.46864 35.625,-3.51863 21.8323,-0.0474 25.41357,0.24763 34.33111,2.82825 24.81638,7.18155 40.43238,21.22015 48.33347,43.45124 3.08418,8.67791 6.06398,26.86593 6.07658,37.09009 l 0.009,7.17489 -57.1875,0.32511 -57.1875,0.32511 -0.40436,7.5 c -0.66061,12.25312 2.06515,41.83634 4.82594,52.37671 3.48137,13.2915 7.46932,20.69952 14.45182,26.84576 7.09814,6.24804 15.25044,8.90253 27.34085,8.90253 24.72812,0 43.57938,-11.85 54.39357,-34.19209 2.75945,-5.70102 5.01718,-11.27558 5.01718,-12.38794 0,-2.75311 1.79009,-3.64577 5.46263,-2.72403 l 3.07759,0.77242 -2.32937,6.77041 c -9.26796,26.93782 -26.70504,43.90983 -52.06841,50.67969 -12.56011,3.35249 -46.40075,4.38859 -59.83044,1.83183 z M 215,317.15471 C 215,274.56653 210.62767,261.25 196.64435,261.25 c -7.09548,0 -11.95965,2.56754 -15.39515,8.12629 -5.19148,8.4 -6.48721,16.15417 -7.15381,42.81121 l -0.63297,25.3125 20.76879,0 20.76879,0 0,-20.34529 z M 39.664379,451.20329 C 31.933831,449.9029 23.168364,445.61901 20.002239,441.59394 14.470981,434.56207 13.75,428.22596 13.75,386.64812 l 0,-39.14812 -6.25,0 c -5.4166666,0 -6.25,-0.33334 -6.25,-2.5 0,-2.16666 0.8333334,-2.5 6.25,-2.5 l 6.25,0 0,-14.29076 c 0,-12.5272 0.269951,-14.37167 2.1875,-14.94629 1.203125,-0.36054 9.5,-2.38025 18.4375,-4.48826 8.9375,-2.10802 17.234375,-4.13884 18.4375,-4.51295 C 54.831153,303.63404 55,305.08047 55,323.0011 l 0,19.41956 14.6875,0.35216 C 81.753202,343.06214 84.375,343.4597 84.375,345 c 0,1.5409 -2.630259,1.93786 -14.761102,2.2278 l -14.761103,0.35281 0.386103,43.39719 c 0.430137,48.34666 0.670746,49.86129 8.229825,51.80644 8.487576,2.18407 16.726842,-5.44193 20.227302,-18.72174 0.826241,-3.13454 2.136464,-5.3125 3.195905,-5.3125 4.620363,0 -4.151557,21.53259 -10.854759,26.64537 -7.847271,5.9854 -21.940075,8.2357 -36.372792,5.80792 z M 301.25,446.875 c 0,-3.03571 0.25,-3.125 8.75,-3.125 l 8.75,0 0,-118.125 0,-118.125 -9.375,0 c -9.16666,0 -9.375,-0.0695 -9.375,-3.125 l 0,-3.125 40,0 40,0 0,80 c 0,77.48465 0.0739,80 2.35166,80 1.29343,0 19.14251,-13.92188 39.66465,-30.9375 l 37.31298,-30.9375 -14.66465,-0.35218 C 430.00109,298.67069 430,298.67044 430,295.58532 l 0,-3.08532 32.58694,0 32.58693,0 -0.39943,2.8125 c -0.37764,2.65899 -1.04223,2.83227 -12.17643,3.17475 l -11.77698,0.36224 -17.76293,14.95684 c -9.7696,8.22626 -18.43542,15.76717 -19.25739,16.75756 -1.21032,1.45836 3.89509,12.38941 26.85272,57.49342 l 28.34717,55.69269 5.4997,0 c 5.03301,0 5.4997,0.26517 5.4997,3.125 l 0,3.125 -45.71194,0 -45.71193,0 0.39943,-2.8125 c 0.35385,-2.49147 1.21983,-2.85529 7.58694,-3.18737 3.95313,-0.20619 7.1875,-0.59247 7.1875,-0.85838 0,-0.62896 -36.14917,-74.70759 -36.74861,-75.30702 -0.25101,-0.25102 -1.92901,-0.0867 -3.72889,0.36495 l -3.2725,0.82135 0,37.30483 0,37.30485 7.8125,0.37214 c 7.0169,0.33425 7.85318,0.65856 8.21194,3.18465 l 0.39944,2.8125 -47.58694,0 -47.58694,0 0,-3.125 z M 6.25,221.97769 c 0,-3.2171 0.03486,-3.22769 10.625,-3.22769 l 10.625,0 0,-103.125 0,-103.125 -10.625,0 C 6.2784789,12.5 6.25,12.491329 6.25,9.2647884 l 0,-3.2352115 61.5625,0.5560817 c 56.91349,0.5140883 62.45926,0.7557965 73.4375,3.2007149 31.35877,6.9837855 45,21.3943325 45,47.5378445 0,26.03578 -12.43326,41.202628 -40.05021,48.855672 -9.9646,2.76134 -11.97914,3.82011 -7.26854,3.82011 1.70385,0 7.56322,1.16669 13.02082,2.59265 29.19862,7.62899 43.73378,22.6803 45.24155,46.84809 1.86048,29.82119 -10.34176,48.13095 -38.20327,57.32499 -20.54296,6.77897 -26.15749,7.26041 -91.80285,7.87196 l -60.9375,0.56768 0,-3.22768 z m 109.375,-5.59024 c 13.05905,-6.02715 18.04624,-20.15779 18.10024,-51.28506 0.0616,-35.5011 -7.49418,-47.40447 -31.84686,-50.17161 -6.111646,-0.69445 -11.846998,-0.98063 -12.74523,-0.63594 -1.307925,0.5019 -1.63315,10.9649 -1.63315,52.54093 l 0,51.91423 11.5625,-0.0275 c 8.55712,-0.0204 12.86212,-0.62728 16.5625,-2.3351 z M 111.48939,104.78433 C 117.73852,101.32191 121.83455,94.162349 123.88083,83.125 125.9286,72.079659 124.65797,34.723962 121.99001,27.53559 117.83255,16.334034 111.43853,12.5 96.915149,12.5 l -9.415149,0 0,48.305422 0,48.305428 9.369249,-0.7086 c 6.442511,-0.48724 11.009501,-1.6174 14.620141,-3.61792 z m 139.94513,75.26336 c -14.43883,-2.27853 -24.94557,-8.1752 -31.26397,-17.5462 -5.05428,-7.49613 -6.85731,-15.5054 -6.16865,-27.40177 1.65725,-28.62783 19.84,-39.136005 70.85712,-40.949738 l 21.73403,-0.772676 -0.69328,-29.501153 c -0.72932,-31.034905 -2.08574,-42.006567 -5.97738,-48.349022 -5.14528,-8.3856038 -17.71774,-9.1031869 -25.85989,-1.475973 -2.9272,2.742074 -3.59811,7.958281 -2.03125,15.792592 0.71019,3.550926 1.21242,3.90625 5.52142,3.90625 4.68232,0 4.75669,0.07704 6.09375,6.311526 1.92649,8.98293 1.64082,14.810167 -1.01243,20.6519 -5.00899,11.02838 -18.73247,17.74587 -33.44678,16.371826 C 231.30264,75.415164 223.21887,66.391672 223.24299,48.125 223.2721,26.062617 236.09571,12.952618 263.75,6.7133647 277.02835,3.7175536 316.8411,3.6631825 330,6.6228885 348.8965,10.8731 360.20497,19.022531 366.01516,32.577147 c 5.16698,12.054071 5.67798,17.682405 6.40502,70.547853 0.73506,53.44897 0.9279,55.23397 6.2763,58.09635 7.91422,4.23556 14.77013,-4.2087 16.89128,-20.80463 1.74589,-13.65983 1.91018,-14.16672 4.59162,-14.16672 2.40517,0 2.51272,0.48993 1.71516,7.8125 -1.2228,11.22671 -3.99614,22.75617 -6.79221,28.23692 -3.44853,6.75968 -11.17052,13.25654 -18.99468,15.9811 -9.8853,3.4423 -32.31801,3.18597 -44.33885,-0.50666 -10.2713,-3.1552 -19.49015,-10.37667 -21.95757,-17.20022 -0.85991,-2.378 -1.92752,-4.32364 -2.37249,-4.32364 -0.44498,0 -1.84238,2.29151 -3.10534,5.09225 -2.87631,6.37851 -12.5012,15.15283 -18.872,17.20421 -6.24258,2.0101 -25.43611,2.8569 -34.02688,1.50123 z m 45.70137,-16.61019 c 7.02418,-7.68196 9.11411,-18.01838 9.11411,-45.07684 l 0,-19.93018 -5.19833,0.831246 c -15.51096,2.480304 -20.51027,13.576564 -19.55815,43.410464 0.6357,19.91896 2.02341,23.57781 8.9424,23.57781 2.68588,0 5.02683,-0.98267 6.69997,-2.8125 z M 410,91.875 c 0,-12.083334 0.47043,-19.375 1.25,-19.375 0.6875,0 1.25,0.718994 1.25,1.597765 0,0.87877 1.89589,5.553824 4.21309,10.389006 5.01194,10.45816 12.25341,17.238249 21.27169,19.916389 20.10276,5.96988 38.57736,-2.82854 33.19976,-15.811192 -1.9627,-4.73838 -7.04545,-7.305237 -24.30954,-12.276638 -17.404,-5.01169 -27.57223,-10.47712 -32.5,-17.46879 -3.54454,-5.029082 -3.74913,-5.982232 -3.73402,-17.396072 0.0131,-9.95149 0.48858,-12.954928 2.70296,-17.075468 9.26377,-17.2381731 29.19865,-22.9641297 52.20882,-14.9961054 l 9.92778,3.4378134 3.49211,-3.9083545 C 480.89331,6.758759 482.75394,5 483.10738,5 c 0.35344,0 0.64262,7.3125 0.64262,16.25 0,8.9375 -0.42188,16.248664 -0.9375,16.24703 -0.51563,-0.0016 -2.5631,-3.114038 -4.54995,-6.916455 C 473.89669,22.225187 464.55684,13.511963 457.79477,11.485998 443.66374,7.2522367 428.75,12.419876 428.75,21.550069 c 0,8.06781 2.86514,10.050643 22.86099,15.821086 C 481.57876,46.019312 490,54.273791 490,75 c 0,19.922336 -10.0203,31.50358 -30.31536,35.03781 -10.19287,1.77501 -21.82757,0.14958 -31.98608,-4.46862 -7.35036,-3.34158 -9.38334,-2.96401 -13.71902,2.54791 -1.35539,1.7231 -2.80527,3.1329 -3.22194,3.1329 -0.41668,0 -0.7576,-8.71875 -0.7576,-19.375 z"/>
-	    	</svg>
-    	</div>
-    	<div id="main-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede. </div>
-		<div id="btn1"><p id="btn1_text">Explore!</p></div>	
-		<section id="section1"></section>
+	    	    </svg>
+    	    </h1>
+        </div>
     </div>
-	
-	
+
+
 
 <!--section_2-->
 
 	<div id="sec2_wrap">
-	    <div class="btn_wrap">
-	        <div id="text_left">
-	            <ul id="ul_left">
-	                <p id="pe_lab">Labolatory</p>
-    	            <p id="pe_one_left">No it's not good1!</p>
-    	            <p id="pe_two_left">No it's not good2!</p>
-    	            <p id="pe_three_left">No it's not good3!</p>
-	            </ul>
-	        </div>
-	        <div id="text_right">
-	            <ul id="ul_right">
-	                <p id="pe_lab2">Labolatory</p>
-    	            <p id="pe_one_right">I like it1!</p>
-    	            <p id="pe_two_right">I like it2!</p>
-    	            <p id="pe_three_right">I like it3!</p>
-	            </ul>
-	        </div>
-	    </div>
+
 	</div>
 
 <!--section_3-->
 
 <div id="contact_wrap"><section id="section3"></section></div>
 
-<!--other-->
+<!--basic frame-->
 
-<div id='drawn_line_left'></div>
-<div id='drawn_line_top'></div>
-<div id='drawn_line_bottom'></div>
-<div id='drawn_line_right'></div>
+		<div id="btn1_svg_hold">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 6">
+                <polyline id="poly11" points="0,0 15,0" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
+                <polyline id="poly12" points="15,0 15,6" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
+                <polyline id="poly13" points="15,6 0,6" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
+                <polyline id="poly14" points="0,6 0,0" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
+            </svg>
+        </div>
+
+
+		<div id="btn1">
+            <p id="btn1_text">Explore!</p>
+	    </div>
+
+
+<div id="btn2">
+            <svg viewBox="0 0 42 6">
+              <polyline class="poly_color" id="poly21" points="0,0 20,0" style="fill:none;stroke:white;stroke-width:0.2" />
+              <polyline class="poly_color" id="poly22" points="20,0 20,6" style="fill:none;stroke:white;stroke-width:0.2" />
+              <polyline class="poly_color" id="poly23" points="20,6 0,6" style="fill:none;stroke:white;stroke-width:0.2" />
+              <polyline class="poly_color" id="poly24" points="0,6 0,0" style="fill:none;stroke:white;stroke-width:0.2" />
+              <polyline class="poly_color" id="poly25" points="22,0 42,0" style="fill:none;stroke:white;stroke-width:0.2" />
+              <polyline class="poly_color" id="poly26" points="42,0 42,6" style="fill:none;stroke:white;stroke-width:0.2" />
+              <polyline class="poly_color" id="poly27" points="42,6 22,6" style="fill:none;stroke:white;stroke-width:0.2" />
+              <polyline class="poly_color" id="poly28" points="22,6 22,0" style="fill:none;stroke:white;stroke-width:0.2" />
+            </svg>
+        </div>
+
+	    <div class="btn_wrap">
+	        <div id="text_left">
+
+	                <p id="pe_lab">Lab ugly!</p>
+    	            <p id="pe_one_left">Hate scroll...</p>
+    	            <p id="pe_two_left">To arty-farty to me</p>
+    	            <p id="pe_three_left">Boring...</p>
+                    <p id="pe_imi_left">Nooo... Imi</p>
+                    <p id="pe_fw_left">No no familiar</p>
+	        </div>
+	        <div id="text_right">
+
+	                <p id="pe_lab2">Lab cool!</p>
+    	            <p id="pe_one_right">That's my favourite!</p>
+    	            <p id="pe_two_right">Looks good!</p>
+    	            <p id="pe_three_right">Yes, it's my style!</p>
+                    <p id="pe_imi_right">Imi fantactic!</p>
+                    <p id="pe_fw_right">Good skills man!</p>
+	        </div>
+	    </div>
+
+		<div id="btn_svg_solo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 6">
+                <polyline id="poly31" points="0,0 15,0" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
+                <polyline id="poly32" points="15,0 15,6" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
+                <polyline id="poly33" points="15,6 0,6" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
+                <polyline id="poly34" points="0,6 0,0" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
+            </svg>
+        </div>
+
+
+		<div id="btn_solo">
+            <p class="btn_solo_all" id="btn_solo_lab">next Lab</p>
+            <p class="btn_solo_all" id="btn_solo_scroll">next Scroll</p>
+            <p class="btn_solo_all" id="btn_solo_draw">next Draw</p>
+            <p class="btn_solo_all" id="btn_solo_stan">next Stan</p>
+            <p class="btn_solo_all" id="btn_solo_imi">next Imi</p>
+            <p class="btn_solo_all" id="btn_solo_fw">next Fw</p>
+	    </div>
+
+
+<div id="title_wrap">
+    <p id="tit_lab">Labolatory</p>
+    <p id="tit_scroll">Scroll Me</p>
+    <p id="tit_draw">Drawings</p>
+    <p id="tit_stan">Standard</p>
+    <p id="tit_imi">I made it</p>
+    <p id="tit_f_w">Familiar with</p>
+    <p id="tit_contact">Contact</p>
+</div>
+
+<div id="counting_top">
+        <p class='top_all_stat_num' id="top_1">1</p>
+        <p class='top_all_stat_num' id="top_2">2</p>
+        <p class='top_all_stat_num' id="top_3">3</p>
+        <p class='top_all_stat_num' id="top_4">4</p>
+        <p class='top_all_stat_num' id="top_5">5</p>
+        <p class='top_all_stat_num' id="top_6">6</p>
+        <p class='top_all_stat_num' id="top_7">7</p>
+        <p class='top_all_stat_num' id="top_8">8</p>
+        <p class='top_all' id="top_1_nav">1</p>
+        <p class='top_all' id="top_2_nav">2</p>
+        <p class='top_all' id="top_3_nav">3</p>
+        <p class='top_all' id="top_4_nav">4</p>
+        <p class='top_all' id="top_5_nav">5</p>
+        <p class='top_all' id="top_6_nav">6</p>
+        <p class='top_all' id="top_7_nav">7</p>
+        <p class='top_all' id="top_8_nav">8</p>
+</div>
+
+<div id="counting_bottom">
+    <p id="bottom_8">8</p>
+</div>
+
+
+
+<div class="drawn_line" id='drawn_line_left_top'></div>
+<div class="drawn_line" id='drawn_line_left_bottom'></div>
+<div class="drawn_line" id='drawn_line_top_left'></div>
+<div class="drawn_line" id='drawn_line_top_right'></div>
+<div class="drawn_line" id='drawn_line_bottom_left'></div>
+<div class="drawn_line" id='drawn_line_bottom_right'></div>
+<div class="drawn_line" id='drawn_line_right'></div>
+
 
 
 
@@ -144,3 +251,13 @@
 
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+

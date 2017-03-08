@@ -1,5 +1,5 @@
 body {
-font-family: 'Della Respira';
+font-family: 'Abril Fatface';
 font-size: 18px;
 width: 100%;
 height: 100%;
@@ -8,95 +8,217 @@ overflow-x: hidden;
 overflow-y: hidden;
 }
 
+p {color: white;}
+
+.linear {background: linear-gradient(to top left,  rgb(243,117,3), rgb(240,208,10), rgb(168,234,189), rgb(17,126,218), rgb(3,75,210), rgb(2,8,32))}
 /*navigation button*/
-#fa-bars {position: fixed; top: 3vh; right: 4vh; width: 10vh; height: 10vh; z-index: 9999;}
+#fa-bars {position: fixed; top: 30px; right: 30px; width: 60px; height: 60px; z-index: 9999; cursor: pointer;}
 
 /* navigation site */
 
 #nav_wrap {
 z-index: 9998;
-background: #2200FF; /* For browsers that do not support gradients */
-background: -webkit-linear-gradient(left top, #2200FF, #000000); /* For Safari 5.1 to 6.0 */
-background: -o-linear-gradient(bottom right, #2200FF, #000000); /* For Opera 11.1 to 12.0 */
-background: -moz-linear-gradient(bottom right, #2200FF, #000000); /* For Firefox 3.6 to 15 */
-background: linear-gradient(to bottom right, #2200FF, #000000); /* Standard syntax */
+background: #040009;
 position: absolute; display: table; top: -100%; width: 100%; height: 100vh;
 }
 
 #section_nav {display:table-cell; vertical-align:middle; text-align: center;}
-#section_nav p {font-size: 35px; color: white;}
+#section_nav p {font-size: 35px; color: white; cursor: pointer; width: 20vw; margin: auto; height: 10vh; line-height: 10vh;}
 
 /*section_1*/
 
 #sec1_wrap {
-background: #004ED4; /* For browsers that do not support gradients */
-background: -webkit-linear-gradient(left top, #DCF7F5, #004ED4); /* For Safari 5.1 to 6.0 */
-background: -o-linear-gradient(bottom right, #DCF7F5, #004ED4); /* For Opera 11.1 to 12.0 */
-background: -moz-linear-gradient(bottom right, #DCF7F5, #004ED4); /* For Firefox 3.6 to 15 */
-background: linear-gradient(to bottom right, #DCF7F5, #004ED4); /* Standard syntax */
 position: absolute;
 display: table;
 width: 100%;
 height: 100vh;
+background: #040009;
+z-index: 1;
 }
 
-#intro {
-display: table-cell; 
-vertical-align: middle; 
-text-align: center;
-background: yellow;
+.rotation {
+-ms-transform: rotate(-90deg);
+-webkit-transform: rotate(-90deg);
+transform: rotate(-90deg);
 }
 
-#section1 {
+#last_upadate {visibility: hidden; font-family: 'Oswald'; position: absolute; top: 30px; right: 120px; height: 60px; line-height: 60px; margin: auto; font-size: 15px; color: white;}
+#seb_geb {visibility: hidden; font-family: 'Oswald'; position: absolute; top: 90px; font-size: 15px; left: 8px; color: white;}
+#web_dev {visibility: hidden; font-family: 'Oswald'; position: absolute; bottom: 90px; font-size: 15px; left: 15px; color: white;}
+
+.center_center {display: table-cell; vertical-align: middle}
+
+#intro {margin: auto; width: 400px; height: 400px;}
+
+/*section1 {
 position: absolute;
-width: 100%; 
+left: 0;
+right: 0;
+width: 100%;
 height: 100vh;
-background-image: url('../img/my_img.png');
-background-size: cover;
-background-repeat: no-repeat;
-background-position: right;
-}
+color: red;
+}*/
 
 
 #path12, #path37, #path58, #path72, #path94, #bastek {visibility: hidden;}
+#poly11, #poly12, #poly13, #poly14 {visibility: hidden;}
 
-#main-text {
-position: absolute;
-top: 0;
-margin-left: 60vh;
-margin-right: 40vh;
-margin-top: 35vh;
-text-align: justify;
-}
-#btn1 {
-position: absolute;
-bottom: 10vh;
-left: 0;
-right: 0;
-margin-left: auto;
-margin-right: auto;
-width: 100px;
-text-align: center;
-border: 2px solid #0C00ED;
-z-index: 10;
-}
-#btn1 p {margin: 0;}
 
 /*seconde page (section_2)*/
 
-#sec2_wrap {position: absolute; top: 100%; width: 100%; height: 100vh; background-color: #ADADAD;}
-.btn_wrap {position: absolute; bottom: 25px; text-align: center; width: 100%; height: 50px;}
-.btn_wrap div {display: inline-block; border: 1px solid blue; width: 200px; height: 50px; z-index: 10;}
-.btn_wrap div ul p {visibility: hidden; margin: 0}
+#sec2_wrap {position: absolute; display: table; top: 100%; width: 100%; height: 100vh}
 
-ul {padding: 0px;}
 
 /*contact (section_3)*/
-#contact_wrap {position: absolute; top: 100%; width: 100%; height: 100vh; background-color: orange}
+#contact_wrap {position: absolute; top: 100%; width: 100%; height: 100vh; background: #040009;}
 
 
-/*other*/
-#drawn_line_left {position: fixed; left: 9vh; top: 8vh; bottom: 8vh; border-left: 1px solid #DEDEDE;}
-#drawn_line_top {position: fixed; left: 9vh; top: 8vh; right: 14vh; border-top: 1px solid #DEDEDE;}
-#drawn_line_bottom {position: fixed; left: 9vh; bottom: 8vh; right: 9vh; border-bottom: 1px solid #DEDEDE;}
-#drawn_line_right {position: fixed; right: 9vh; top: 13vh; bottom: 8vh; border-right: 1px solid #DEDEDE;}
+/*basic web frame*/
+
+#btn1 {
+position: absolute;
+bottom: 30px;
+left: 0;
+right: 0;
+margin: auto;
+width: 150px;
+height: 60px;
+z-index: 10;
+cursor: pointer;
+}
+
+#btn1_text {
+margin: auto;
+color: rgb(3,75,210);
+text-align: center;
+line-height: 60px;
+}
+
+
+#btn1_svg_hold {
+position: absolute;
+bottom: 30px;
+left: 0;
+right: 0;
+margin: auto;
+width: 150px;
+height: 60px;
+z-index: 9;
+}
+
+#btn_solo {
+position: absolute;
+bottom: 30px;
+left: 0;
+right: 0;
+margin: auto;
+width: 150px;
+height: 60px;
+}
+
+.btn_solo_all {
+position: absolute;
+width: 150px;
+margin: auto;
+color: rgb(3,75,210);
+text-align: center;
+line-height: 60px;
+visibility: hidden;
+cursor: pointer;
+}
+
+
+
+#btn_svg_solo {
+visibility: hidden;
+position: absolute;
+bottom: 30px;
+left: 0;
+right: 0;
+margin: auto;
+width: 150px;
+height: 60px;
+z-index: 9;
+}
+
+.btn_wrap {position: absolute; bottom: 30px; text-align: center; width: 100%; height: 60px;}
+.btn_wrap div {display: inline-block; width: 200px; height: 60px;}
+.btn_wrap div p {visibility: hidden; z-index: 1; position: absolute; width: 200px; margin: auto; text-align: center; line-height: 60px; cursor: pointer;}
+#text_left p {margin-left: -9px; color: rgb(3,75,210)}
+#text_right p {margin-left: 9px; color: rgb(3,75,210)}
+
+#btn2 {position: absolute; bottom: 30px; left: 0; right: 0; margin: auto; text-align: center; width: 420px; height: 60px;}
+
+
+
+
+
+
+#title_wrap {}
+#title_wrap p {position: fixed; top: 30px; left: 100px; width: 200px; height: 60px; visibility: hidden; line-height: 60px; text-align: center; margin: 0px;}
+
+#counting_top {
+position: fixed;
+left: 45px;
+top: calc(50% - 45px);
+bottom: calc(50%);
+z-index: 2;
+}
+.top_all {cursor: pointer}
+.top_all:nth-child(16) {color: rgb(243,117,3)}
+.top_all:nth-child(15) {color: rgb(245,184,34)}
+.top_all:nth-child(14) {color: rgb(240,208,10)}
+.top_all:nth-child(13) {color: rgb(189,204,74)}
+.top_all:nth-child(12) {color: rgb(168,234,189)}
+.top_all:nth-child(11) {color: rgb(102,187,209)}
+.top_all:nth-child(10) {color: rgb(17,126,218)}
+.top_all:nth-child(9) {color: rgb(3,75,210)}
+
+
+#counting_bottom {
+visibility: hidden;
+position: fixed;
+left: 45px;
+top: calc(50%);
+bottom: calc(50% - 45px);
+border-top: 1px solid white;
+z-index: 2;
+}
+#counting_top p {visibility: hidden; position: absolute; line-height: 45px; margin: auto; text-align: center; width: 30px;}
+#counting_bottom p {visibility: hidden; line-height: 45px; margin: auto; text-align: center; width: 30px;}
+.top_all_stat_num {color: rgb(3,75,210)}
+
+.drawn_line {visibility: hidden;}
+#drawn_line_left_top {position: fixed; left: 60px; top: 60px; width: 1px; height: calc(50% - 60px * 1.75);}
+#drawn_line_left_bottom {position: fixed; left: 60px; bottom: 60px; width: 1px; height: calc(50% - 60px * 1.75);}
+#drawn_line_top_right {position: fixed; top: 60px; left: 300px; right: 120px; height: 1px;}
+#drawn_line_top_left {position: fixed; left: 60px; top: 60px; height: 1px; width: calc(240px - 200px);}
+#drawn_line_bottom_left {position: fixed; left: 60px; bottom: 60px; height: 1px; width: calc(50% - 200px * 1.5);}
+#drawn_line_bottom_right {position: fixed; bottom: 60px; right: 60px; height: 1px; width: calc(50% - 200px * 1.5);}
+#drawn_line_right {position: fixed; right: 60px; bottom: 60px; width: 1px; height: calc(100% - 90px * 2);}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
