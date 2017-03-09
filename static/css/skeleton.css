@@ -48,7 +48,7 @@ transform: rotate(-90deg);
 
 .center_center {display: table-cell; vertical-align: middle}
 
-#intro {margin: auto; width: 400px; height: 400px;}
+#intro {margin: auto; margin-left: 15vw; width: 35vw; height: 35vw;}
 
 /*section1 {
 position: absolute;
@@ -125,6 +125,7 @@ text-align: center;
 line-height: 60px;
 visibility: hidden;
 cursor: pointer;
+z-index: 15;
 }
 
 

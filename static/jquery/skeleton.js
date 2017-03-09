@@ -6,8 +6,8 @@
 		counter = $('#fa-bars, #about, #labolatory, #content1, #content2, #content3, #i_made_it, #familiar_with, #contact'),
 		faBars = $('#fa-bars'),
 		poly = $('.poly'),
-		polyColor = $('.poly_color'), 
-		polyBlack = $('.poly_black'), 
+		polyColor = $('.poly_color'),
+		polyBlack = $('.poly_black'),
 		poly5 = $('#poly_5'),
 		poly6 = $('#poly_6'),
 		poly7 = $('#poly_7'),
@@ -75,6 +75,7 @@
 		btnSoloImi = $('#btn_solo_imi'),
 		btnSoloFw = $('#btn_solo_fw'),
 		btnSvgSolo = $('#btn_svg_solo'),
+		polyColorSvg = $('.poly_color_svg'),
 		poly31to34 = $('#poly31, #poly32, #poly33, #poly34'),
 
 		btn2 = $('#btn2'),
@@ -121,7 +122,7 @@
 		tlAnimButtonLeft = new TimelineMax({paused: true}),
 		tlAnimButtonRight = new TimelineMax({paused: true}),
 		tlRightBtnAnim = new TimelineMax({paused: true})
-		
+
 
 
 
@@ -288,7 +289,7 @@
 		.to(top7, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 		.to(countingBottom, 1, {borderTop: '1px solid rgb(245,184,34)', ease:Power0.easeNone}, '-=1')
 		.to(drawnLine, 1, {background: 'rgb(245,184,34)', ease:Power0.easeNone}, '-=1')
-		.to(polyColor, 1, {stroke: 'rgb(245,184,34)', ease:Power0.easeNone}, '-=1')	
+		.to(polyColor, 1, {stroke: 'rgb(245,184,34)', ease:Power0.easeNone}, '-=1')
 
 		.to(polyLeft, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
 		.to(polyRight, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
@@ -372,7 +373,7 @@
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 170px)", ease:Power2.easeOut}, '-=1')
 		.to(btnSvgSolo, 1, {autoAlpha: 1}, '-=1')
 		.fromTo(poly31to34, 1, {drawSVG: "50% 50%"}, {drawSVG: "0% 100%"}, '-=1')
-		
+
 
 
 
@@ -529,6 +530,7 @@
 	$(countingTop).mouseover(function(){
         tlNavLeft.play();
         tlRightBtnAnim.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 	});
 
 	$(countingTop).mouseleave(function(){
@@ -633,7 +635,8 @@
 //lab
 
     $(peLab2).click(function(){
-    	TweenMax.to(btnSoloLab, 1, {autoAlpha: 1})
+    	TweenMax.to(btnSoloLab, 1, {autoAlpha: 1});
+    	TweenMax.to(polyColorSvg, 1, {stroke: 'rgb(17,126,218)', ease:Power0.easeNone}, '-=1');
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -641,7 +644,8 @@
 //scrool me
 
     $(peOneRight).click(function(){
-    	TweenMax.to(btnSoloScroll, 1, {autoAlpha: 1})
+    	TweenMax.to(btnSoloScroll, 1, {autoAlpha: 1});
+    	TweenMax.to(polyColorSvg, 1, {stroke: 'rgb(102,187,209)', ease:Power0.easeNone}, '-=1');
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -649,7 +653,8 @@
 //drawings
 
 	$(peTwoRight).click(function(){
-		TweenMax.to(btnSoloDraw, 1, {autoAlpha: 1})
+		TweenMax.to(btnSoloDraw, 1, {autoAlpha: 1});
+		TweenMax.to(polyColorSvg, 1, {stroke: 'rgb(168,234,189)', ease:Power0.easeNone}, '-=1');
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -657,7 +662,8 @@
 //standard
 
     $(peThreeRight).click(function(){
-    	TweenMax.to(btnSoloStan, 1, {autoAlpha: 1})
+    	TweenMax.to(btnSoloStan, 1, {autoAlpha: 1});
+    	TweenMax.to(polyColorSvg, 1, {stroke: 'rgb(189,204,74)', ease:Power0.easeNone}, '-=1');
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -665,7 +671,8 @@
 //i made it
 
     $(peImiRight).click(function(){
-    	TweenMax.to(btnSoloImi, 1, {autoAlpha: 1})
+    	TweenMax.to(btnSoloImi, 1, {autoAlpha: 1});
+    	TweenMax.to(polyColorSvg, 1, {stroke: 'rgb(240,208,10)', ease:Power0.easeNone}, '-=1');
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -673,13 +680,14 @@
 //familiar with
 
     $(peFwRight).click(function(){
-    	TweenMax.to(btnSoloFw, 1, {autoAlpha: 1})
+    	TweenMax.to(btnSoloFw, 1, {autoAlpha: 1});
+    	TweenMax.to(polyColorSvg, 1, {stroke: 'rgb(245,184,34)', ease:Power0.easeNone}, '-=1');
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
 
 
-//style next button
+//style left and right button
 
 	$(textLeft).mouseover(function(){
         tlAnimButtonLeft.play();
@@ -696,6 +704,57 @@
 	$(textRight).mouseleave(function(){
         tlAnimButtonRight.reverse();
 	});
+
+//CENTER BUTTON AFTER RIGHT CLICK EVENT
+
+//labolatory to scroll me
+
+	$(btnSoloLab).click(function(){
+		tlBase.play();
+		tlRightBtnAnim.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
+	});
+
+//scroll me to drawings
+
+    $(btnSoloScroll).click(function(){
+		tlBase.play();
+		tlRightBtnAnim.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
+	});
+
+//drawings to standard
+
+    $(btnSoloDraw).click(function(){
+		tlBase.play();
+		tlRightBtnAnim.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
+	});
+
+//standard to I made it
+
+	$(btnSoloStan).click(function(){
+		tlBase.play();
+		tlRightBtnAnim.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
+	});
+
+//i made it to familiar with
+
+    $(btnSoloImi).click(function(){
+		tlBase.play();
+		tlRightBtnAnim.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
+	});
+
+//familiar with to contact
+
+    $(btnSoloFw).click(function(){
+		tlBase.play();
+		TweenMax.to(btnSvgSolo, 1, {autoAlpha: 0}, '-=1');
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
+	});
+
 
 })(jQuery);
 
