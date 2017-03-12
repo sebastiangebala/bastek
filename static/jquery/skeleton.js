@@ -11,6 +11,8 @@
 		poly5 = $('#poly_5'),
 		poly6 = $('#poly_6'),
 		poly7 = $('#poly_7'),
+		poly8 = $('#poly_8'),
+		poly9 = $('#poly_9'),
 		poly11 = $('#poly11'),
 		poly12 = $('#poly12'),
 		poly13 = $('#poly13'),
@@ -23,7 +25,7 @@
 		lastUpdate = $('#last_upadate'),
 		sebGeb = $('#seb_geb'),
 		webDev = $('#web_dev'),
-
+		mainText = $('#main_text'),
 
 		countingTop = $('#counting_top'),
 		topAllStatNum = $('.top_all_stat_num'),
@@ -113,16 +115,18 @@
 		drawnLineBottomLeft = $('#drawn_line_bottom_left'),
 		drawnLineBottomRight = $('#drawn_line_bottom_right'),
 
+
 		tlIntro = new TimelineMax({delay: 1, onComplete: loadBase}),
 		tlBase = new TimelineMax({paused: true, onComplete: resetBase}),
 		tlNav = new TimelineMax({paused: true}),
 		tlNavLeft = new TimelineMax({paused: true}),
 		tlDrawNav = new TimelineMax({paused: true}),
+		tlAnimNavButton = new TimelineMax({paused: true}),
 		tlAnimButton = new TimelineMax({paused: true}),
 		tlAnimButtonLeft = new TimelineMax({paused: true}),
 		tlAnimButtonRight = new TimelineMax({paused: true}),
-		tlRightBtnAnim = new TimelineMax({paused: true})
-
+		tlRightBtnAnim = new TimelineMax({paused: true}),
+		tlAnimButtonAfterClick = new TimelineMax({paused: true})
 
 
 
@@ -142,7 +146,7 @@
 //main record
 
 	tlBase
-		.from(section1, 1, {ease:Power0.easeNone, autoAlpha: 0, x: 150})
+		.to(section1, 1, {ease:Power0.easeNone, autoAlpha: 0.4, x: 150})
 		.from(faBars, 1, {y: -50, autoAlpha: 0, ease:Power2.easeOut}, '-=1')
 		.from(btn1, 1, {autoAlpha: 0, ease:Power2.easeOut}, '-=1')
 		.from(btn1Text, 1, {y: 50, autoAlpha: 0, ease:Power2.easeOut}, '-=1')
@@ -154,10 +158,10 @@
 		.to(webDev, 1, {autoAlpha: 1}, '-=1')
 		.to(poly11to14, 1, {autoAlpha: 1}, '-=1')
 		.to(countingBottom, 1, {borderTop: '1px solid rgb(3,75,210)', ease:Power0.easeNone}, '-=1')
-		.to(polyColor, 1, {stroke: 'rgb(3,75,210)', ease:Power0.easeNone}, '-=1')
+		.to(mainText, 1, {autoAlpha: 1}, '-=1')
 
 		.to(btnSvgSolo, 1, {autoAlpha: 0},'-=1')
-		.to(poly31to34, 1, {drawSVG: "50% 50%"}, '-=1')
+		.to(poly31to34, 1, {autoAlpha: 0}, '-=1')
 
         .addPause()
         .to(sec1Wrap, 1, {y: "-100%", ease:Power4.easeOut})
@@ -175,14 +179,13 @@
 		.to(top2, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 		.to(bottom8, 1, {color: 'black'}, '-=1')
 		.to(countingBottom, 1, {borderTop: '1px solid rgb(17,126,218)', ease:Power0.easeNone}, '-=1')
-		.to(polyColor, 1, {stroke: 'rgb(17,126,218)', ease:Power0.easeNone}, '-=1')
 
 		.to(polyLeft, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
 		.to(polyRight, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(btnSvgSolo, 1, {autoAlpha: 0},'-=1')
-		.to(poly31to34, 1, {drawSVG: "50% 50%"}, '-=1')
+		.to(poly31to34, 1, {autoAlpha: 0}, '-=1')
 
 		.addPause()
         .to(peLab, 1, {autoAlpha: 0})
@@ -197,14 +200,13 @@
 		.to(top3, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 		.to(countingBottom, 1, {borderTop: '1px solid rgb(102,187,209)', ease:Power0.easeNone}, '-=1')
 		.to(drawnLine, 1, {background: 'rgb(102,187,209)', ease:Power0.easeNone}, '-=1')
-		.to(polyColor, 1, {stroke: 'rgb(102,187,209)', ease:Power0.easeNone}, '-=1')
 
 		.to(polyLeft, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
 		.to(polyRight, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(btnSvgSolo, 1, {autoAlpha: 0},'-=1')
-		.to(poly31to34, 1, {drawSVG: "50% 50%"}, '-=1')
+		.to(poly31to34, 1, {autoAlpha: 0}, '-=1')
 
         .addPause()
         .to(peOneLeft, 1, {autoAlpha: 0})
@@ -219,14 +221,13 @@
 		.to(top4, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 		.to(countingBottom, 1, {borderTop: '1px solid rgb(168,234,189)', ease:Power0.easeNone}, '-=1')
 		.to(drawnLine, 1, {background: 'rgb(168,234,189)', ease:Power0.easeNone}, '-=1')
-		.to(polyColor, 1, {stroke: 'rgb(168,234,189)', ease:Power0.easeNone}, '-=1')
 
 		.to(polyLeft, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
 		.to(polyRight, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(btnSvgSolo, 1, {autoAlpha: 0},'-=1')
-		.to(poly31to34, 1, {drawSVG: "50% 50%"}, '-=1')
+		.to(poly31to34, 1, {autoAlpha: 0}, '-=1')
 
         .addPause()
         .to(peTwoLeft, 1, {autoAlpha: 0})
@@ -241,14 +242,14 @@
 		.to(top5, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 		.to(countingBottom, 1, {borderTop: '1px solid rgb(189,204,74)', ease:Power0.easeNone}, '-=1')
 		.to(drawnLine, 1, {background: 'rgb(189,204,74)', ease:Power0.easeNone}, '-=1')
-		.to(polyColor, 1, {stroke: 'rgb(189,204,74)', ease:Power0.easeNone}, '-=1')
+
 
 		.to(polyLeft, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
 		.to(polyRight, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(btnSvgSolo, 1, {autoAlpha: 0},'-=1')
-		.to(poly31to34, 1, {drawSVG: "50% 50%"}, '-=1')
+		.to(poly31to34, 1, {autoAlpha: 0}, '-=1')
 
         .addPause()
         .to(sec1Wrap, 1, {y: "-100%", ease:Power4.easeOut})
@@ -266,7 +267,6 @@
 		.to(top6, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 		.to(countingBottom, 1, {borderTop: '1px solid rgb(240,208,10)', ease:Power0.easeNone}, '-=1')
 		.to(drawnLine, 1, {background: 'rgb(240,208,10)', ease:Power0.easeNone}, '-=1')
-		.to(polyColor, 1, {stroke: 'rgb(240,208,10)', ease:Power0.easeNone}, '-=1')
 		.to(bottom8, 1, {color: 'white', ease:Power0.easeNone}, '-=1')
 
 		.to(polyLeft, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
@@ -274,7 +274,7 @@
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(btnSvgSolo, 1, {autoAlpha: 0},'-=1')
-		.to(poly31to34, 1, {drawSVG: "50% 50%"}, '-=1')
+		.to(poly31to34, 1, {autoAlpha: 0}, '-=1')
 
         .addPause()
         .to(peImiLeft, 1, {autoAlpha: 0})
@@ -289,14 +289,14 @@
 		.to(top7, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 		.to(countingBottom, 1, {borderTop: '1px solid rgb(245,184,34)', ease:Power0.easeNone}, '-=1')
 		.to(drawnLine, 1, {background: 'rgb(245,184,34)', ease:Power0.easeNone}, '-=1')
-		.to(polyColor, 1, {stroke: 'rgb(245,184,34)', ease:Power0.easeNone}, '-=1')
+		
 
 		.to(polyLeft, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
 		.to(polyRight, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(btnSvgSolo, 1, {autoAlpha: 0},'-=1')
-		.to(poly31to34, 1, {drawSVG: "50% 50%"}, '-=1')
+		.to(poly31to34, 1, {autoAlpha: 0}, '-=1')
 
         .addPause()
         .to(peFwLeft, 1, {autoAlpha: 0})
@@ -308,14 +308,14 @@
         .to(top7, 1, {autoAlpha: 0}, '-=1')
 		.to(top8, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 		.to(polySecond, 1, {autoAlpha: 0}, '-=1')
+		.to(countingBottom, 1, {borderTop: '1px solid rgb(243,117,3)', ease:Power0.easeNone}, '-=1')
         .to(drawnLineBottomLeft, 1, {width:"50%", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"50%", ease:Power2.easeOut}, '-=1')
-		.to(countingBottom, 1, {borderTop: '1px solid rgb(243,117,3)', ease:Power0.easeNone}, '-=1')
 		.to(drawnLine, 1, {background: 'rgb(243,117,3)', ease:Power0.easeNone}, '-=1')
-		.to(polyColor, 1, {stroke: 'rgb(243,117,3)', ease:Power0.easeNone}, '-=1')
+		
 
 		.to(btnSvgSolo, 1, {autoAlpha: 0},'-=1')
-		.to(poly31to34, 1, {drawSVG: "50% 50%"}, '-=1')
+		.to(poly31to34, 1, {autoAlpha: 0}, '-=1')
 
 //nav handler
 
@@ -336,30 +336,57 @@
         .fromTo(top8nav, 1, {x: 0}, {x: 240}, '-=1')
 
 
-//nav draw
+//navigation draw
 
 
     tlDrawNav
-		.to(poly, 0.5, {drawSVG: "50% 50%", ease:Power2.easeOut})
-		.to(poly5, 0.5, {stroke: "rgb(240,208,10)", ease:Power2.easeOut}, '-=0.5')
-		.to(poly6, 0.5, {stroke: "rgb(245,184,34)", ease:Power2.easeOut}, '-=0.5')
-		.to(poly7, 0.5, {stroke: "rgb(243,117,3)", ease:Power2.easeOut}, '-=0.5')
+		.to(poly, 0.2, {drawSVG: "50% 50%", ease:Linear.easeNone})
+		.to(poly, 0.2, {stroke: "rgb(243,117,3)", ease:Linear.easeNone})
+		.to(poly, 0.2, {drawSVG: "0% 100%", ease:Linear.easeNone}, '-=0.2')
+		.to(poly5, 0.2, {x: 1, repeat:1, yoyo:true, ease:Linear.easeNone}, '-=0.4')
+		.to(poly5, 0.2, {stroke: "rgb(240,208,10)"}, '-=0.2')
+        .to(poly6, 0.2, {x: 1, repeat:1, yoyo:true, ease:Linear.easeNone}, '-=0.3')
+        .to(poly6, 0.2, {stroke: "rgb(245,184,34)"}, '-=0.2')
+        .to(poly7, 0.2, {x: 1, repeat:1, yoyo:true, ease:Linear.easeNone}, '-=0.2')
+		.to(poly7, 0.2, {stroke: "rgb(243,117,3)"}, '-=0.2')
+
+		
+
+
+//fa_Bars click event
+
+	tlAnimNavButton
+		.to(poly5, 0.5, {morphSVG: poly8, ease:Linear.easeNone})
+		.to(poly7, 0.5, {morphSVG: poly9, ease:Linear.easeNone}, '-=0.5')
+		.to(poly6, 0.5, {autoAlpha: 0, ease:Linear.easeNone}, '-=0.5')
 
 //first button animation
 
     tlAnimButton
-    	.to(poly11to14, 0.5, {drawSVG: "50% 50%", ease:Power2.easeOut})
-        .to(btn1Text, 0.5, {color: "rgb(243,117,3)", ease:Power2.easeOut}, '-=0.5')
+    	.to(poly11to14, 0.2, {drawSVG: "50% 50%", ease:Linear.easeNone})
+        .to(btn1Text, 0.2, {color: "rgb(243,117,3)", ease:Linear.easeNone}, '-=0.2')
+        .to(btn1Text, 0.2, {rotationX: 180, repeat:1, yoyo:true, ease:Linear.easeNone}, '-=0.2')
+        .to(poly11to14, 0.2, {stroke: "rgb(243,117,3)", ease:Linear.easeNone})
+        .to(poly11to14, 0.2, {drawSVG: "0% 100%", ease:Linear.easeNone}, '-=0.2')
+        
 
 //next button animation
 
 	tlAnimButtonLeft
-    	.to(polyLeft, 0.5, {drawSVG: "50% 50%", ease:Power2.easeOut})
-    	.to(textLeftPe, 0.5, {color: "rgb(243,117,3)", ease:Power2.easeOut}, '-=0.5')
+    	.to(polyLeft, 0.2, {drawSVG: "50% 50%", ease:Linear.easeNone})
+    	.to(polyLeft, 0.2, {stroke: "rgb(243,117,3)", ease:Linear.easeNone})
+		.to(polyLeft, 0.2, {drawSVG: "0% 100%", ease:Linear.easeNone}, '-=0.2')
+    	.to(textLeftPe, 0.2, {color: "rgb(243,117,3)", ease:Linear.easeNone}, '-=0.2')
+    	.to(textLeftPe, 0.2, {rotationX: 180, repeat:1, yoyo:true, ease:Linear.easeNone}, '-=0.2')
+    	
 
     tlAnimButtonRight
-    	.to(polyRight, 0.5, {drawSVG: "50% 50%", ease:Power2.easeOut})
-    	.to(textRightPe, 0.5, {color: "rgb(243,117,3)", ease:Power2.easeOut}, '-=0.5')
+    	.to(polyRight, 0.2, {drawSVG: "50% 50%", ease:Linear.easeNone})
+    	.to(polyRight, 0.2, {stroke: "rgb(243,117,3)", ease:Linear.easeNone})
+		.to(polyRight, 0.2, {drawSVG: "0% 100%", ease:Linear.easeNone}, '-=0.2')
+    	.to(textRightPe, 0.2, {color: "rgb(243,117,3)", ease:Linear.easeNone}, '-=0.2')
+    	.to(textRightPe, 0.2, {rotationX: 180, repeat:1, yoyo:true, ease:Linear.easeNone}, '-=0.2')
+    	
 
 
 //Right Button Animation
@@ -372,9 +399,18 @@
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 170px)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 170px)", ease:Power2.easeOut}, '-=1')
 		.to(btnSvgSolo, 1, {autoAlpha: 1}, '-=1')
-		.fromTo(poly31to34, 1, {drawSVG: "50% 50%"}, {drawSVG: "0% 100%"}, '-=1')
+		.to(btnSolo, 1, {autoAlpha: 1}, '-=1')
+		.to(poly31to34, 1, {autoAlpha: 1}, '-=1')
 
+//After Right Click Animation Button
 
+	tlAnimButtonAfterClick
+    	.to(poly31to34, 0.2, {drawSVG: "50% 50%", ease:Linear.easeNone})
+    	.to(btnSoloAll, 0.2, {color: "rgb(243,117,3)", ease:Linear.easeNone}, '-=0.2')
+    	.to(btnSolo, 0.2, {rotationX: 180, repeat:1, yoyo:true, ease:Linear.easeNone}, '-=0.2')
+    	.to(poly31to34, 0.2, {stroke: "rgb(243,117,3)", ease:Linear.easeNone})
+		.to(poly31to34, 0.2, {drawSVG: "0% 100%", ease:Linear.easeNone}, '-=0.2')
+		
 
 
 //FUNCTIONS--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -393,16 +429,16 @@
 
 // TRIGGERS---------------------------------------------------------------------------------------------------------------------------------------------------
 
-//nav open and close
+//navigation open and close
 
       $(counter).click(function() {
       var clicks = $(faBars).data('clicks');
       if (clicks) {
          tlNav.reverse();
+         tlAnimNavButton.reverse();
       } else {
          tlNav.play();
-         tlRightBtnAnim.reverse();
-         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
+         tlAnimNavButton.play();
       }
       $(faBars).data("clicks", !clicks);
     });
@@ -410,34 +446,57 @@
 //navigation
 
     $(about).click(function(){
+        tlRightBtnAnim.reverse();
+        tlAnimNavButton.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         tlBase.seek(1);
 	});
 
     $(labolatory).click(function(){
+    	tlRightBtnAnim.reverse();
+    	tlAnimNavButton.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 		tlBase.seek(2);
 	});
 
 	$(content1).click(function(){
+		tlRightBtnAnim.reverse();
+		tlAnimNavButton.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 		tlBase.seek(3);
 	});
 
 	$(content2).click(function(){
+		tlRightBtnAnim.reverse();
+		tlAnimNavButton.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 		tlBase.seek(4);
 	});
 
 	$(content3).click(function(){
+		tlRightBtnAnim.reverse();
+		tlAnimNavButton.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 		tlBase.seek(5);
 	});
 
 	$(imadeIt).click(function(){
+		tlRightBtnAnim.reverse();
+		tlAnimNavButton.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 	    tlBase.seek(6);
 	});
 
 	$(familiarWith).click(function(){
+		tlRightBtnAnim.reverse();
+		tlAnimNavButton.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 	    tlBase.seek(7);
 	});
 
 	$(contact).click(function(){
+		tlAnimNavButton.reverse();
+		TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 	    tlBase.seek(8);
 	});
 
@@ -529,8 +588,6 @@
 
 	$(countingTop).mouseover(function(){
         tlNavLeft.play();
-        tlRightBtnAnim.reverse();
-        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 	});
 
 	$(countingTop).mouseleave(function(){
@@ -555,34 +612,49 @@
 	});
 
     $(top1nav).click(function(){
+    	tlRightBtnAnim.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         tlBase.seek(1);
 	});
 
     $(top2nav).click(function(){
+    	tlRightBtnAnim.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 		tlBase.seek(2);
 	});
 
 	$(top3nav).click(function(){
+		tlRightBtnAnim.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 		tlBase.seek(3);
 	});
 
 	$(top4nav).click(function(){
+		tlRightBtnAnim.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 		tlBase.seek(4);
 	});
 
 	$(top5nav).click(function(){
+		tlRightBtnAnim.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 		tlBase.seek(5);
 	});
 
 	$(top6nav).click(function(){
+		tlRightBtnAnim.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 	    tlBase.seek(6);
 	});
 
 	$(top7nav).click(function(){
+		tlRightBtnAnim.reverse();
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 	    tlBase.seek(7);
 	});
 
 	$(top8nav).click(function(){
+        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 	    tlBase.seek(8);
 	});
 
@@ -636,7 +708,6 @@
 
     $(peLab2).click(function(){
     	TweenMax.to(btnSoloLab, 1, {autoAlpha: 1});
-    	TweenMax.to(polyColorSvg, 1, {stroke: 'rgb(17,126,218)', ease:Power0.easeNone}, '-=1');
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -645,7 +716,6 @@
 
     $(peOneRight).click(function(){
     	TweenMax.to(btnSoloScroll, 1, {autoAlpha: 1});
-    	TweenMax.to(polyColorSvg, 1, {stroke: 'rgb(102,187,209)', ease:Power0.easeNone}, '-=1');
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -654,7 +724,6 @@
 
 	$(peTwoRight).click(function(){
 		TweenMax.to(btnSoloDraw, 1, {autoAlpha: 1});
-		TweenMax.to(polyColorSvg, 1, {stroke: 'rgb(168,234,189)', ease:Power0.easeNone}, '-=1');
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -663,7 +732,6 @@
 
     $(peThreeRight).click(function(){
     	TweenMax.to(btnSoloStan, 1, {autoAlpha: 1});
-    	TweenMax.to(polyColorSvg, 1, {stroke: 'rgb(189,204,74)', ease:Power0.easeNone}, '-=1');
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -672,7 +740,6 @@
 
     $(peImiRight).click(function(){
     	TweenMax.to(btnSoloImi, 1, {autoAlpha: 1});
-    	TweenMax.to(polyColorSvg, 1, {stroke: 'rgb(240,208,10)', ease:Power0.easeNone}, '-=1');
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -681,7 +748,6 @@
 
     $(peFwRight).click(function(){
     	TweenMax.to(btnSoloFw, 1, {autoAlpha: 1});
-    	TweenMax.to(polyColorSvg, 1, {stroke: 'rgb(245,184,34)', ease:Power0.easeNone}, '-=1');
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -705,54 +771,67 @@
         tlAnimButtonRight.reverse();
 	});
 
+
+	
+
 //CENTER BUTTON AFTER RIGHT CLICK EVENT
 
 //labolatory to scroll me
 
 	$(btnSoloLab).click(function(){
 		tlBase.play();
+		TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 		tlRightBtnAnim.reverse();
-        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 	});
 
 //scroll me to drawings
 
     $(btnSoloScroll).click(function(){
 		tlBase.play();
+		TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 		tlRightBtnAnim.reverse();
-        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 	});
 
 //drawings to standard
 
     $(btnSoloDraw).click(function(){
 		tlBase.play();
+		TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 		tlRightBtnAnim.reverse();
-        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 	});
 
 //standard to I made it
 
 	$(btnSoloStan).click(function(){
 		tlBase.play();
+		TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 		tlRightBtnAnim.reverse();
-        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 	});
 
 //i made it to familiar with
 
     $(btnSoloImi).click(function(){
 		tlBase.play();
+		TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 		tlRightBtnAnim.reverse();
-        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 	});
 
 //familiar with to contact
 
     $(btnSoloFw).click(function(){
 		tlBase.play();
-		TweenMax.to(btnSvgSolo, 1, {autoAlpha: 0}, '-=1');
-        TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
+		TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
+		TweenMax.to(btnSvgSolo, 1, {autoAlpha: 0});
+	});
+
+	//mouse over and leave animation
+
+	$(btnSoloAll).mouseover(function(){
+        tlAnimButtonAfterClick.play();
+	});
+
+	$(btnSoloAll).mouseleave(function(){
+        tlAnimButtonAfterClick.reverse();
 	});
 
 

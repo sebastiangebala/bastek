@@ -42,24 +42,31 @@ z-index: 1;
 transform: rotate(-90deg);
 }
 
-#last_upadate {visibility: hidden; font-family: 'Oswald'; position: absolute; top: 30px; right: 120px; height: 60px; line-height: 60px; margin: auto; font-size: 15px; color: white;}
+#last_upadate {visibility: hidden; font-family: 'Oswald'; position: absolute; top: 30px; right: 120px; height: 60px; line-height: 60px; margin: auto; font-size: 15px; color: white; z-index: 2;}
 #seb_geb {visibility: hidden; font-family: 'Oswald'; position: absolute; top: 90px; font-size: 15px; left: 8px; color: white;}
 #web_dev {visibility: hidden; font-family: 'Oswald'; position: absolute; bottom: 90px; font-size: 15px; left: 15px; color: white;}
 
 .center_center {display: table-cell; vertical-align: middle}
 
-#intro {margin: auto; margin-left: 15vw; width: 35vw; height: 35vw;}
+#intro {position: relative; margin: auto; margin-left: 15vw; width: 30vw; height: 34vw; z-index: 2;}
 
-/*section1 {
+#main_text {position: absolute; z-index: 2; font-family: 'Oswald'; left: 45vw; max-width: 40vw; color: white; text-align: justify; top: calc(50% - 15vh);}
+
+#section1 { 
+background-image: url('../img/ja.png'); 
+background-size: contain; 
+background-repeat: no-repeat; 
+background-position: center;
 position: absolute;
 left: 0;
 right: 0;
 width: 100%;
 height: 100vh;
-color: red;
-}*/
+visibility: hidden;
+z-index: 1;
+}
 
-
+#poly_8, #poly_9 {visibility: hidden;}
 #path12, #path37, #path58, #path72, #path94, #bastek {visibility: hidden;}
 #poly11, #poly12, #poly13, #poly14 {visibility: hidden;}
 
@@ -114,6 +121,8 @@ right: 0;
 margin: auto;
 width: 150px;
 height: 60px;
+z-index: 10;
+visibility: hidden;
 }
 
 .btn_solo_all {
@@ -149,9 +158,6 @@ z-index: 9;
 #text_right p {margin-left: 9px; color: rgb(3,75,210)}
 
 #btn2 {position: absolute; bottom: 30px; left: 0; right: 0; margin: auto; text-align: center; width: 420px; height: 60px;}
-
-
-
 
 
 
