@@ -146,7 +146,7 @@
 //main record
 
 	tlBase
-		.to(section1, 1, {ease:Power0.easeNone, autoAlpha: 0.4, x: 150})
+		.to(section1, 1, {ease:Power0.easeNone, autoAlpha: 0.125, x: 150})
 		.from(faBars, 1, {y: -50, autoAlpha: 0, ease:Power2.easeOut}, '-=1')
 		.from(btn1, 1, {autoAlpha: 0, ease:Power2.easeOut}, '-=1')
 		.from(btn1Text, 1, {y: 50, autoAlpha: 0, ease:Power2.easeOut}, '-=1')
@@ -289,7 +289,7 @@
 		.to(top7, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 		.to(countingBottom, 1, {borderTop: '1px solid rgb(245,184,34)', ease:Power0.easeNone}, '-=1')
 		.to(drawnLine, 1, {background: 'rgb(245,184,34)', ease:Power0.easeNone}, '-=1')
-		
+
 
 		.to(polyLeft, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
 		.to(polyRight, 1, {drawSVG: '0% 100%', autoAlpha: 1, ease:Power2.easeOut}, '-=1')
@@ -312,7 +312,7 @@
         .to(drawnLineBottomLeft, 1, {width:"50%", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"50%", ease:Power2.easeOut}, '-=1')
 		.to(drawnLine, 1, {background: 'rgb(243,117,3)', ease:Power0.easeNone}, '-=1')
-		
+
 
 		.to(btnSvgSolo, 1, {autoAlpha: 0},'-=1')
 		.to(poly31to34, 1, {autoAlpha: 0}, '-=1')
@@ -350,7 +350,7 @@
         .to(poly7, 0.2, {x: 1, repeat:1, yoyo:true, ease:Linear.easeNone}, '-=0.2')
 		.to(poly7, 0.2, {stroke: "rgb(243,117,3)"}, '-=0.2')
 
-		
+
 
 
 //fa_Bars click event
@@ -368,7 +368,7 @@
         .to(btn1Text, 0.2, {rotationX: 180, repeat:1, yoyo:true, ease:Linear.easeNone}, '-=0.2')
         .to(poly11to14, 0.2, {stroke: "rgb(243,117,3)", ease:Linear.easeNone})
         .to(poly11to14, 0.2, {drawSVG: "0% 100%", ease:Linear.easeNone}, '-=0.2')
-        
+
 
 //next button animation
 
@@ -378,7 +378,7 @@
 		.to(polyLeft, 0.2, {drawSVG: "0% 100%", ease:Linear.easeNone}, '-=0.2')
     	.to(textLeftPe, 0.2, {color: "rgb(243,117,3)", ease:Linear.easeNone}, '-=0.2')
     	.to(textLeftPe, 0.2, {rotationX: 180, repeat:1, yoyo:true, ease:Linear.easeNone}, '-=0.2')
-    	
+
 
     tlAnimButtonRight
     	.to(polyRight, 0.2, {drawSVG: "50% 50%", ease:Linear.easeNone})
@@ -386,7 +386,7 @@
 		.to(polyRight, 0.2, {drawSVG: "0% 100%", ease:Linear.easeNone}, '-=0.2')
     	.to(textRightPe, 0.2, {color: "rgb(243,117,3)", ease:Linear.easeNone}, '-=0.2')
     	.to(textRightPe, 0.2, {rotationX: 180, repeat:1, yoyo:true, ease:Linear.easeNone}, '-=0.2')
-    	
+
 
 
 //Right Button Animation
@@ -410,7 +410,7 @@
     	.to(btnSolo, 0.2, {rotationX: 180, repeat:1, yoyo:true, ease:Linear.easeNone}, '-=0.2')
     	.to(poly31to34, 0.2, {stroke: "rgb(243,117,3)", ease:Linear.easeNone})
 		.to(poly31to34, 0.2, {drawSVG: "0% 100%", ease:Linear.easeNone}, '-=0.2')
-		
+
 
 
 //FUNCTIONS--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -772,7 +772,7 @@
 	});
 
 
-	
+
 
 //CENTER BUTTON AFTER RIGHT CLICK EVENT
 

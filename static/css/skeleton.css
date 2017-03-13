@@ -48,14 +48,24 @@ transform: rotate(-90deg);
 
 .center_center {display: table-cell; vertical-align: middle}
 
-#intro {position: relative; margin: auto; margin-left: 15vw; width: 30vw; height: 34vw; z-index: 2;}
+#intro {position: relative; margin: auto; margin-left: 15vw; width: 26vw; height: 30vw; z-index: 2;}
 
-#main_text {position: absolute; z-index: 2; font-family: 'Oswald'; left: 45vw; max-width: 40vw; color: white; text-align: justify; top: calc(50% - 15vh);}
+#main_text {
+position: relative; 
+margin: auto; 
+z-index: 2; 
+font-family: 'Oswald'; 
+margin-right: 15vw; 
+width: 26vw; 
+color: white; 
+text-align: justify;  
+border-bottom: 1px solid white;
+}
 
-#section1 { 
-background-image: url('../img/ja.png'); 
-background-size: contain; 
-background-repeat: no-repeat; 
+#section1 {
+background-image: url('../img/ja.png');
+background-size: contain;
+background-repeat: no-repeat;
 background-position: center;
 position: absolute;
 left: 0;
@@ -74,6 +84,105 @@ z-index: 1;
 /*seconde page (section_2)*/
 
 #sec2_wrap {position: absolute; display: table; top: 100%; width: 100%; height: 100vh}
+
+.desktop {
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+position: absolute;
+bottom: 20vh;
+}
+
+#desk {
+background-image: url('../img/desk.png');
+left: 15vw;
+width: 72vh;
+height: 60.19vh;
+z-index: 1;
+}
+
+#desk_wrap {
+width: 72vh;
+height: 46.19vh;
+left: 15vw;
+bottom: 34vh;
+position: absolute;
+background: blue;
+border-radius: 7pt;
+}
+
+#red_desk_click {
+position: absolute;
+left: 34.7vh;
+bottom: 11vh;
+z-index: 2;
+width: 2.7vh;
+height: 2.7vh;
+background: black;
+border-radius: 100%;
+border: 1px solid blue;
+}
+
+#tablet {
+background-image: url('../img/tablet.png');
+left: 10vw;
+width: 18.83vh;
+height: 23.99vh;
+z-index: 3;
+}
+
+#tablet_wrap {
+width: 18.8vh;
+height: 20.99vh;
+left: 10vw;
+bottom: 22vh;
+position: absolute;
+background: blue;
+border-radius: 7pt;
+z-index: 2;
+}
+
+#red_tablet_click {
+position: absolute;
+left: 8.4vh;
+bottom: 0.2vh;
+z-index: 2;
+width: 2vh;
+height: 2vh;
+background: black;
+border-radius: 100%;
+border: 1px solid blue;
+}
+
+#phone {
+background-image: url('../img/phone.png');
+left: 8vw;
+width: 6.82vh;
+height: 11.99vh;
+z-index: 5;
+}
+
+#phone_wrap {
+left: 8vw;
+width: 6.82vh;
+height: 10vh;
+bottom: 21vh;
+position: absolute;
+background: blue;
+z-index: 4;
+}
+
+#red_phone_click {
+position: absolute;
+left: 2.8vh;
+bottom: 0.1vh;
+z-index: 2;
+width: 1vh;
+height: 1vh;
+background: black;
+border-radius: 100%;
+border: 1px solid blue;
+}
 
 
 /*contact (section_3)*/
@@ -136,7 +245,6 @@ visibility: hidden;
 cursor: pointer;
 z-index: 15;
 }
-
 
 
 #btn_svg_solo {
@@ -209,6 +317,26 @@ z-index: 2;
 
 
 
+/*small Desktop*/
+@media (min-width: 992px) and (max-width: 1200px) {
+
+
+}
+
+
+/*iPad*/
+@media (min-width: 768px) and (max-width: 992px) {
+
+
+}
+
+
+
+/*iPhone*/
+@media only screen and (max-width: 768px) {
+
+
+}
 
 
 
