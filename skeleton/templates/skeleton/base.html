@@ -19,7 +19,6 @@
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
         <script src="{% static "jquery/modernizr-2.8.3-respond-1.4.2.min.js" %}"></script>
-        <script src="https://use.fontawesome.com/116e10d08c.js"></script>
     </head>
 
 
@@ -43,15 +42,15 @@
 
 <!--section_1 -->
 
-	<div id="fa-bars">
+	<div style="visibility:hidden" id="fa-bars">
 	    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7">
-	        <polyline class="poly poly_color" points="0,0 7,0" style="stroke:rgb(3,75,210);stroke-width:0.2" />
-	        <polyline class="poly poly_color" points="7,0 7,7" style="stroke:rgb(3,75,210);stroke-width:0.2" />
-	        <polyline class="poly poly_color" points="7,7 0,7" style="stroke:rgb(3,75,210);stroke-width:0.2" />
-	        <polyline class="poly poly_color" points="0,7 0,0" style="stroke:rgb(3,75,210);stroke-width:0.2" />
-	        <polyline class="poly_black" id="poly_5" points="1,2 6,2" style="stroke:rgb(3,75,210);stroke-width:0.7" />
-	        <polyline class="poly_black" id="poly_6" points="1,3.5 6,3.5" style="stroke:rgb(17,126,218);stroke-width:0.7" />
-	        <polyline class="poly_black" id="poly_7" points="1,5 6,5" style="stroke:rgb(102,187,209);stroke-width:0.7" />
+	        <polyline class="poly poly_color" points="0,0 7,0" style="stroke:rgb(3,75,210);stroke-width:0.5" />
+	        <polyline class="poly poly_color" points="7,0 7,7" style="stroke:rgb(3,75,210);stroke-width:0.5" />
+	        <polyline class="poly poly_color" points="7,7 0,7" style="stroke:rgb(3,75,210);stroke-width:0.5" />
+	        <polyline class="poly poly_color" points="0,7 0,0" style="stroke:rgb(3,75,210);stroke-width:0.5" />
+	        <polyline class="poly_black" id="poly_5" points="1,2 6,2" style="stroke:rgb(17,126,218);stroke-width:0.7" />
+	        <polyline class="poly_black" id="poly_6" points="1,3.5 6,3.5" style="stroke:rgb(102,187,209);stroke-width:0.7" />
+	        <polyline class="poly_black" id="poly_7" points="1,5 6,5" style="stroke:rgb(17,126,218);stroke-width:0.7" />
 	        <polyline class="poly_black" id="poly_8" points="2,2 5,5" style="stroke:rgb(102,187,209);stroke-width:0.7" />
 	        <polyline class="poly_black" id="poly_9" points="2,5 5,2" style="stroke:rgb(102,187,209);stroke-width:0.7" />
 	    </svg>
@@ -70,15 +69,11 @@
 	    	    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 700">
 	    					<defs>
 	    					    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-	    					      <stop offset="0%" style="stop-color:rgb(2,8,32);stop-opacity:1" />
-	    					      <stop offset="12.5%" style="stop-color:rgb(3,75,210);stop-opacity:1" />
-	    					      <stop offset="25%" style="stop-color:rgb(17,126,218);stop-opacity:1" />
-	    					      <stop offset="37.5%" style="stop-color:rgb(102,187,209);stop-opacity:1" />
-	    					      <stop offset="50%" style="stop-color:rgb(168,234,189);stop-opacity:1" />
-	    					      <stop offset="62.5%" style="stop-color:rgb(189,204,74);stop-opacity:1" />
-	    					      <stop offset="75%" style="stop-color:rgb(240,208,10);stop-opacity:1" />
-	    					      <stop offset="87.5%" style="stop-color:rgb(245,184,34);stop-opacity:1" />
-	    					      <stop offset="100%" style="stop-color:rgb(243,117,3);stop-opacity:1" />
+	    					      <stop offset="0%" style="stop-color:rgb(139,69,19);stop-opacity:1" />
+	    					      <stop offset="25%" style="stop-color:rgb(218,165,32);stop-opacity:1" />
+	    					      <stop offset="50%" style="stop-color:rgb(255,215,0);stop-opacity:1" />
+	    					      <stop offset="75%" style="stop-color:rgb(218,165,32);stop-opacity:1" />
+	    					      <stop offset="100%" style="stop-color:rgb(139,69,19);stop-opacity:1" />
 	    					    </linearGradient>
 	    					  </defs>
 	    					<path
@@ -109,17 +104,7 @@
 
         <div id='section1'></div>
 
-        <div id="btn1_svg_hold">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 6">
-                <polyline id="poly11" points="0,0 15,0" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-                <polyline id="poly12" points="15,0 15,6" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-                <polyline id="poly13" points="15,6 0,6" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-                <polyline id="poly14" points="0,6 0,0" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-            </svg>
-        </div>
-
-
-		<div id="btn1">
+		<div style="visibility:hidden" id="btn1">
             <p id="btn1_text">Explore!</p>
 	    </div>
 
@@ -132,36 +117,81 @@
 <!--section_2-->
 
 	<div id="sec2_wrap">
-		<div id="desk" class="desktop"><div id="red_desk_click"></div></div>
-		<div id="tablet" class="desktop"><div id="red_tablet_click"></div></div>
-		<div id="phone" class="desktop"><div id="red_phone_click"></div></div>
-		<div id="desk_wrap"></div>
-		<div id="tablet_wrap"></div>
-		<div id="phone_wrap"></div>
-		
-		
-		
+		<div style="visibility:hidden" id="desk" class="desktop"><div id="red_desk_click"></div></div>
+		<div style="visibility:hidden" id="tablet" class="desktop"><div id="red_tablet_click"></div></div>
+		<div style="visibility:hidden" id="phone"><div id="red_phone_click"></div></div>
+
+		<div style="visibility:hidden; font-size:200px" id="desk_wrap_scroll" class="desk_wrap_common scrollContainer">
+		    <div id="paralax_img_desk"></div>
+		    <div id="desk_wrap_scroll_desk">a b c d e f g h j k l</div>
+		</div>
+		<div style="visibility:hidden; font-size:150px" id="tablet_wrap_scroll" class="tablet_wrap_common">
+		    <div id="paralax_img_tablet"></div>
+		    <div id="desk_wrap_scroll_tablet">a b c d e f g h j k l</div>
+		</div>
+		<div style="visibility:hidden" id="phone_wrap_scroll" class="phone_wrap_common"></div>
+
+		<div style="visibility:hidden" id="desk_wrap_draw" class="desk_wrap_common">
+			<div style="visibility:hidden" class= "desk_wrap_stan_img_common" id="chat1"></div>
+			<div style="visibility:hidden" class= "desk_wrap_stan_img_common" id="chat2"></div>
+			<div style="visibility:hidden" class= "desk_wrap_stan_img_common" id="chat3"></div>
+		</div>
+		<div style="visibility:hidden" id="tablet_wrap_draw" class="tablet_wrap_common">
+			<div style="visibility:hidden" class= "tablet_wrap_stan_img_common" id="chat4"></div>
+			<div style="visibility:hidden" class= "tablet_wrap_stan_img_common" id="chat5"></div>
+			<div style="visibility:hidden" class= "tablet_wrap_stan_img_common" id="chat6"></div>
+		</div>
+		<div style="visibility:hidden" id="phone_wrap_draw" class="phone_wrap_common">
+			<div style="visibility:hidden" class= "phone_wrap_stan_img_common" id="chat7"></div>
+			<div style="visibility:hidden" class= "phone_wrap_stan_img_common" id="chat8"></div>
+			<div style="visibility:hidden" class= "phone_wrap_stan_img_common" id="chat9"></div>
+		</div>
+
+		<div style="visibility:hidden" id="desk_wrap_stan" class="desk_wrap_common">
+			<div class='desk_wrap_stan_img_common waves_3'></div>
+			<div class='desk_wrap_stan_img_common monster_1'></div>
+			<div class='desk_wrap_stan_img_common waves_2'></div>
+			<div class='desk_wrap_stan_img_common monstersea'></div>
+			<div class='desk_wrap_stan_img_common waves_1'></div>
+		</div>
+		<div style="visibility:hidden" id="tablet_wrap_stan" class="tablet_wrap_common">
+			<div class='tablet_wrap_stan_img_common waves_6'></div>
+			<div class='tablet_wrap_stan_img_common monster_1'></div>
+			<div class='tablet_wrap_stan_img_common waves_5'></div>
+			<div class='tablet_wrap_stan_img_common monstersea_tablet'></div>
+			<div class='tablet_wrap_stan_img_common waves_4'></div>
+		</div>
+		<div style="visibility:hidden" id="phone_wrap_stan" class="phone_wrap_common">
+			<div class='phone_wrap_stan_img_common waves_9'></div>
+			<div class='phone_wrap_stan_img_common monster_1'></div>
+			<div class='phone_wrap_stan_img_common waves_8'></div>
+			<div class='phone_wrap_stan_img_common monstersea_phone'></div>
+			<div class='phone_wrap_stan_img_common waves_7'></div>
+		</div>
+
+
+
 	</div>
 
 <!--section_3-->
 
-<div id="contact_wrap"><section id="section3"></section></div>
+<div id="contact_wrap"><section id="section3">
+
+	<div id="icon_wrap">
+		<div class="icon_saize" id="icon_python"></div>
+		<div class="icon_saize" id="icon_js"></div>
+		<div class="icon_saize" id="icon_django"></div>
+		<div class="icon_saize" id="icon_jquery"></div>
+		<div class="icon_saize" id="icon_gs"></div>
+		<div class="icon_saize" id="icon_css"></div>
+		<div class="icon_saize" id="icon_html"></div>
+	</div>
+	
+	<div id='drawn_line_center'></div>
+
+</section></div>
 
 <!--basic frame-->
-
-
-<div id="btn2">
-            <svg viewBox="0 0 42 6">
-              <polyline class="poly_color" id="poly21" points="0,0 20,0" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-              <polyline class="poly_color" id="poly22" points="20,0 20,6" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-              <polyline class="poly_color" id="poly23" points="20,6 0,6" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-              <polyline class="poly_color" id="poly24" points="0,6 0,0" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-              <polyline class="poly_color" id="poly25" points="22,0 42,0" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-              <polyline class="poly_color" id="poly26" points="42,0 42,6" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-              <polyline class="poly_color" id="poly27" points="42,6 22,6" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-              <polyline class="poly_color" id="poly28" points="22,6 22,0" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-            </svg>
-        </div>
 
 	    <div class="btn_wrap">
 	        <div id="text_left">
@@ -183,16 +213,6 @@
                     <p id="pe_fw_right">Good skills man!</p>
 	        </div>
 	    </div>
-
-		<div id="btn_svg_solo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 6">
-                <polyline class="poly_color_svg" id="poly31" points="0,0 15,0" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-                <polyline class="poly_color_svg" id="poly32" points="15,0 15,6" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-                <polyline class="poly_color_svg" id="poly33" points="15,6 0,6" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-                <polyline class="poly_color_svg" id="poly34" points="0,6 0,0" style="fill:none;stroke:rgb(3,75,210);stroke-width:0.2" />
-            </svg>
-        </div>
-
 
 		<div id="btn_solo">
             <p class="btn_solo_all" id="btn_solo_lab">next Lab</p>
@@ -256,16 +276,25 @@
 
 
 
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js
         "></script>
 
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
         <script src="{% static "jquery/DrawSVGPlugin.js" %}"></script>
         <script src="{% static "jquery/MorphSVGPlugin.js" %}"></script>
         <script src="{% static "jquery/skeleton.js" %}"></script>
+
+
+
 
     </body>
 </html>

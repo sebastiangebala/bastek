@@ -50,16 +50,37 @@ transform: rotate(-90deg);
 
 #intro {position: relative; margin: auto; margin-left: 15vw; width: 26vw; height: 30vw; z-index: 2;}
 
+#btn1 {
+position: absolute;
+bottom: 30px;
+left: 0;
+right: 0;
+margin: auto;
+width: 150px;
+height: 60px;
+z-index: 10;
+cursor: pointer;
+border: 3px solid rgb(3,75,210);
+}
+
+#btn1_text {
+margin: auto;
+color: rgb(102,187,209);
+text-align: center;
+line-height: 60px;
+text-shadow: 0 0 2px black;
+}
+
 #main_text {
-position: relative; 
-margin: auto; 
-z-index: 2; 
-font-family: 'Oswald'; 
-margin-right: 15vw; 
-width: 26vw; 
-color: white; 
-text-align: justify;  
-border-bottom: 1px solid white;
+position: relative;
+margin: auto;
+z-index: 2;
+font-family: 'Oswald';
+margin-right: 15vw;
+width: 26vw;
+color: white;
+text-align: justify;
+border-bottom: 3px solid rgb(255,215,0);
 }
 
 #section1 {
@@ -83,7 +104,12 @@ z-index: 1;
 
 /*seconde page (section_2)*/
 
-#sec2_wrap {position: absolute; display: table; top: 100%; width: 100%; height: 100vh}
+#sec2_wrap {position: absolute; display: table; top: 100%; width: 100%; height: 100vh; 
+background-image: url('../img/passenger.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
 
 .desktop {
 background-size: contain;
@@ -92,23 +118,49 @@ background-position: center;
 position: absolute;
 bottom: 20vh;
 }
+#phone {
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+position: absolute;
+bottom: 20vh;
+}
+
+.desk_wrap_common {
+position: absolute;
+margin-left: 3vh;
+left: 30vh;
+bottom: 33.9vh;
+width: 66.4vh;
+height: 43.45vh;
+background: white;
+}
+
+.tablet_wrap_common {
+width: 16.7vh;
+height: 19.5vh;
+left: 21.3vh;
+bottom: 22.4vh;
+position: absolute;
+z-index: 2;
+background: white;
+}
+.phone_wrap_common {
+left: 16vh;
+width: 6.82vh;
+height: 10vh;
+bottom: 21vh;
+position: absolute;
+z-index: 4;
+background: white;
+}
 
 #desk {
 background-image: url('../img/desk.png');
-left: 15vw;
+left: 30vh;
 width: 72vh;
 height: 60.19vh;
 z-index: 1;
-}
-
-#desk_wrap {
-width: 72vh;
-height: 46.19vh;
-left: 15vw;
-bottom: 34vh;
-position: absolute;
-background: blue;
-border-radius: 7pt;
 }
 
 #red_desk_click {
@@ -121,25 +173,15 @@ height: 2.7vh;
 background: black;
 border-radius: 100%;
 border: 1px solid blue;
+cursor: pointer;
 }
 
 #tablet {
 background-image: url('../img/tablet.png');
-left: 10vw;
+left: 20vh;
 width: 18.83vh;
 height: 23.99vh;
 z-index: 3;
-}
-
-#tablet_wrap {
-width: 18.8vh;
-height: 20.99vh;
-left: 10vw;
-bottom: 22vh;
-position: absolute;
-background: blue;
-border-radius: 7pt;
-z-index: 2;
 }
 
 #red_tablet_click {
@@ -152,24 +194,15 @@ height: 2vh;
 background: black;
 border-radius: 100%;
 border: 1px solid blue;
+cursor: pointer;
 }
 
 #phone {
 background-image: url('../img/phone.png');
-left: 8vw;
+left: 16vh;
 width: 6.82vh;
 height: 11.99vh;
 z-index: 5;
-}
-
-#phone_wrap {
-left: 8vw;
-width: 6.82vh;
-height: 10vh;
-bottom: 21vh;
-position: absolute;
-background: blue;
-z-index: 4;
 }
 
 #red_phone_click {
@@ -182,45 +215,218 @@ height: 1vh;
 background: black;
 border-radius: 100%;
 border: 1px solid blue;
+cursor: pointer;
 }
 
+#desk_wrap_scroll {
+overflow-y: scroll;
+overflow-x: hidden;
+z-index: 1;
+}
+
+#paralax_img_desk {
+height: 50vh;
+background-image: url('../img/saint-tropez.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+#chat1 {
+background-image: url('../img/eyes1.png');
+}
+
+#chat2 {
+background-image: url('../img/eyes.png');
+}
+
+#chat3 {
+background-image: url('../img/chat.jpg');
+}
+
+#chat4 {
+background-image: url('../img/eyes1.png');
+}
+
+#chat5 {
+background-image: url('../img/eyes.png');
+}
+
+#chat6 {
+background-image: url('../img/chat.jpg');
+}
+
+#chat7 {
+background-image: url('../img/eyes1.png');
+}
+
+#chat8 {
+background-image: url('../img/eyes.png');
+}
+
+#chat9 {
+background-image: url('../img/chat.jpg');
+}
+
+#desk_wrap_draw {
+background: white;
+}
+
+#desk_wrap_stan {
+overflow: hidden;
+background: #ede26b;
+}
+
+.desk_wrap_stan_img_common {
+position: absolute;
+width: 66.4vh;
+height: 43.25vh;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.tablet_wrap_stan_img_common {
+position: absolute;
+width: 16.7vh;
+height: 19.5vh;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.phone_wrap_stan_img_common {
+position: absolute;
+width: 6.82vh;
+height: 10vh;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.monster_1 {
+background-image: url('../img/monster.png');
+}
+
+.monstersea, .monstersea_tablet, .monstersea_phone {
+background-image: url('../img/monstersea.png');
+background-size: contain;
+}
+
+.waves_1 {
+background-image: url('../img/waves.png');
+}
+
+.waves_2 {
+background-image: url('../img/waves.png');
+bottom: 5vh;
+}
+
+.waves_3 {
+background-image: url('../img/waves.png');
+bottom: 10vh;
+}
+
+.waves_4 {
+background-image: url('../img/waves.png');
+}
+
+.waves_5 {
+background-image: url('../img/waves.png');
+bottom: 2vh;
+}
+
+.waves_6 {
+background-image: url('../img/waves.png');
+bottom: 4vh;
+}
+
+.waves_7 {
+background-image: url('../img/waves.png');
+}
+
+.waves_8 {
+background-image: url('../img/waves.png');
+bottom: 1vh;
+}
+
+.waves_9 {
+background-image: url('../img/waves.png');
+bottom: 2vh;
+}
+
+#tablet_wrap_scroll {
+overflow-y: scroll;
+overflow-x: hidden;
+z-index: 3;
+}
+
+#paralax_img_tablet {
+height: 22vh;
+background-image: url('../img/saint-tropez.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+#desk_wrap_scroll_tablet {
+background: white;
+}
+
+#tablet_wrap_draw {
+margin-left: 1.2vh;
+background: white;
+}
+
+#tablet_wrap_stan {
+overflow: hidden;
+background: #ede26b;
+}
+
+#phone_wrap_scroll {
+background: blue;
+}
+
+#phone_wrap_draw {
+background: white;
+}
+
+#phone_wrap_stan {
+overflow: hidden;
+background: #ede26b;
+}
 
 /*contact (section_3)*/
 #contact_wrap {position: absolute; top: 100%; width: 100%; height: 100vh; background: #040009;}
+#icon_wrap {
+position: absolute;
+width: calc(50vw - 60px);
+height: calc(100vh - 60px - 60px);
+top: 60px;
+left: 60px;
+}
+.icon_saize {
+position: relative;
+width: 30%;
+height: 22vh;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+display: inline-block;
+margin-top: 20px;
+margin-left: 10px;
+}
+#icon_python {background-image: url('../img/python.png')}
+#icon_django {background-image: url('../img/django.png')}
+#icon_gs {background-image: url('../img/gs.png')}
+#icon_js {background-image: url('../img/js.png')}
+#icon_css {background-image: url('../img/css.png')}
+#icon_html {background-image: url('../img/html.png')}
+#icon_jquery {background-image: url('../img/jquery.png')}
 
 
 /*basic web frame*/
 
-#btn1 {
-position: absolute;
-bottom: 30px;
-left: 0;
-right: 0;
-margin: auto;
-width: 150px;
-height: 60px;
-z-index: 10;
-cursor: pointer;
-}
-
-#btn1_text {
-margin: auto;
-color: rgb(3,75,210);
-text-align: center;
-line-height: 60px;
-}
-
-
-#btn1_svg_hold {
-position: absolute;
-bottom: 30px;
-left: 0;
-right: 0;
-margin: auto;
-width: 150px;
-height: 60px;
-z-index: 9;
-}
 
 #btn_solo {
 position: absolute;
@@ -232,44 +438,30 @@ width: 150px;
 height: 60px;
 z-index: 10;
 visibility: hidden;
+border: 3px solid rgb(17,126,218);
 }
 
 .btn_solo_all {
 position: absolute;
 width: 150px;
 margin: auto;
-color: rgb(3,75,210);
+color: rgb(102,187,209);
 text-align: center;
 line-height: 60px;
 visibility: hidden;
 cursor: pointer;
 z-index: 15;
-}
-
-
-#btn_svg_solo {
-visibility: hidden;
-position: absolute;
-bottom: 30px;
-left: 0;
-right: 0;
-margin: auto;
-width: 150px;
-height: 60px;
-z-index: 9;
+text-shadow: 0 0 2px black;
 }
 
 .btn_wrap {position: absolute; bottom: 30px; text-align: center; width: 100%; height: 60px;}
-.btn_wrap div {display: inline-block; width: 200px; height: 60px;}
-.btn_wrap div p {visibility: hidden; z-index: 1; position: absolute; width: 200px; margin: auto; text-align: center; line-height: 60px; cursor: pointer;}
-#text_left p {margin-left: -9px; color: rgb(3,75,210)}
-#text_right p {margin-left: 9px; color: rgb(3,75,210)}
+.btn_wrap div {display: inline-block; width: 200px; height: 60px; border: 3px solid rgb(17,126,218); margin-left: 5px; margin-right: 5px;}
+.btn_wrap div p {visibility: hidden; z-index: 1; position: absolute; text-shadow: 0 0 2px black; width: 200px; margin: auto; text-align: center; line-height: 60px; cursor: pointer;}
+#text_left p {color: rgb(102,187,209)}
+#text_right p {color: rgb(102,187,209)}
 
 #btn2 {position: absolute; bottom: 30px; left: 0; right: 0; margin: auto; text-align: center; width: 420px; height: 60px;}
 
-
-
-#title_wrap {}
 #title_wrap p {position: fixed; top: 30px; left: 100px; width: 200px; height: 60px; visibility: hidden; line-height: 60px; text-align: center; margin: 0px;}
 
 #counting_top {
@@ -279,15 +471,21 @@ top: calc(50% - 45px);
 bottom: calc(50%);
 z-index: 2;
 }
-.top_all {cursor: pointer}
-.top_all:nth-child(16) {color: rgb(243,117,3)}
-.top_all:nth-child(15) {color: rgb(245,184,34)}
-.top_all:nth-child(14) {color: rgb(240,208,10)}
-.top_all:nth-child(13) {color: rgb(189,204,74)}
-.top_all:nth-child(12) {color: rgb(168,234,189)}
-.top_all:nth-child(11) {color: rgb(102,187,209)}
-.top_all:nth-child(10) {color: rgb(17,126,218)}
-.top_all:nth-child(9) {color: rgb(3,75,210)}
+.top_all {
+cursor: pointer; 
+border-radius: 100%; 
+height: 30px;
+line-height: 30px !important;
+background-color: black
+}
+.top_all:nth-child(16) {color: rgb(3,75,210); border: 3px solid rgb(3,75,210)}
+.top_all:nth-child(15) {color: rgb(17,126,218); border: 3px solid rgb(17,126,218)}
+.top_all:nth-child(14) {color: rgb(17,126,218); border: 3px solid rgb(17,126,218)}
+.top_all:nth-child(13) {color: rgb(102,187,209); border: 3px solid rgb(102,187,209)}
+.top_all:nth-child(12) {color: rgb(102,187,209); border: 3px solid rgb(102,187,209)}
+.top_all:nth-child(11) {color: rgb(17,126,218); border: 3px solid rgb(17,126,218)}
+.top_all:nth-child(10) {color: rgb(17,126,218); border: 3px solid rgb(17,126,218)}
+.top_all:nth-child(9) {color: rgb(3,75,210); border: 3px solid rgb(3,75,210)}
 
 
 #counting_bottom {
@@ -296,22 +494,27 @@ position: fixed;
 left: 45px;
 top: calc(50%);
 bottom: calc(50% - 45px);
-border-top: 1px solid white;
+border-top: 3px solid white;
 z-index: 2;
 }
 #counting_top p {visibility: hidden; position: absolute; line-height: 45px; margin: auto; text-align: center; width: 30px;}
 #counting_bottom p {visibility: hidden; line-height: 45px; margin: auto; text-align: center; width: 30px;}
 .top_all_stat_num {color: rgb(3,75,210)}
 
-.drawn_line {visibility: hidden;}
-#drawn_line_left_top {position: fixed; left: 60px; top: 60px; width: 1px; height: calc(50% - 60px * 1.75);}
-#drawn_line_left_bottom {position: fixed; left: 60px; bottom: 60px; width: 1px; height: calc(50% - 60px * 1.75);}
-#drawn_line_top_right {position: fixed; top: 60px; left: 300px; right: 120px; height: 1px;}
-#drawn_line_top_left {position: fixed; left: 60px; top: 60px; height: 1px; width: calc(240px - 200px);}
-#drawn_line_bottom_left {position: fixed; left: 60px; bottom: 60px; height: 1px; width: calc(50% - 200px * 1.5);}
-#drawn_line_bottom_right {position: fixed; bottom: 60px; right: 60px; height: 1px; width: calc(50% - 200px * 1.5);}
-#drawn_line_right {position: fixed; right: 60px; bottom: 60px; width: 1px; height: calc(100% - 90px * 2);}
-
+.drawn_line {visibility: hidden; background: black;}
+#drawn_line_left_top {position: fixed; left: 60px; top: 60px; width: 3px; height: calc(50% - 60px * 1.75);}
+#drawn_line_left_bottom {position: fixed; left: 60px; bottom: 60px; width: 3px; height: calc(50% - 60px * 1.75);}
+#drawn_line_top_right {position: fixed; top: 60px; left: 300px; right: 120px; height: 3px;}
+#drawn_line_top_left {position: fixed; left: 60px; top: 60px; height: 3px; width: calc(240px - 200px);}
+#drawn_line_bottom_left {position: fixed; left: 60px; bottom: 60px; height: 3px; width: calc(50% - 200px * 1.5);}
+#drawn_line_bottom_right {position: fixed; bottom: 60px; right: 60px; height: 3px; width: calc(50% - 200px * 1.5);}
+#drawn_line_right {position: fixed; right: 60px; bottom: 60px; width: 3px; height: calc(100% - 90px * 2);}
+#drawn_line_center {visibility: hidden; background: white;
+position: absolute;
+right: 50vw;
+bottom: calc(120px);
+width: 3px;
+height: calc(100% - 120px * 2);}
 
 
 
