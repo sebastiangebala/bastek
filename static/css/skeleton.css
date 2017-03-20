@@ -8,6 +8,10 @@ overflow-x: hidden;
 overflow-y: hidden;
 }
 
+a:link {
+outline:none;
+}
+
 p {color: white;}
 
 .linear {background: linear-gradient(to top left,  rgb(243,117,3), rgb(240,208,10), rgb(168,234,189), rgb(17,126,218), rgb(3,75,210), rgb(2,8,32))}
@@ -397,8 +401,10 @@ background: #ede26b;
 }
 
 /*contact (section_3)*/
+
+
 #contact_wrap {position: absolute; top: 100%; width: 100%; height: 100vh; background: #040009;}
-#icon_wrap {
+#icon_wrap_fw {
 position: absolute;
 width: calc(50vw - 60px);
 height: calc(100vh - 60px - 60px);
@@ -424,9 +430,36 @@ margin-left: 10px;
 #icon_html {background-image: url('../img/html.png')}
 #icon_jquery {background-image: url('../img/jquery.png')}
 
+#icon_wrap_imi {
+position: absolute;
+width: calc(50vw - 60px);
+height: calc(100vh - 60px - 60px);
+top: 60px;
+left: 60px;
+}
+
+#icon_toole {background-image: url('../img/toole.png'); cursor: pointer;}
+#icon_cpk {background-image: url('../img/cpk.png'); cursor: pointer;}
 
 /*basic web frame*/
 
+#text_wrap_right {
+position: fixed;
+width: calc(50vw - 60px);
+height: calc(100vh - 60px - 60px * 2);
+top: 60px;
+left: 50vw;
+}
+
+.right_text {position: absolute; font-size: 25px; color: white; padding: 60px; padding-top: 30px;}
+
+#text_right_lab {visibility: hidden;}
+#text_right_scroll {visibility: hidden;}
+#text_right_draw {visibility: hidden;}
+#text_right_stan {visibility: hidden;}
+#text_right_imi {visibility: hidden;}
+#text_right_fw {visibility: hidden;}
+#text_right_contact {visibility: hidden;}
 
 #btn_solo {
 position: absolute;

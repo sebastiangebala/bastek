@@ -149,6 +149,17 @@
 		peFwLeft = $('#pe_fw_left'),
 		peFwRight = $('#pe_fw_right'),
 
+		textRightLab = $('#text_right_lab'),
+		textRightScroll = $('#text_right_scroll'),
+		textRightDraw = $('#text_right_draw'),
+		textRightStan = $('#text_right_stan'),
+		textRightImi = $('#text_right_imi'),
+		textRightFw = $('#text_right_fw'),
+		textRightContact = $('#text_right_contact'),
+
+		iconWrapFw = $('#icon_wrap_fw'),
+		iconWrapImi = $('#icon_wrap_imi'),
+
 		drawnLineLeftTop = $('#drawn_line_left_top'),
 		drawnLineBottomLeft = $('#drawn_line_bottom_left'),
 		drawnLineBottomRight = $('#drawn_line_bottom_right'),
@@ -222,6 +233,7 @@
 
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
+		.to(textRightLab, 1, {autoAlpha: 1}, '-=1')
 
 		.addPause()
         .to(peLab, 1, {autoAlpha: 0})
@@ -244,6 +256,9 @@
 		.from(tablet, 1, {left: '10vh', ease:Power0.easeNone}, '-=1')
 		.from(deskWrapScroll, 1, {left: '60vh', ease:Power0.easeNone}, '-=1')
 		.from(tabletWrapScroll, 1, {left: '10vh', ease:Power0.easeNone}, '-=1')
+
+		.to(textRightLab, 1, {autoAlpha: 0}, '-=1')
+		.to(textRightScroll, 1, {autoAlpha: 1}, '-=1')
 
         .addPause()
         .to(peOneLeft, 1, {autoAlpha: 0})
@@ -271,7 +286,8 @@
 		.to(tabletWrapStan, 1, {left: '90vh', ease:Power0.easeNone}, '-=1')
 		.to(phoneWrapStan, 1, {left: '105vh', ease:Power0.easeNone, onComplete:loadChatAnim}, '-=1')
 
-		
+		.to(textRightScroll, 1, {autoAlpha: 0}, '-=1')
+		.to(textRightDraw, 1, {autoAlpha: 1}, '-=1')
 
         .addPause()
         .to(peTwoLeft, 1, {autoAlpha: 0})
@@ -297,6 +313,9 @@
 		.to(tabletWrapDraw, 1, {left: '105vh', ease:Power0.easeNone}, '-=1')
 		.to(phoneWrapDraw, 1, {left: '100vh', ease:Power0.easeNone, onComplete:loadMonsterAnim}, '-=1')
 
+		.to(textRightDraw, 1, {autoAlpha: 0}, '-=1')
+		.to(textRightStan, 1, {autoAlpha: 1}, '-=1')
+
         .addPause()
         .to(sec1Wrap, 1, {y: "-100%", ease:Power4.easeOut})
 		.to(sec2Wrap, 1, {y: "-200%", ease:Power4.easeOut}, '-=1')
@@ -318,7 +337,11 @@
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineCenter, 1, {autoAlpha: 1, ease:Power2.easeOut}, '-=1')
-		
+
+		.to(iconWrapImi, 1, {autoAlpha: 1}, "-=1")
+
+		.to(textRightStan, 1, {autoAlpha: 0}, '-=1')
+		.to(textRightImi, 1, {autoAlpha: 1}, '-=1')
 
         .addPause()
         .to(peImiLeft, 1, {autoAlpha: 0})
@@ -335,6 +358,12 @@
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 
+		.to(iconWrapImi, 1, {autoAlpha: 0}, "-=1")
+        .to(iconWrapFw, 1, {autoAlpha: 1}, "-=1")
+
+        .to(textRightImi, 1, {autoAlpha: 0}, '-=1')
+		.to(textRightFw, 1, {autoAlpha: 1}, '-=1')
+
         .addPause()
         .to(peFwLeft, 1, {autoAlpha: 0})
         .to(peFwRight, 1, {autoAlpha: 0}, '-=1')
@@ -348,6 +377,10 @@
 		.to(drawnLineBottomRight, 1, {width:"50%", ease:Power2.easeOut}, '-=1')
 		.to(textLeft, 1, {autoAlpha: 0}, '-=1')
 		.to(textRight, 1, {autoAlpha: 0}, '-=1')
+		.to(iconWrapFw, 1, {autoAlpha: 0}, "-=1")
+
+		.to(textRightFw, 1, {autoAlpha: 0}, '-=1')
+		.to(textRightContact, 1, {autoAlpha: 1}, '-=1')
 
 
 //nav handler

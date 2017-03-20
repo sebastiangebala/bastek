@@ -177,7 +177,7 @@
 
 <div id="contact_wrap"><section id="section3">
 
-	<div id="icon_wrap">
+	<div style="visibility:hidden" id="icon_wrap_fw">
 		<div class="icon_saize" id="icon_python"></div>
 		<div class="icon_saize" id="icon_js"></div>
 		<div class="icon_saize" id="icon_django"></div>
@@ -185,6 +185,11 @@
 		<div class="icon_saize" id="icon_gs"></div>
 		<div class="icon_saize" id="icon_css"></div>
 		<div class="icon_saize" id="icon_html"></div>
+	</div>
+
+	<div style="visibility:hidden" id="icon_wrap_imi">
+		<a href="http://toole.pl" target="_blank"><div class="icon_saize" id="icon_toole"></div></a>
+		<a href="http://pomocdlakobiet.cpk.org.pl" target="_blank"><div class="icon_saize" id="icon_cpk"></div></a>
 	</div>
 	
 	<div id='drawn_line_center'></div>
@@ -213,6 +218,16 @@
                     <p id="pe_fw_right">Good skills man!</p>
 	        </div>
 	    </div>
+
+	    <div id="text_wrap_right">
+	    	<p class="right_text" id="text_right_lab">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    	<p class="right_text" id="text_right_scroll">scroll Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    	<p class="right_text" id="text_right_draw">drawing Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    	<p class="right_text" id="text_right_stan">standard Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    	<p class="right_text" id="text_right_imi">I made it Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    	<p class="right_text" id="text_right_fw">Familiar with Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    	<p class="right_text" id="text_right_contact">Contact Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
 
 		<div id="btn_solo">
             <p class="btn_solo_all" id="btn_solo_lab">next Lab</p>
@@ -292,7 +307,7 @@
         <script src="{% static "jquery/DrawSVGPlugin.js" %}"></script>
         <script src="{% static "jquery/MorphSVGPlugin.js" %}"></script>
         <script src="{% static "jquery/skeleton.js" %}"></script>
-
+        <script src="{% static "jquery/scroll.js" %}"></script>
 
 
 
