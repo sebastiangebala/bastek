@@ -1,5 +1,5 @@
 body {
-font-family: 'Abril Fatface';
+font-family: 'Oswald';
 font-size: 18px;
 width: 100%;
 height: 100%;
@@ -26,8 +26,32 @@ background: #040009;
 position: absolute; display: table; top: -100%; width: 100%; height: 100vh;
 }
 
-#section_nav {display:table-cell; vertical-align:middle; text-align: center;}
-#section_nav p {font-size: 35px; color: white; cursor: pointer; width: 20vw; margin: auto; height: 10vh; line-height: 10vh;}
+#section_nav {position: relative; display:table-cell; vertical-align:middle; text-align: center;}
+#section_nav p {
+font-size: 35px; color: white; cursor: pointer; width: 20vw; 
+margin: auto; height: 6vh;
+line-height: 6vh;
+margin-bottom: 4vh;
+}
+
+.nav_img_all {
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+height: 100vh;
+width: 100%;
+position: absolute;
+top: 0px;
+left: 0px;
+}
+#about_nav_img {background-image: url('../img/ja.png');background-size: contain;}
+#labolatory_nav_img {background-image: url('../img/labolatory.png');background-size: contain;}
+#scroll_nav_img {background-image: url('../img/saint-tropez.jpg');}
+#draw_nav_img {background-image: url('../img/eyes.png');}
+#stan_nav_img {background-image: url('../img/monster.png');background-size: contain;}
+#imi_nav_img {background-image: url('../img/toole.png');background-size: contain;width: 60%; left: 20%;}
+#fw_nav_img {background-image: url('../img/python.png'); background-size: contain;height: 60vh; top: 20vh;}
+#contact_nav_img {background-image: url('../img/chat.jpg');}
 
 /*section_1*/
 
@@ -65,26 +89,31 @@ height: 60px;
 z-index: 10;
 cursor: pointer;
 border: 3px solid rgb(3,75,210);
+background: rgb(3,75,210); /* For browsers that do not support gradients */
+background: -webkit-linear-gradient(left top, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9)); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* For Firefox 3.6 to 15 */
+background: linear-gradient(to bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* Standard syntax */;
+border-radius: 7pt;
 }
 
 #btn1_text {
 margin: auto;
-color: rgb(102,187,209);
+color: black;
 text-align: center;
 line-height: 60px;
-text-shadow: 0 0 2px black;
 }
 
 #main_text {
 position: relative;
 margin: auto;
 z-index: 2;
-font-family: 'Oswald';
 margin-right: 15vw;
 width: 26vw;
 color: white;
 text-align: justify;
 border-bottom: 3px solid rgb(255,215,0);
+font-size: 1.5vw;
 }
 
 #section1 {
@@ -108,7 +137,31 @@ z-index: 1;
 
 /*seconde page (section_2)*/
 
-#sec2_wrap {position: absolute; display: table; top: 100%; width: 100%; height: 100vh; 
+.labolatory_main {
+position: absolute; 
+top: 10vh; 
+left: 10vh; 
+height: 80vh;
+width: 80vh;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+}
+#lab_1 {background-image: url('../img/lab1.png'); z-index: 1}
+#lab_2 {background-image: url('../img/lab2.png')}
+#lab_3 {background-image: url('../img/lab3.png')}
+#lab_4 {background-image: url('../img/lab4.png')}
+#lab_5 {background-image: url('../img/lab5.png')}
+#lab_6 {background-image: url('../img/lab6.png')}
+#lab_7 {background-image: url('../img/lab7.png')}
+#lab_8 {background-image: url('../img/lab8.png'); z-index: 1}
+#lab_9 {background-image: url('../img/lab9.png')}
+#lab_10 {background-image: url('../img/lab10.png')}
+#lab_11 {background-image: url('../img/lab11.png')}
+#lab_12 {background-image: url('../img/lab12.png')}
+#lab_13 {background-image: url('../img/lab13.png')}
+
+#sec2_wrap {position: absolute; display: table; top: 100%; width: 100%; height: 100vh;
 background-image: url('../img/passenger.jpg');
 background-size: cover;
 background-repeat: no-repeat;
@@ -429,6 +482,13 @@ margin-left: 10px;
 #icon_css {background-image: url('../img/css.png')}
 #icon_html {background-image: url('../img/html.png')}
 #icon_jquery {background-image: url('../img/jquery.png')}
+#many_more {
+position: relative;
+display: inline-block;
+margin-top: 20px;
+margin-left: 10px;
+font-size: 35px;
+}
 
 #icon_wrap_imi {
 position: absolute;
@@ -445,13 +505,28 @@ left: 60px;
 
 #text_wrap_right {
 position: fixed;
-width: calc(50vw - 60px);
-height: calc(100vh - 60px - 60px * 2);
-top: 60px;
-left: 50vw;
+left: 60vw;
+bottom: 120px;
+top: 120px;
+right: 120px;
 }
 
-.right_text {position: absolute; font-size: 25px; color: white; padding: 60px; padding-top: 30px;}
+.right_text {
+position: absolute;
+font-size: 20px;
+color: black;
+text-align: justify;
+margin-top: 0px;
+border: 3px solid rgb(139,69,19);
+border-bottom: 10px solid rgb(139,69,19);
+border-radius: 7pt;
+background: rgba(255,215,0,0.9); /* For browsers that do not support gradients */
+background: -webkit-linear-gradient(left top, rgba(139,69,190.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9)); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(bottom right, rgba(139,69,190.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9));  /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(bottom right, rgba(139,69,190.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9));  /* For Firefox 3.6 to 15 */
+background: linear-gradient(to bottom right, rgba(139,69,190.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9)); /* Standard syntax */;
+padding: 15px;
+}
 
 #text_right_lab {visibility: hidden;}
 #text_right_scroll {visibility: hidden;}
@@ -460,6 +535,13 @@ left: 50vw;
 #text_right_imi {visibility: hidden;}
 #text_right_fw {visibility: hidden;}
 #text_right_contact {visibility: hidden;}
+
+#text_right_lab_click {visibility: hidden;}
+#text_right_scroll_click {visibility: hidden;}
+#text_right_draw_click {visibility: hidden;}
+#text_right_stan_click {visibility: hidden;}
+#text_right_imi_click {visibility: hidden;}
+#text_right_fw_click {visibility: hidden;}
 
 #btn_solo {
 position: absolute;
@@ -471,31 +553,59 @@ width: 150px;
 height: 60px;
 z-index: 10;
 visibility: hidden;
-border: 3px solid rgb(17,126,218);
 }
 
 .btn_solo_all {
 position: absolute;
 width: 150px;
 margin: auto;
-color: rgb(102,187,209);
+color: black;
 text-align: center;
 line-height: 60px;
 visibility: hidden;
 cursor: pointer;
 z-index: 15;
-text-shadow: 0 0 2px black;
+background: rgb(3,75,210); /* For browsers that do not support gradients */
+background: -webkit-linear-gradient(left top, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9)); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* For Firefox 3.6 to 15 */
+background: linear-gradient(to bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* Standard syntax */;
+border: 3px solid rgba(3,75,210,0.9);
+border-radius: 7pt;
 }
 
 .btn_wrap {position: absolute; bottom: 30px; text-align: center; width: 100%; height: 60px;}
-.btn_wrap div {display: inline-block; width: 200px; height: 60px; border: 3px solid rgb(17,126,218); margin-left: 5px; margin-right: 5px;}
-.btn_wrap div p {visibility: hidden; z-index: 1; position: absolute; text-shadow: 0 0 2px black; width: 200px; margin: auto; text-align: center; line-height: 60px; cursor: pointer;}
-#text_left p {color: rgb(102,187,209)}
-#text_right p {color: rgb(102,187,209)}
+.btn_wrap div {
+display: inline-block; 
+width: 200px; 
+height: 60px; 
+border: 3px solid rgba(3,75,210,0.9); 
+margin-left: 5px; 
+margin-right: 5px;
+background: rgb(3,75,210); /* For browsers that do not support gradients */
+background: -webkit-linear-gradient(left top, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9)); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* For Firefox 3.6 to 15 */
+background: linear-gradient(to bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* Standard syntax */;
+border-radius: 7pt;
+}
+
+.btn_wrap div p {
+visibility: hidden; 
+z-index: 1; 
+position: absolute; 
+width: 200px; 
+margin: auto; 
+text-align: center; 
+line-height: 60px; 
+cursor: pointer;
+}
+#text_left p {color: black}
+#text_right p {color: black}
 
 #btn2 {position: absolute; bottom: 30px; left: 0; right: 0; margin: auto; text-align: center; width: 420px; height: 60px;}
 
-#title_wrap p {position: fixed; top: 30px; left: 100px; width: 200px; height: 60px; visibility: hidden; line-height: 60px; text-align: center; margin: 0px;}
+#title_wrap p {position: fixed; top: 30px; left: 100px; width: 200px; height: 60px; visibility: hidden; line-height: 60px; text-align: center; margin: 0px; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;}
 
 #counting_top {
 position: fixed;
@@ -505,8 +615,8 @@ bottom: calc(50%);
 z-index: 2;
 }
 .top_all {
-cursor: pointer; 
-border-radius: 100%; 
+cursor: pointer;
+border-radius: 100%;
 height: 30px;
 line-height: 30px !important;
 background-color: black
@@ -549,7 +659,11 @@ bottom: calc(120px);
 width: 3px;
 height: calc(100% - 120px * 2);}
 
+/*huge Desktop*/
+@media (min-width: 1500px) {
+.right_text {font-size: 35px}
 
+}
 
 
 

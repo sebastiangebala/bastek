@@ -2,6 +2,15 @@
 
 	var section1 = $('#section1'),
 		section2 = $('#section2'),
+		sectionNav = $('#section_nav'),
+		aboutNavImg = $('#about_nav_img'),
+        labNavImg = $('#labolatory_nav_img'),
+        scrollNavImg = $('#scroll_nav_img'),
+        drawNavImg = $('#draw_nav_img'),
+        stanNavImg = $('#stan_nav_img'),
+        imiNavImg = $('#imi_nav_img'),
+        fwNavImg = $('#fw_nav_img'),
+        contactNavImg = $('#contact_nav_img'),
 
 		counter = $('#fa-bars, #about, #labolatory, #content1, #content2, #content3, #i_made_it, #familiar_with, #contact'),
 		faBars = $('#fa-bars'),
@@ -47,6 +56,7 @@
 		countingBottom = $('#counting_bottom'),
 
 		drawnLine = $('.drawn_line'),
+		titWrapPe = $('#title_wrap p'),
         titLab = $('#tit_lab'),
         titScroll = $('#tit_scroll'),
         titDraw = $('#tit_draw'),
@@ -75,6 +85,21 @@
 		btnSoloFw = $('#btn_solo_fw'),
 		btnSvgSolo = $('#btn_svg_solo'),
 		polyColorSvg = $('.poly_color_svg'),
+
+		lab1 = $('#lab_1'),
+		lab2 = $('#lab_2'),
+		lab3 = $('#lab_3'),
+		lab4 = $('#lab_4'),
+		lab5 = $('#lab_5'),
+		lab6 = $('#lab_6'),
+		lab7 = $('#lab_7'),
+		lab8 = $('#lab_8'),
+		lab9 = $('#lab_9'),
+		lab10 = $('#lab_10'),
+		lab11 = $('#lab_11'),
+		lab12 = $('#lab_12'),
+		lab13 = $('#lab_13'),
+		labAll = $('.labolatory_main'),
 
 		desktop = $('.desktop'),
 		allWrapScroll = $('#desk_wrap_scroll, #tablet_wrap_scroll'),
@@ -157,6 +182,18 @@
 		textRightFw = $('#text_right_fw'),
 		textRightContact = $('#text_right_contact'),
 
+		textRightLabClick = $('#text_right_lab_click'),
+		textRightScrollClick = $('#text_right_scroll_click'),
+		textRightDrawClick = $('#text_right_draw_click'),
+		textRightStanClick = $('#text_right_stan_click'),
+		textRightImiClick = $('#text_right_imi_click'),
+		textRightFwClick = $('#text_right_fw_click'),
+
+		textRightAllClick = $('#text_right_lab_click, #text_right_scroll_click, #text_right_draw_click, #text_right_stan_click, #text_right_imi_click, #text_right_fw_click')
+
+		textWrapRight = $('#text_wrap_right'),
+		rightText = $('.right_text'),
+
 		iconWrapFw = $('#icon_wrap_fw'),
 		iconWrapImi = $('#icon_wrap_imi'),
 
@@ -201,6 +238,7 @@
 		.to(path12, 1, {morphSVG: path94})
 		.to(path12, 1, {morphSVG: bastek})
 
+
 //main record
 
 	tlBase
@@ -216,6 +254,7 @@
 		.to(webDev, 1, {autoAlpha: 1}, '-=1')
 		.to(mainText, 1, {autoAlpha: 1}, '-=1')
 
+		.to(textRightAllClick, 1, {autoAlpha: 0}, '-=1')
 
         .addPause()
         .to(sec1Wrap, 1, {y: "-100%", ease:Power4.easeOut})
@@ -234,6 +273,22 @@
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(textRightLab, 1, {autoAlpha: 1}, '-=1')
+
+		.from(lab1, 1, {autoAlpha: 0}, '-=1')
+		.from(lab2, 1, {autoAlpha: 0, y: -500}, '-=1')
+		.from(lab3, 1, {autoAlpha: 0, y: -300}, '-=1')
+		.from(lab4, 1, {autoAlpha: 0, x: -400}, '-=1')
+		.from(lab5, 1, {autoAlpha: 0, x: -300}, '-=1')
+		.from(lab6, 1, {autoAlpha: 0, y: 100}, '-=1')
+		.from(lab7, 1, {autoAlpha: 0, x: 500}, '-=1')
+		.from(lab8, 1, {autoAlpha: 0, x: 500}, '-=1')
+		.from(lab9, 1, {autoAlpha: 0, x: 500}, '-=1')
+		.from(lab10, 1, {autoAlpha: 0, x: 500}, '-=1')
+		.from(lab11, 1, {autoAlpha: 0, x: 500}, '-=1')
+		.from(lab12, 1, {autoAlpha: 0, x: 500}, '-=1')
+		.from(lab13, 1, {autoAlpha: 0, x: 500}, '-=1')
+
+		.to(textRightAllClick, 1, {autoAlpha: 0}, '-=1')
 
 		.addPause()
         .to(peLab, 1, {autoAlpha: 0})
@@ -259,6 +314,10 @@
 
 		.to(textRightLab, 1, {autoAlpha: 0}, '-=1')
 		.to(textRightScroll, 1, {autoAlpha: 1}, '-=1')
+
+		.to(labAll, 1, {autoAlpha: 0}, '-=1')
+
+		.to(textRightAllClick, 1, {autoAlpha: 0}, '-=1')
 
         .addPause()
         .to(peOneLeft, 1, {autoAlpha: 0})
@@ -289,6 +348,8 @@
 		.to(textRightScroll, 1, {autoAlpha: 0}, '-=1')
 		.to(textRightDraw, 1, {autoAlpha: 1}, '-=1')
 
+		.to(textRightAllClick, 1, {autoAlpha: 0}, '-=1')
+
         .addPause()
         .to(peTwoLeft, 1, {autoAlpha: 0})
         .to(peTwoRight, 1, {autoAlpha: 0}, '-=1')
@@ -315,6 +376,8 @@
 
 		.to(textRightDraw, 1, {autoAlpha: 0}, '-=1')
 		.to(textRightStan, 1, {autoAlpha: 1}, '-=1')
+
+		.to(textRightAllClick, 1, {autoAlpha: 0}, '-=1')
 
         .addPause()
         .to(sec1Wrap, 1, {y: "-100%", ease:Power4.easeOut})
@@ -343,6 +406,13 @@
 		.to(textRightStan, 1, {autoAlpha: 0}, '-=1')
 		.to(textRightImi, 1, {autoAlpha: 1}, '-=1')
 
+		.to(titWrapPe, 1, {textShadow: "none"}, "-=1")
+
+		.to(textWrapRight, 1, {left: "55vw"}, "-=1")
+		.to(rightText, 1, {textShadow: "none", color: "white", background: 'none', borderTop: 'none', borderLeft: 'none', borderRight: 'none', borderRadius: '0pt', borderBottom: '3px solid rgb(255,215,0)'}, "-=1")
+
+		.to(textRightAllClick, 1, {autoAlpha: 0}, '-=1')
+
         .addPause()
         .to(peImiLeft, 1, {autoAlpha: 0})
         .to(peImiRight, 1, {autoAlpha: 0}, '-=1')
@@ -363,6 +433,8 @@
 
         .to(textRightImi, 1, {autoAlpha: 0}, '-=1')
 		.to(textRightFw, 1, {autoAlpha: 1}, '-=1')
+
+		.to(textRightAllClick, 1, {autoAlpha: 0}, '-=1')
 
         .addPause()
         .to(peFwLeft, 1, {autoAlpha: 0})
@@ -429,20 +501,19 @@
 //first button animation
 
     tlAnimButton
-        .to(btn1Text, 0.1, {scale: 1.15, color: "rgb(255,215,0)", ease:Linear.easeNone})
-        .to(btn1, 0.1, {scale: 1.15, border: "3px solid rgb(139,69,19)", ease:Linear.easeNone}, '-=0.1')
+        .to(btn1, 0.1, {scale: 1.15, border: "3px solid rgba(139,69,19,0.9)", background: 'linear-gradient(to bottom right, rgba(139,69,190.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9))', ease:Linear.easeNone}, '-=0.1')
+
 
 
 //next button animation
 
 	tlAnimButtonLeft
-    	.to(textLeft, 0.1, {scale: 1.15, border: "3px solid rgb(139,69,19)", ease:Linear.easeNone})
-    	.to(textLeftPe, 0.1, {scale: 1.15, color: "rgb(255,215,0)", ease:Linear.easeNone}, '-=0.1')
+    	.to(textLeft, 0.1, {scale: 1.15, border: "3px solid rgba(139,69,19,0.9)", background: 'linear-gradient(to bottom right, rgba(139,69,190.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9))', ease:Linear.easeNone}, '-=0.1')
 
 
     tlAnimButtonRight
-    	.to(textRight, 0.1, {scale: 1.15, border: "3px solid rgb(139,69,19)", ease:Linear.easeNone})
-    	.to(textRightPe, 0.1, {scale: 1.15, color: "rgb(255,215,0)", ease:Linear.easeNone}, '-=0.1')
+    	.to(textRight, 0.1, {scale: 1.15, border: "3px solid rgba(139,69,19,0.9)", background: 'linear-gradient(to bottom right, rgba(139,69,190.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9))', ease:Linear.easeNone}, '-=0.1')
+
 
 
 
@@ -458,8 +529,8 @@
 //After Right Click Animation Button
 
 	tlAnimButtonAfterClick
-    	.to(btnSoloAll, 0.1, {scale: 1.15, color: "rgb(255,215,0)", ease:Linear.easeNone})
-    	.to(btnSolo, 0.1, {scale: 1.15, border: "3px solid rgb(139,69,19)", ease:Linear.easeNone}, '-=0.1')
+    	.to(btnSoloAll, 0.1, {scale: 1.15, border: "3px solid rgba(139,69,19,0.9)", background: 'linear-gradient(to bottom right, rgba(139,69,190.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9))', ease:Linear.easeNone}, '-=0.1')
+
 
 //Red Btn Anim
 
@@ -471,7 +542,7 @@
 
 	tlRedPhoneAnim
 		.to(redPhoneClick, 0.1, {border: "1px solid red", ease:Linear.easeNone})
-    	
+
 
 //drawings anim
 
@@ -572,6 +643,9 @@
         tlAnimNavButton.reverse();
         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(aboutNavImg, 0.5, {autoAlpha: 0, scale: 1});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
         tlBase.seek(1);
 	});
 
@@ -580,6 +654,10 @@
     	tlAnimNavButton.reverse();
         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(labNavImg, 0.5, {autoAlpha: 0, scale: 1});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(textRightLab, 1, {autoAlpha: 1});
 		tlBase.seek(2);
 	});
 
@@ -588,6 +666,10 @@
 		tlAnimNavButton.reverse();
         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(scrollNavImg, 0.5, {autoAlpha: 0, scale: 1});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(textRightScroll, 1, {autoAlpha: 1});
 		tlBase.seek(3);
 	});
 
@@ -596,6 +678,10 @@
 		tlAnimNavButton.reverse();
         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(drawNavImg, 0.5, {autoAlpha: 0, scale: 1});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(textRightDraw, 1, {autoAlpha: 1});
 		tlBase.seek(4);
 	});
 
@@ -604,6 +690,10 @@
 		tlAnimNavButton.reverse();
         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(stanNavImg, 0.5, {autoAlpha: 0, scale: 1});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(textRightStan, 1, {autoAlpha: 1});
 		tlBase.seek(5);
 	});
 
@@ -612,6 +702,10 @@
 		tlAnimNavButton.reverse();
         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(imiNavImg, 0.5, {autoAlpha: 0, scale: 1});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(textRightImi, 1, {autoAlpha: 1});
 	    tlBase.seek(6);
 	});
 
@@ -620,6 +714,10 @@
 		tlAnimNavButton.reverse();
         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(fwNavImg, 0.5, {autoAlpha: 0, scale: 1});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(textRightFw, 1, {autoAlpha: 1});
 	    tlBase.seek(7);
 	});
 
@@ -627,6 +725,8 @@
 		tlAnimNavButton.reverse();
 		TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
 		TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+		TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+		TweenMax.to(contactNavImg, 0.5, {autoAlpha: 0, scale: 1});
 	    tlBase.seek(8);
 	});
 
@@ -648,70 +748,86 @@
         tlAnimButton.reverse();
 	});
 
-	//color for navigations buttons
+	//color and animations for navigation's buttons
 
 	$(about).mouseover(function(){
         TweenMax.to(about, 0.1, {color: 'rgb(139,69,19)'});
+        TweenMax.to(aboutNavImg, 0.5, {autoAlpha: 0.3, scale: 1.2});
 	});
 
 	$(about).mouseleave(function(){
         TweenMax.to(about, 0.1, {color: 'white'});
+        TweenMax.to(aboutNavImg, 0.5, {autoAlpha: 0, scale: 1});
 	});
 
 	$(labolatory).mouseover(function(){
         TweenMax.to(labolatory, 0.1, {color: 'rgb(218,165,32)'});
+        TweenMax.to(labNavImg, 0.5, {autoAlpha: 0.3, scale: 1.2});
 	});
 
 	$(labolatory).mouseleave(function(){
         TweenMax.to(labolatory, 0.1, {color: 'white'});
+        TweenMax.to(labNavImg, 0.5, {autoAlpha: 0, scale: 1});
 	});
 
 	$(content1).mouseover(function(){
         TweenMax.to(content1, 0.1, {color: 'rgb(218,165,32)'});
+        TweenMax.to(scrollNavImg, 0.5, {autoAlpha: 0.3, scale: 1.2});
 	});
 
 	$(content1).mouseleave(function(){
         TweenMax.to(content1, 0.1, {color: 'white'});
+        TweenMax.to(scrollNavImg, 0.5, {autoAlpha: 0, scale: 1});
 	});
 
 	$(content2).mouseover(function(){
         TweenMax.to(content2, 0.1, {color: 'rgb(255,215,0)'});
+        TweenMax.to(drawNavImg, 0.5, {autoAlpha: 0.3, scale: 1.2});
 	});
 
 	$(content2).mouseleave(function(){
         TweenMax.to(content2, 0.1, {color: 'white'});
+        TweenMax.to(drawNavImg, 0.5, {autoAlpha: 0, scale: 1});
 	});
 
 	$(content3).mouseover(function(){
         TweenMax.to(content3, 0.1, {color: 'rgb(255,215,0)'});
+        TweenMax.to(stanNavImg, 0.5, {autoAlpha: 0.3, scale: 1.2});
 	});
 
 	$(content3).mouseleave(function(){
         TweenMax.to(content3, 0.1, {color: 'white'});
+        TweenMax.to(stanNavImg, 0.5, {autoAlpha: 0, scale: 1});
 	});
 
 	$(imadeIt).mouseover(function(){
         TweenMax.to(imadeIt, 0.1, {color: 'rgb(218,165,32)'});
+        TweenMax.to(imiNavImg, 0.5, {autoAlpha: 0.3, scale: 1.2});
 	});
 
 	$(imadeIt).mouseleave(function(){
         TweenMax.to(imadeIt, 0.1, {color: 'white'});
+        TweenMax.to(imiNavImg, 0.5, {autoAlpha: 0, scale: 1});
 	});
 
 	$(familiarWith).mouseover(function(){
         TweenMax.to(familiarWith, 0.1, {color: 'rgb(218,165,32)'});
+        TweenMax.to(fwNavImg, 0.5, {autoAlpha: 0.3, scale: 1.2});
 	});
 
 	$(familiarWith).mouseleave(function(){
         TweenMax.to(familiarWith, 0.1, {color: 'white'});
+        TweenMax.to(fwNavImg, 0.5, {autoAlpha: 0, scale: 1});
 	});
 
 	$(contact).mouseover(function(){
         TweenMax.to(contact, 0.1, {color: 'rgb(139,69,19)'});
+        TweenMax.to(contactNavImg, 0.5, {autoAlpha: 0.3, scale: 1.2});
 	});
 
 	$(contact).mouseleave(function(){
         TweenMax.to(contact, 0.1, {color: 'white'});
+        TweenMax.to(contactNavImg, 0.5, {autoAlpha: 0, scale: 1});
 	});
 
 //left navigation
@@ -725,8 +841,6 @@
 	});
 
 	//style it!
-
-
 
 	$(top1nav).mouseover(function(){
         TweenMax.to(top1nav, 0.1, {scale: 1.5, color: 'rgb(139,69,19)', border: '3px solid rgb(139,69,19)'});
@@ -810,6 +924,8 @@
     	tlRightBtnAnim.reverse();
         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(textRightLab, 1, {autoAlpha: 1});
 		tlBase.seek(2);
 	});
 
@@ -817,6 +933,8 @@
 		tlRightBtnAnim.reverse();
         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(textRightScroll, 1, {autoAlpha: 1});
 		tlBase.seek(3);
 	});
 
@@ -824,6 +942,8 @@
 		tlRightBtnAnim.reverse();
         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(textRightDraw, 1, {autoAlpha: 1});
 		tlBase.seek(4);
 	});
 
@@ -831,6 +951,8 @@
 		tlRightBtnAnim.reverse();
         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(textRightStan, 1, {autoAlpha: 1});
 		tlBase.seek(5);
 	});
 
@@ -838,6 +960,8 @@
 		tlRightBtnAnim.reverse();
         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(textRightImi, 1, {autoAlpha: 1});
 	    tlBase.seek(6);
 	});
 
@@ -845,12 +969,15 @@
 		tlRightBtnAnim.reverse();
         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
+        TweenMax.to(textRightFw, 1, {autoAlpha: 1});
 	    tlBase.seek(7);
 	});
 
 	$(top8nav).click(function(){
         TweenMax.to(btnSoloAll, 1, {autoAlpha: 0});
         TweenMax.to(btnSolo, 1, {autoAlpha: 0});
+        TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
 	    tlBase.seek(8);
 	});
 
@@ -905,6 +1032,8 @@
     $(peLab2).click(function(){
     	TweenMax.to(btnSoloLab, 1, {autoAlpha: 1});
     	TweenMax.to(btnSolo, 1, {autoAlpha: 1});
+    	TweenMax.to(textRightLab, 1, {autoAlpha: 0});
+    	TweenMax.to(textRightLabClick, 1, {autoAlpha: 1});
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -914,6 +1043,8 @@
     $(peOneRight).click(function(){
     	TweenMax.to(btnSoloScroll, 1, {autoAlpha: 1});
     	TweenMax.to(btnSolo, 1, {autoAlpha: 1});
+    	TweenMax.to(textRightScroll, 1, {autoAlpha: 0});
+    	TweenMax.to(textRightScrollClick, 1, {autoAlpha: 1});
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -923,6 +1054,8 @@
 	$(peTwoRight).click(function(){
 		TweenMax.to(btnSoloDraw, 1, {autoAlpha: 1});
 		TweenMax.to(btnSolo, 1, {autoAlpha: 1});
+		TweenMax.to(textRightDraw, 1, {autoAlpha: 0});
+    	TweenMax.to(textRightDrawClick, 1, {autoAlpha: 1});
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -932,6 +1065,8 @@
     $(peThreeRight).click(function(){
     	TweenMax.to(btnSoloStan, 1, {autoAlpha: 1});
     	TweenMax.to(btnSolo, 1, {autoAlpha: 1});
+    	TweenMax.to(textRightStan, 1, {autoAlpha: 0});
+    	TweenMax.to(textRightStanClick, 1, {autoAlpha: 1});
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -941,6 +1076,8 @@
     $(peImiRight).click(function(){
     	TweenMax.to(btnSoloImi, 1, {autoAlpha: 1});
     	TweenMax.to(btnSolo, 1, {autoAlpha: 1});
+    	TweenMax.to(textRightImi, 1, {autoAlpha: 0});
+    	TweenMax.to(textRightImiClick, 1, {autoAlpha: 1});
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -950,6 +1087,8 @@
     $(peFwRight).click(function(){
     	TweenMax.to(btnSoloFw, 1, {autoAlpha: 1});
     	TweenMax.to(btnSolo, 1, {autoAlpha: 1});
+    	TweenMax.to(textRightFw, 1, {autoAlpha: 0});
+    	TweenMax.to(textRightFwClick, 1, {autoAlpha: 1});
 		tlAnimButtonLeft.reverse();
 		tlRightBtnAnim.play();
 	});
@@ -1078,7 +1217,7 @@
       }
       $(redPhoneClick).data("clicks", !clicks);
     });
-	
+
 	$(redDeskClick).mouseover(function(){
         tlRedDeskAnim.play();
 	});
