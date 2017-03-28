@@ -115,7 +115,7 @@
 
         <div id='section1'></div>
 
-		<div style="visibility:hidden" id="btn1">
+		<div style="visibility:hidden" class='linear' id="btn1">
             <p id="btn1_text">Explore!</p>
 	    </div>
 
@@ -221,6 +221,28 @@
 		<a href="http://pomocdlakobiet.cpk.org.pl" target="_blank"><div class="icon_saize" id="icon_cpk"></div></a>
 	</div>
 
+	<div style="visibility:hidden" id="icon_wrap_contact">
+        <div class='icon_contact_size' id="icon_poststamp"></div>
+        <div class='icon_contact_size' id="icon_stamp"></div>
+
+        <form id="action="" method="post">
+			{% csrf_token %}
+			<div>
+				<p>{{ form.from_email }}</p>
+				<p>{{ form.message }}</p>
+			</div>
+			<button class='linear' id="send_btn" type="submit">Send it!</button>
+		</form>
+
+
+	</div>
+
+	<div style="visibility:hidden" class='icon_contact_size' id="post_box_wrap"></div>
+
+	
+	
+	
+
 	<div id='drawn_line_center'></div>
 
 </section></div>
@@ -228,7 +250,7 @@
 <!--basic frame-->
 
 	    <div class="btn_wrap">
-	        <div id="text_left">
+	        <div class="linear" id="text_left">
 
 	                <p id="pe_lab">Lab ugly!</p>
     	            <p id="pe_one_left">Hate scroll...</p>
@@ -237,7 +259,7 @@
                     <p id="pe_imi_left">Nooo... Imi</p>
                     <p id="pe_fw_left">No no familiar</p>
 	        </div>
-	        <div id="text_right">
+	        <div class="linear" id="text_right">
 
 	                <p id="pe_lab2">Lab cool!</p>
     	            <p id="pe_one_right">That's my favourite!</p>
@@ -265,12 +287,12 @@
 		</div>
 
 		<div id="btn_solo">
-            <p class="btn_solo_all" id="btn_solo_lab">next Lab</p>
-            <p class="btn_solo_all" id="btn_solo_scroll">next Scroll</p>
-            <p class="btn_solo_all" id="btn_solo_draw">next Draw</p>
-            <p class="btn_solo_all" id="btn_solo_stan">next Stan</p>
-            <p class="btn_solo_all" id="btn_solo_imi">next Imi</p>
-            <p class="btn_solo_all" id="btn_solo_fw">next Fw</p>
+            <p class="btn_solo_all linear" id="btn_solo_lab">next Lab</p>
+            <p class="btn_solo_all linear" id="btn_solo_scroll">next Scroll</p>
+            <p class="btn_solo_all linear" id="btn_solo_draw">next Draw</p>
+            <p class="btn_solo_all linear" id="btn_solo_stan">next Stan</p>
+            <p class="btn_solo_all linear" id="btn_solo_imi">next Imi</p>
+            <p class="btn_solo_all linear" id="btn_solo_fw">next Fw</p>
 	    </div>
 
 

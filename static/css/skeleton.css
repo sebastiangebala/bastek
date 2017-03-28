@@ -14,7 +14,15 @@ outline:none;
 
 p {color: white;}
 
-.linear {background: linear-gradient(to top left,  rgb(243,117,3), rgb(240,208,10), rgb(168,234,189), rgb(17,126,218), rgb(3,75,210), rgb(2,8,32))}
+.linear {
+border: 3px solid rgba(3,75,210,0.9);
+background: rgb(3,75,210); /* For browsers that do not support gradients */
+background: -webkit-linear-gradient(left top, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9)); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* For Firefox 3.6 to 15 */
+background: linear-gradient(to bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* Standard syntax */;
+border-radius: 7pt;
+}
 /*navigation button*/
 #fa-bars {position: fixed; top: 30px; right: 30px; width: 60px; height: 60px; z-index: 9999; cursor: pointer;}
 
@@ -28,7 +36,7 @@ position: absolute; display: table; top: -100%; width: 100%; height: 100vh;
 
 #section_nav {position: relative; display:table-cell; vertical-align:middle; text-align: center;}
 #section_nav p {
-font-size: 35px; color: white; cursor: pointer; width: 20vw; 
+font-size: 35px; color: white; cursor: pointer; width: 20vw;
 margin: auto; height: 6vh;
 line-height: 6vh;
 margin-bottom: 4vh;
@@ -48,10 +56,10 @@ left: 0px;
 #labolatory_nav_img {background-image: url('../img/labolatory.png');background-size: contain;}
 #scroll_nav_img {background-image: url('../img/saint-tropez.jpg');}
 #draw_nav_img {background-image: url('../img/eyes.png');}
-#stan_nav_img {background-image: url('../img/monster.png');background-size: contain;}
-#imi_nav_img {background-image: url('../img/toole.png');background-size: contain;width: 60%; left: 20%;}
-#fw_nav_img {background-image: url('../img/python.png'); background-size: contain;height: 60vh; top: 20vh;}
-#contact_nav_img {background-image: url('../img/chat.jpg');}
+#stan_nav_img {background-image: url('../img/monster.png');background-size: contain; height: 60vh; top: 20vh;}
+#imi_nav_img {background-image: url('../img/cpk.png');background-size: contain; height: 60vh; top: 20vh;}
+#fw_nav_img {background-image: url('../img/python.png'); background-size: contain; height: 60vh; top: 20vh;}
+#contact_nav_img {background-image: url('../img/mailbox.png'); background-size: contain; height: 60vh; top: 20vh;}
 
 /*section_1*/
 
@@ -70,9 +78,9 @@ z-index: 1;
 transform: rotate(-90deg);
 }
 
-#last_upadate {visibility: hidden; font-family: 'Oswald'; position: absolute; top: 30px; right: 120px; height: 60px; line-height: 60px; margin: auto; font-size: 15px; color: white; z-index: 2;}
-#seb_geb {visibility: hidden; font-family: 'Oswald'; position: absolute; top: 90px; font-size: 15px; left: 8px; color: white;}
-#web_dev {visibility: hidden; font-family: 'Oswald'; position: absolute; bottom: 90px; font-size: 15px; left: 15px; color: white;}
+#last_upadate {visibility: hidden; position: absolute; top: 30px; right: 120px; height: 60px; line-height: 60px; margin: auto; font-size: 15px; color: white; z-index: 2;}
+#seb_geb {visibility: hidden; position: absolute; top: 90px; font-size: 15px; left: 8px; color: white;}
+#web_dev {visibility: hidden; position: absolute; bottom: 90px; font-size: 15px; left: 15px; color: white;}
 
 .center_center {display: table-cell; vertical-align: middle}
 
@@ -88,13 +96,6 @@ width: 150px;
 height: 60px;
 z-index: 10;
 cursor: pointer;
-border: 3px solid rgb(3,75,210);
-background: rgb(3,75,210); /* For browsers that do not support gradients */
-background: -webkit-linear-gradient(left top, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9)); /* For Safari 5.1 to 6.0 */
-background: -o-linear-gradient(bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* For Opera 11.1 to 12.0 */
-background: -moz-linear-gradient(bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* For Firefox 3.6 to 15 */
-background: linear-gradient(to bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* Standard syntax */;
-border-radius: 7pt;
 }
 
 #btn1_text {
@@ -138,9 +139,9 @@ z-index: 1;
 /*seconde page (section_2)*/
 
 .labolatory_main {
-position: absolute; 
-top: 10vh; 
-left: 10vh; 
+position: absolute;
+top: 10vh;
+left: 10vh;
 height: 80vh;
 width: 80vh;
 background-size: contain;
@@ -187,7 +188,7 @@ bottom: 20vh;
 position: absolute;
 margin-left: 3vh;
 left: 30vh;
-bottom: 33.9vh;
+bottom: 33.8vh;
 width: 66.4vh;
 height: 43.45vh;
 background: white;
@@ -501,6 +502,76 @@ left: 60px;
 #icon_toole {background-image: url('../img/toole.png'); cursor: pointer;}
 #icon_cpk {background-image: url('../img/cpk.png'); cursor: pointer;}
 
+#icon_wrap_contact {
+position: absolute;
+width: calc(50vw - 180px);
+height: calc(100vh - 120px - 120px);
+top: 120px;
+left: 120px;
+background-image: url('../img/postcard.png');
+background-size: contain;
+background-repeat: no-repeat;
+}
+.icon_contact_size {
+background-repeat: no-repeat;
+position: absolute;
+width: 7vw;
+height: 7vw;
+background-size: contain;
+}
+#icon_poststamp {
+background-image: url('../img/poststamp.png');
+top: 15px;
+right: 15px;
+z-index: 1;
+}
+#icon_stamp {
+background-image: url('../img/stamp.png');
+z-index: 1;
+top: 55px;
+right: 65px;
+z-index: 2;
+}
+#post_box_wrap {
+background-image: url('../img/mailbox.png');
+bottom: 15vh;
+left: 40vw;
+z-index: 3;
+}
+#send_btn {
+position: fixed;
+width: 200px;
+left: 9vw;
+bottom: 9vw;
+line-height: 50px;
+text-align: center;
+color: black;
+text-align: center;
+cursor: pointer;
+font-family: 'Oswald';
+font-size: 18px;
+}
+
+.email {
+position: absolute;
+right: 15px;
+top: calc(7vw + 15px);
+width: 22vw;
+background: #e7e6aa;
+color: black;
+border-color: #898666;
+}
+.message {
+position: absolute;
+right: 15px;
+top: calc(7vw + 45px);
+width: 22vw;
+height: 11vw;
+background: #e7e6aa;
+color: black;
+border-color: #898666;
+}
+
 /*basic web frame*/
 
 #text_wrap_right {
@@ -565,39 +636,25 @@ line-height: 60px;
 visibility: hidden;
 cursor: pointer;
 z-index: 15;
-background: rgb(3,75,210); /* For browsers that do not support gradients */
-background: -webkit-linear-gradient(left top, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9)); /* For Safari 5.1 to 6.0 */
-background: -o-linear-gradient(bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* For Opera 11.1 to 12.0 */
-background: -moz-linear-gradient(bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* For Firefox 3.6 to 15 */
-background: linear-gradient(to bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* Standard syntax */;
-border: 3px solid rgba(3,75,210,0.9);
-border-radius: 7pt;
 }
 
 .btn_wrap {position: absolute; bottom: 30px; text-align: center; width: 100%; height: 60px;}
 .btn_wrap div {
-display: inline-block; 
-width: 200px; 
-height: 60px; 
-border: 3px solid rgba(3,75,210,0.9); 
-margin-left: 5px; 
+display: inline-block;
+width: 200px;
+height: 60px;
+margin-left: 5px;
 margin-right: 5px;
-background: rgb(3,75,210); /* For browsers that do not support gradients */
-background: -webkit-linear-gradient(left top, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9)); /* For Safari 5.1 to 6.0 */
-background: -o-linear-gradient(bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* For Opera 11.1 to 12.0 */
-background: -moz-linear-gradient(bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* For Firefox 3.6 to 15 */
-background: linear-gradient(to bottom right, rgba(3,75,210,0.9), rgba(17,126,218,0.9), rgba(102,187,209,0.9), rgba(17,126,218,0.9), rgba(3,75,210,0.9));  /* Standard syntax */;
-border-radius: 7pt;
 }
 
 .btn_wrap div p {
-visibility: hidden; 
-z-index: 1; 
-position: absolute; 
-width: 200px; 
-margin: auto; 
-text-align: center; 
-line-height: 60px; 
+visibility: hidden;
+z-index: 1;
+position: absolute;
+width: 200px;
+margin: auto;
+text-align: center;
+line-height: 60px;
 cursor: pointer;
 }
 #text_left p {color: black}
@@ -662,7 +719,6 @@ height: calc(100% - 120px * 2);}
 /*huge Desktop*/
 @media (min-width: 1500px) {
 .right_text {font-size: 35px}
-
 }
 
 

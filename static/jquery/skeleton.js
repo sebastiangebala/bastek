@@ -197,6 +197,14 @@
 		iconWrapFw = $('#icon_wrap_fw'),
 		iconWrapImi = $('#icon_wrap_imi'),
 
+		sendBtn = $('#send_btn'),
+		iconWrapContact = $('#icon_wrap_contact'),
+		postBoxWrap = $('#post_box_wrap'),
+		iconPoststamp = $('#icon_poststamp'),
+		iconStamp = $('#icon_stamp'),
+		email = $('.email'),
+		message = $('.message'),
+
 		drawnLineLeftTop = $('#drawn_line_left_top'),
 		drawnLineBottomLeft = $('#drawn_line_bottom_left'),
 		drawnLineBottomRight = $('#drawn_line_bottom_right'),
@@ -213,6 +221,7 @@
 		tlAnimButtonRight = new TimelineMax({paused: true}),
 		tlRightBtnAnim = new TimelineMax({paused: true}),
 		tlAnimButtonAfterClick = new TimelineMax({paused: true}),
+		tlSendBtn = new TimelineMax({paused: true}),
 		tlMonsterAnim = new TimelineMax({paused: true, yoyo: true, repeat: -1}),
 		tlShowMonster = new TimelineMax({paused: true})
 		tlShowMonsterTablet = new TimelineMax({paused: true})
@@ -224,6 +233,8 @@
 		tlRedDeskAnim = new TimelineMax({paused: true})
 		tlRedTabletAnim = new TimelineMax({paused: true})
 		tlRedPhoneAnim = new TimelineMax({paused: true})
+		tlPoststamp = new TimelineMax({paused: true})
+		tlStamp = new TimelineMax({paused: true})
 
 
 //PATHS--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -408,8 +419,8 @@
 
 		.to(titWrapPe, 1, {textShadow: "none"}, "-=1")
 
-		.to(textWrapRight, 1, {left: "55vw"}, "-=1")
-		.to(rightText, 1, {textShadow: "none", color: "white", background: 'none', borderTop: 'none', borderLeft: 'none', borderRight: 'none', borderRadius: '0pt', borderBottom: '3px solid rgb(255,215,0)'}, "-=1")
+		.to(textWrapRight, 1, {left: "calc(50vw + 60px)"}, "-=1")
+		.to(rightText, 1, {color: "white", background: 'none', borderTop: 'none', borderLeft: 'none', borderRight: 'none', borderRadius: '0pt', borderBottom: '3px solid rgb(255,215,0)'}, "-=1")
 
 		.to(textRightAllClick, 1, {autoAlpha: 0}, '-=1')
 
@@ -453,6 +464,11 @@
 
 		.to(textRightFw, 1, {autoAlpha: 0}, '-=1')
 		.to(textRightContact, 1, {autoAlpha: 1}, '-=1')
+
+		.to(iconWrapContact, 1, {autoAlpha: 1}, '-=1')
+		.to(postBoxWrap, 1, {autoAlpha: 1}, '-=1')
+		.to(iconPoststamp, 1, {autoAlpha: 0}, '-=1')
+		.to(iconStamp, 1, {autoAlpha: 0}, '-=1')
 
 
 //nav handler
@@ -543,6 +559,11 @@
 	tlRedPhoneAnim
 		.to(redPhoneClick, 0.1, {border: "1px solid red", ease:Linear.easeNone})
 
+//Send button animation
+
+    tlSendBtn
+    	.to(sendBtn, 0.1, {scale: 1.15, border: "3px solid rgba(139,69,19,0.9)", background: 'linear-gradient(to bottom right, rgba(139,69,190.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9))', ease:Linear.easeNone}, '-=0.1')
+
 
 //drawings anim
 
@@ -596,6 +617,15 @@
 		.fromTo(monsterseaPhone, 1, {x: 300, y: 300}, {x: 20, y: 20})
 		.to(monsterseaPhone, 1, {rotation: '-25'},'-=1')
 
+//Contact Animtions
+
+	tlPoststamp
+		.to(iconPoststamp, 1, {autoAlpha: 1}) 
+		.from(iconPoststamp, 2, {scale: 15, rotation: '180deg', x: -1000, y: -500}, '-=1')
+
+	tlStamp
+		.to(iconStamp, 0.5, {autoAlpha: 1}) 
+		.from(iconStamp, 1, {scale: 20}, '-=0.5')
 
 
 //FUNCTIONS--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1240,6 +1270,24 @@
 
 	$(redPhoneClick).mouseleave(function(){
         tlRedPhoneAnim.reverse();
+	});
+
+//CONTACT
+
+    $(sendBtn).mouseover(function(){
+        tlSendBtn.play();
+	});
+
+	$(sendBtn).mouseleave(function(){
+        tlSendBtn.reverse();
+	});
+
+	$(email).click(function(){
+        tlPoststamp.play();
+	});
+
+	$(message).click(function(){
+        tlStamp.play();
 	});
 
 })(jQuery);
