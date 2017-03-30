@@ -196,6 +196,15 @@
 
 		iconWrapFw = $('#icon_wrap_fw'),
 		iconWrapImi = $('#icon_wrap_imi'),
+		iconPython = $('#icon_python'),
+		iconDjango = $('#icon_django'),
+		iconGs = $('#icon_gs'),
+		iconJs = $('#icon_js'),
+		iconCss = $('#icon_css'),
+		iconHtml = $('#icon_html'),
+		iconJquery = $('#icon_jquery'),
+		iconToole = $('#icon_toole'),
+		iconCpk = $('#icon_cpk'),
 
 		sendBtn = $('#send_btn'),
 		iconWrapContact = $('#icon_wrap_contact'),
@@ -1288,6 +1297,82 @@
 
 	$(message).click(function(){
         tlStamp.play();
+	});
+
+//COLOR ANIMATION FOR ICON
+
+//style it!
+
+	$(iconPython).mouseover(function(){
+        TweenMax.to(iconPython, 0.1, {scale: 1.1, backgroundColor: 'rgba(139,69,19,0.9)'});
+	});
+
+	$(iconPython).mouseleave(function(){
+        TweenMax.to(iconPython, 0.1, {scale: 1.0, backgroundColor: 'rgba(3,75,210,0.9)'});
+	});
+
+	$(iconDjango).mouseover(function(){
+        TweenMax.to(iconDjango, 0.1, {scale: 1.1, backgroundColor: 'rgba(255,215,0,0.9)'});
+	});
+
+	$(iconDjango).mouseleave(function(){
+        TweenMax.to(iconDjango, 0.1, {scale: 1.0, backgroundColor: 'rgba(102,187,209,0.9)'});
+	});
+
+	$(iconGs).mouseover(function(){
+        TweenMax.to(iconGs, 0.1, {scale: 1.1, backgroundColor: 'rgba(255,215,0,0.9)'});
+	});
+
+	$(iconGs).mouseleave(function(){
+        TweenMax.to(iconGs, 0.1, {scale: 1.0, backgroundColor: 'rgba(102,187,209,0.9)'});
+	});
+
+	$(iconJs).mouseover(function(){
+        TweenMax.to(iconJs, 0.1, {scale: 1.1, backgroundColor: 'rgba(218,165,32,0.9)'});
+	});
+
+	$(iconJs).mouseleave(function(){
+        TweenMax.to(iconJs, 0.1, {scale: 1.0, backgroundColor: 'rgba(17,126,218,0.9)'});
+	});
+
+	$(iconCss).mouseover(function(){
+        TweenMax.to(iconCss, 0.1, {scale: 1.1, backgroundColor: 'rgba(218,165,32,0.9)'});
+	});
+
+	$(iconCss).mouseleave(function(){
+        TweenMax.to(iconCss, 0.1, {scale: 1.0, backgroundColor: 'rgba(17,126,218,0.9)'});
+	});
+
+	$(iconHtml).mouseover(function(){
+        TweenMax.to(iconHtml, 0.1, {scale: 1.1, backgroundColor: 'rgba(255,215,0,0.9)'});
+	});
+
+	$(iconHtml).mouseleave(function(){
+        TweenMax.to(iconHtml, 0.1, {scale: 1.0, backgroundColor: 'rgba(102,187,209,0.9)'});
+	});
+
+	$(iconJquery).mouseover(function(){
+        TweenMax.to(iconJquery, 0.1, {scale: 1.1, backgroundColor: 'rgba(218,165,32,0.9)'});
+	});
+
+	$(iconJquery).mouseleave(function(){
+        TweenMax.to(iconJquery, 0.1, {scale: 1.0, backgroundColor: 'rgba(17,126,218,0.9)'});
+	});
+
+	$(iconToole).mouseover(function(){
+        TweenMax.to(iconToole, 0.1, {scale: 1.1, backgroundColor: 'rgba(139,69,19,0.9)'});
+	});
+
+	$(iconToole).mouseleave(function(){
+        TweenMax.to(iconToole, 0.1, {scale: 1.0, backgroundColor: 'rgba(3,75,210,0.9)'});
+	});
+
+	$(iconCpk).mouseover(function(){
+        TweenMax.to(iconCpk, 0.1, {scale: 1.1, backgroundColor: 'rgba(218,165,32,0.9)'});
+	});
+
+	$(iconCpk).mouseleave(function(){
+        TweenMax.to(iconCpk, 0.1, {scale: 1.0, backgroundColor: 'rgba(17,126,218,0.9)'});
 	});
 
 })(jQuery);

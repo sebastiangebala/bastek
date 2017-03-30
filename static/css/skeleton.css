@@ -57,8 +57,8 @@ left: 0px;
 #scroll_nav_img {background-image: url('../img/saint-tropez.jpg');}
 #draw_nav_img {background-image: url('../img/eyes.png');}
 #stan_nav_img {background-image: url('../img/monster.png');background-size: contain; height: 60vh; top: 20vh;}
-#imi_nav_img {background-image: url('../img/cpk.png');background-size: contain; height: 60vh; top: 20vh;}
-#fw_nav_img {background-image: url('../img/python.png'); background-size: contain; height: 60vh; top: 20vh;}
+#imi_nav_img {background-image: url('../img/cpk.jpg');background-size: contain; height: 60vh; top: 20vh;}
+#fw_nav_img {background-image: url('../img/python1.png'); background-size: contain; height: 60vh; top: 20vh;}
 #contact_nav_img {background-image: url('../img/mailbox.png'); background-size: contain; height: 60vh; top: 20vh;}
 
 /*section_1*/
@@ -457,7 +457,19 @@ background: #ede26b;
 /*contact (section_3)*/
 
 
-#contact_wrap {position: absolute; top: 100%; width: 100%; height: 100vh; background: #040009;}
+#contact_wrap {
+position: absolute;
+top: 100%;
+width: 100%;
+height: 100vh;
+background: black;
+background-image: url('../img/home1.png');
+background-size: calc(50vw - 60px);
+background-repeat: no-repeat;
+background-position-y: bottom 60px;
+background-position-x: right 60px;
+}
+
 #icon_wrap_fw {
 position: absolute;
 width: calc(50vw - 60px);
@@ -469,20 +481,22 @@ left: 60px;
 position: relative;
 width: 30%;
 height: 22vh;
-background-size: contain;
+background-size: 100% 100%;
 background-repeat: no-repeat;
 background-position: center;
 display: inline-block;
 margin-top: 20px;
 margin-left: 10px;
+cursor: pointer; 
 }
-#icon_python {background-image: url('../img/python.png')}
-#icon_django {background-image: url('../img/django.png')}
-#icon_gs {background-image: url('../img/gs.png')}
-#icon_js {background-image: url('../img/js.png')}
-#icon_css {background-image: url('../img/css.png')}
-#icon_html {background-image: url('../img/html.png')}
-#icon_jquery {background-image: url('../img/jquery.png')}
+
+#icon_python {background-image: url('../img/python.png'); background-color: rgba(3,75,210,0.9)}
+#icon_django {background-image: url('../img/django.png'); background-color: rgba(102,187,209,0.9)}
+#icon_gs {background-image: url('../img/gs.png'); background-color: rgba(102,187,209,0.9)}
+#icon_js {background-image: url('../img/js.png'); background-color:rgba(17,126,218,0.9)}
+#icon_css {background-image: url('../img/css.png'); background-color:rgba(17,126,218,0.9)}
+#icon_html {background-image: url('../img/html.png'); background-color: rgba(102,187,209,0.9)}
+#icon_jquery {background-image: url('../img/jquery.png'); background-color:rgba(17,126,218,0.9)}
 #many_more {
 position: relative;
 display: inline-block;
@@ -499,8 +513,8 @@ top: 60px;
 left: 60px;
 }
 
-#icon_toole {background-image: url('../img/toole.png'); cursor: pointer;}
-#icon_cpk {background-image: url('../img/cpk.png'); cursor: pointer;}
+#icon_toole {background-image: url('../img/toole.png'); background-color: rgba(3,75,210,0.9)}
+#icon_cpk {background-image: url('../img/cpk.png'); background-color: rgba(17,126,218,0.9)}
 
 #icon_wrap_contact {
 position: absolute;
@@ -556,7 +570,7 @@ font-size: 18px;
 position: absolute;
 right: 15px;
 top: calc(7vw + 15px);
-width: 22vw;
+width: 63%;
 background: #e7e6aa;
 color: black;
 border-color: #898666;
@@ -565,7 +579,7 @@ border-color: #898666;
 position: absolute;
 right: 15px;
 top: calc(7vw + 45px);
-width: 22vw;
+width: 63%;
 height: 11vw;
 background: #e7e6aa;
 color: black;
@@ -592,10 +606,10 @@ border: 3px solid rgb(139,69,19);
 border-bottom: 10px solid rgb(139,69,19);
 border-radius: 7pt;
 background: rgba(255,215,0,0.9); /* For browsers that do not support gradients */
-background: -webkit-linear-gradient(left top, rgba(139,69,190.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9)); /* For Safari 5.1 to 6.0 */
-background: -o-linear-gradient(bottom right, rgba(139,69,190.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9));  /* For Opera 11.1 to 12.0 */
-background: -moz-linear-gradient(bottom right, rgba(139,69,190.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9));  /* For Firefox 3.6 to 15 */
-background: linear-gradient(to bottom right, rgba(139,69,190.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9)); /* Standard syntax */;
+background: -webkit-linear-gradient(left top, rgba(139,69,19,0.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9)); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(bottom right, rgba(139,69,19,0.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9));  /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(bottom right, rgba(139,69,19,0.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9));  /* For Firefox 3.6 to 15 */
+background: linear-gradient(to bottom right, rgba(139,69,19,0.9), rgba(218,165,32,0.9), rgba(255,215,0,0.9), rgba(218,165,32,0.9), rgba(139,69,19,0.9)); /* Standard syntax */;
 padding: 15px;
 }
 
