@@ -600,7 +600,6 @@ z-index: 2;
 background-image: url('../img/mailbox.png');
 bottom: 15vh;
 left: 40vw;
-z-index: 3;
 }
 #send_btn {
 position: fixed;

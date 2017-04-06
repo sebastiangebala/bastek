@@ -264,12 +264,12 @@
 //intro
 
 	tlIntro
-		.to(path12, 1, {autoAlpha: 1})
-		.to(path12, 1, {morphSVG: path37})
-		.to(path12, 1, {morphSVG: path58})
-		.to(path12, 1, {morphSVG: path72})
-		.to(path12, 1, {morphSVG: path94})
-		.to(path12, 1, {morphSVG: bastek})
+		.to(path12, 3, {autoAlpha: 1, ease:Power0.easeNone})
+		.to(path12, 1.5, {morphSVG: path37, ease:Power4.easeInOut, delay: 1})
+		.to(path12, 1.5, {morphSVG: path58, ease:Power4.easeInOut, delay: 1})
+		.to(path12, 1.5, {morphSVG: path72, ease:Power4.easeInOut, delay: 1})
+		.to(path12, 1.5, {morphSVG: path94, ease:Power4.easeInOut, delay: 1})
+		.to(path12, 1.5, {morphSVG: bastek, ease:Power4.easeInOut, delay: 1})
 
 
 //main record
@@ -640,7 +640,7 @@
 
 	tlPoststamp
 		.to(iconPoststamp, 1, {autoAlpha: 1})
-		.from(iconPoststamp, 2, {scale: 15, rotation: '180deg', x: 200, y: 1000}, '-=1')
+		.from(iconPoststamp, 2, {scale: 15, rotation: '180deg', x: 200, y: 500}, '-=1')
 
 	tlStamp
 		.to(iconStamp, 0.5, {autoAlpha: 1})
