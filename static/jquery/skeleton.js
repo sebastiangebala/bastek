@@ -229,6 +229,8 @@
 		drawnLineBottomRight = $('#drawn_line_bottom_right'),
 		drawnLineCenter = $('#drawn_line_center'),
 
+		wider = $('#wider'),
+
 		tlIntro = new TimelineMax({delay: 1, onComplete: loadBase}),
 		tlBase = new TimelineMax({paused: true, onComplete: resetBase}),
 		tlNav = new TimelineMax({paused: true}),
@@ -254,6 +256,7 @@
 		tlRedPhoneAnim = new TimelineMax({paused: true})
 		tlPoststamp = new TimelineMax({paused: true})
 		tlStamp = new TimelineMax({paused: true})
+		tlWider = new TimelineMax()
 
 
 //PATHS--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -273,14 +276,8 @@
 
 	tlBase
 		.to(section1, 1, {ease:Power0.easeNone, autoAlpha: 0.175, x: 150})
-		.to(faBars, 0.5, {autoAlpha: 1, ease:Power2.easeOut})
-		.from(faBars, 2, {x: 100, ease:Elastic.easeOut.config(2,0.5)})
-		.to(btn1, 0.5, {autoAlpha: 1, ease:Power2.easeOut}, '-=2')
-		.to(btn1Text, 0.5, {autoAlpha: 1, ease:Power2.easeOut}, '-=2')
-		.from(btn1, 2, {y: 100, ease:Elastic.easeOut.config(2,0.5)}, '-=2')
-		.to(top1, 0.5, {autoAlpha: 1}, '-=2')
-		.from(top1, 2, {x: -100, ease:Elastic.easeOut.config(2,0.5)}, '-=2')
-		.to(lastUpdate, 0.5, {autoAlpha: 1}, '-=2')
+
+		.to(lastUpdate, 0.5, {autoAlpha: 1}, '-=1')
 		.fromTo(lastUpdate, 3, {rotationX: '90deg'}, {rotationX: '0deg', ease:Elastic.easeOut.config(3,0.5)})
 		.to(sebGeb, 0.5, {autoAlpha: 1}, '-=3.5')
 		.fromTo(sebGeb, 3, {rotationX: '90deg'}, {rotationX: '0deg', ease:Elastic.easeOut.config(3,0.5)}, '-=3')
@@ -291,8 +288,16 @@
 		.to(countingBottom, 1, {autoAlpha: 1}, '-=3')
 		.to(mainText, 1, {autoAlpha: 1}, '-=3')
 		.from(mainText, 1, {x: 100}, '-=3')
+
+		.to(faBars, 0.5, {autoAlpha: 1, ease:Power2.easeOut}, '-=2')
+		.from(faBars, 2, {x: 100, ease:Elastic.easeOut.config(2,0.5)}, '-=2')
+		.to(btn1, 0.5, {autoAlpha: 1, ease:Power2.easeOut}, '-=2')
+		.to(btn1Text, 0.5, {autoAlpha: 1, ease:Power2.easeOut}, '-=2')
+		.from(btn1, 2, {y: 100, ease:Elastic.easeOut.config(2,0.5)}, '-=2')
+		.to(top1, 0.5, {autoAlpha: 1}, '-=2')
+		.from(top1, 2, {x: -100, ease:Elastic.easeOut.config(2,0.5)}, '-=2')
         .addPause()
- 
+
         .to(sec1Wrap, 2, {y: "-100%", ease:Power4.easeInOut})
         .to(sec2Wrap, 2, {y: "-100%", ease:Power4.easeInOut}, '-=2')
         .to(conWrap, 2, {y: "0%", ease:Power4.easeInOut}, '-=2')
@@ -320,12 +325,12 @@
 		.from(lab11, 0.4, {autoAlpha: 0, y: -300}, '-=1.3')
 		.from(lab12, 0.3, {autoAlpha: 0, y: -200}, '-=1.2')
 		.from(lab13, 0.4, {autoAlpha: 0, y: -200}, '-=1.1')
-		
+
 		.addPause()
 
         .to(peLab, 1, {autoAlpha: 0})
         .to(peLab2, 1, {autoAlpha: 0}, '-=1')
-        
+
         .to(titLab, 1, {autoAlpha: 0})
         .to(titLab, 1, {y: 30}, '-=1')
         .to(titScroll, 1, {autoAlpha: 1, color: 'black', ease:Power0.easeNone}, '-=1')
@@ -343,18 +348,18 @@
 		.from(deskWrapScroll, 1, {left: '60vh', ease:Power0.easeNone}, '-=1')
 		.from(tabletWrapScroll, 1, {left: '10vh', ease:Power0.easeNone}, '-=1')
 
-		
+
 
 		.to(labAll, 1, {autoAlpha: 0}, '-=1')
 
 		.to(peOneLeft, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
         .to(peOneRight, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 
-        
+
 
 
         .addPause()
-        
+
 
         .to(peOneLeft, 1, {autoAlpha: 0})
         .to(peOneRight, 1, {autoAlpha: 0}, '-=1')
@@ -471,7 +476,7 @@
         .fromTo(titContact, 1, {y: 30}, {y: 0}, '-=1')
         .to(top7, 1, {autoAlpha: 0}, '-=1')
 		.to(top8, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
-        
+
 		.to(textLeft, 1, {autoAlpha: 0}, '-=1')
 		.to(textRight, 1, {autoAlpha: 0}, '-=1')
 		.to(iconWrapFw, 1, {autoAlpha: 0}, "-=1")
@@ -635,13 +640,16 @@
 
 	tlPoststamp
 		.to(iconPoststamp, 1, {autoAlpha: 1})
-		.from(iconPoststamp, 2, {scale: 15, rotation: '180deg', x: -1000, y: -500}, '-=1')
+		.from(iconPoststamp, 2, {scale: 15, rotation: '180deg', x: 200, y: 1000}, '-=1')
 
 	tlStamp
 		.to(iconStamp, 0.5, {autoAlpha: 1})
 		.from(iconStamp, 1, {scale: 20}, '-=0.5')
 
+//For small size screen
 
+    tlWider
+        .to(wider, 1, {width: '250px', repeat: -1, ease:Power4.easeOut})
 
 
 //FUNCTIONS--------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -678,6 +686,8 @@
       } else {
          tlNav.play();
          tlAnimNavButton.play();
+         tlPoststamp.reverse();
+         tlStamp.reverse();
       }
       $(faBars).data("clicks", !clicks);
     	});
@@ -693,7 +703,7 @@
         TweenMax.to(aboutNavImg, 0.5, {autoAlpha: 0, scale: 1});
         TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
         TweenMax.to(textRightAll, 1, {autoAlpha: 0});
-        tlBase.seek(6.5);
+        tlBase.seek(4);
 	});
 
     $(labolatory).click(function(){
@@ -707,7 +717,7 @@
         TweenMax.fromTo(textRightLab, 1, {autoAlpha: 0, x: 100}, {autoAlpha: 1, x: 0});
         TweenMax.fromTo(textLeft, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
         TweenMax.fromTo(textRight, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
-		tlBase.seek(10.5);
+		tlBase.seek(8);
 	});
 
 	$(content1).click(function(){
@@ -721,7 +731,7 @@
         TweenMax.fromTo(textRightScroll, 1, {autoAlpha: 0, x: 100}, {autoAlpha: 1, x: 0});
         TweenMax.fromTo(textLeft, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
         TweenMax.fromTo(textRight, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
-		tlBase.seek(12.5);
+		tlBase.seek(10);
 	});
 
 	$(content2).click(function(){
@@ -736,7 +746,7 @@
         TweenMax.fromTo(textLeft, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
         TweenMax.fromTo(textRight, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
 		tlChatAnim.play();
-		tlBase.seek(13.5);
+		tlBase.seek(11);
 	});
 
 	$(content3).click(function(){
@@ -751,7 +761,7 @@
         TweenMax.fromTo(textLeft, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
         TweenMax.fromTo(textRight, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
 		tlMonsterAnim.play();
-		tlBase.seek(14.5);
+		tlBase.seek(12);
 	});
 
 	$(imadeIt).click(function(){
@@ -765,7 +775,7 @@
         TweenMax.fromTo(textRightImi, 1, {autoAlpha: 0, x: 100}, {autoAlpha: 1, x: 0});
         TweenMax.fromTo(textLeft, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
         TweenMax.fromTo(textRight, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
-	    tlBase.seek(15.5);
+	    tlBase.seek(13);
 	});
 
 	$(familiarWith).click(function(){
@@ -779,7 +789,7 @@
         TweenMax.fromTo(textRightFw, 1, {autoAlpha: 0, x: 100}, {autoAlpha: 1, x: 0});
         TweenMax.fromTo(textLeft, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
         TweenMax.fromTo(textRight, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
-	    tlBase.seek(16.5);
+	    tlBase.seek(14);
 	});
 
 	$(contact).click(function(){
@@ -790,7 +800,9 @@
 		TweenMax.to(contactNavImg, 0.5, {autoAlpha: 0, scale: 1});
 		TweenMax.to(textRightAll, 1, {autoAlpha: 0});
 		TweenMax.fromTo(textRightContact, 1, {autoAlpha: 0, x: 100}, {autoAlpha: 1, x: 0});
-	    tlBase.seek(18);
+		TweenMax.to(textLeft, 1, {y: 100, autoAlpha: 0});
+        TweenMax.to(textRight, 1, {y: 100, autoAlpha: 0});
+	    tlBase.seek(15.5);
 	});
 
 //mouseover animation
@@ -901,6 +913,8 @@
         tlNavLeft.reverse();
     } else {
         tlNavLeft.play();
+        tlPoststamp.reverse();
+        tlStamp.reverse();
     }
     $(countingTop).data("clicks", !clicks);
     });
@@ -1004,7 +1018,7 @@
         TweenMax.to(aboutNavImgLeft, 0.5, {autoAlpha: 0, scale: 1});
         TweenMax.to(textRightAllClick, 1, {autoAlpha: 0});
         TweenMax.to(textRightAll, 1, {autoAlpha: 0});
-        tlBase.seek(6.5);
+        tlBase.seek(4);
 	});
 
     $(top2nav).click(function(){
@@ -1018,7 +1032,7 @@
         TweenMax.fromTo(textRightLab, 1, {autoAlpha: 0, x: 100}, {autoAlpha: 1, x: 0});
         TweenMax.fromTo(textLeft, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
         TweenMax.fromTo(textRight, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
-		tlBase.seek(10.5);
+		tlBase.seek(8);
 	});
 
 	$(top3nav).click(function(){
@@ -1032,7 +1046,7 @@
         TweenMax.fromTo(textRightScroll, 1, {autoAlpha: 0, x: 100}, {autoAlpha: 1, x: 0});
         TweenMax.fromTo(textLeft, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
         TweenMax.fromTo(textRight, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
-		tlBase.seek(12.5);
+		tlBase.seek(10);
 	});
 
 	$(top4nav).click(function(){
@@ -1047,7 +1061,7 @@
         TweenMax.fromTo(textLeft, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
         TweenMax.fromTo(textRight, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
 		tlChatAnim.play();
-		tlBase.seek(13.5);
+		tlBase.seek(11);
 	});
 
 	$(top5nav).click(function(){
@@ -1062,7 +1076,7 @@
         TweenMax.fromTo(textLeft, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
         TweenMax.fromTo(textRight, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
 		tlMonsterAnim.play();
-		tlBase.seek(14.5);
+		tlBase.seek(12);
 	});
 
 	$(top6nav).click(function(){
@@ -1076,7 +1090,7 @@
         TweenMax.fromTo(textRightImi, 1, {autoAlpha: 0, x: 100}, {autoAlpha: 1, x: 0});
         TweenMax.fromTo(textLeft, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
         TweenMax.fromTo(textRight, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
-	    tlBase.seek(15.5);
+	    tlBase.seek(13);
 	});
 
 	$(top7nav).click(function(){
@@ -1090,7 +1104,7 @@
         TweenMax.fromTo(textRightFw, 1, {autoAlpha: 0, x: 100}, {autoAlpha: 1, x: 0});
         TweenMax.fromTo(textLeft, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
         TweenMax.fromTo(textRight, 1, {y: 100, autoAlpha: 0}, {y: 0, autoAlpha: 1, ease:Elastic.easeOut.config(2,0.5)});
-	    tlBase.seek(16.5);
+	    tlBase.seek(14);
 	});
 
 	$(top8nav).click(function(){
@@ -1100,7 +1114,9 @@
 		TweenMax.to(contactNavImgLeft, 0.5, {autoAlpha: 0, scale: 1});
 		TweenMax.to(textRightAll, 1, {autoAlpha: 0});
 		TweenMax.fromTo(textRightContact, 1, {autoAlpha: 0, x: 100}, {autoAlpha: 1, x: 0});
-	    tlBase.seek(18);
+		TweenMax.to(textLeft, 1, {y: 100, autoAlpha: 0});
+        TweenMax.to(textRight, 1, {y: 100, autoAlpha: 0});
+	    tlBase.seek(15.5);
 	});
 
 //LEFT BUTTON

@@ -43,7 +43,7 @@ margin-bottom: 4vh;
 }
 
 .nav_img_all {
-background-size: cover;
+background-size: contain;
 background-repeat: no-repeat;
 background-position: center;
 height: 100vh;
@@ -52,23 +52,23 @@ position: absolute;
 top: 0px;
 left: 0px;
 }
-.about_nav_img {background-image: url('../img/ja.png');background-size: contain;}
-.labolatory_nav_img {background-image: url('../img/labolatory.png');background-size: contain;}
-.scroll_nav_img {background-image: url('../img/saint-tropez.jpg');}
+.about_nav_img {background-image: url('../img/ja.png');}
+.labolatory_nav_img {background-image: url('../img/labolatory.png');}
+.scroll_nav_img {background-image: url('../img/saint-tropez1.jpg');}
 .draw_nav_img {background-image: url('../img/eyes.png');}
-.stan_nav_img {background-image: url('../img/monster.png');background-size: contain; height: 60vh; top: 20vh;}
-.imi_nav_img {background-image: url('../img/cpk.jpg');background-size: contain; height: 60vh; top: 20vh;}
-.fw_nav_img {background-image: url('../img/python1.png'); background-size: contain; height: 60vh; top: 20vh;}
-.contact_nav_img {background-image: url('../img/mailbox.png'); background-size: contain; height: 60vh; top: 20vh;}
+.stan_nav_img {background-image: url('../img/monster.png');height: 60vh; top: 20vh;}
+.imi_nav_img {background-image: url('../img/cpk.jpg');height: 60vh; top: 20vh;}
+.fw_nav_img {background-image: url('../img/python1.png'); height: 60vh; top: 20vh;}
+.contact_nav_img {background-image: url('../img/mailbox.png'); height: 60vh; top: 20vh;}
 
-.about_nav_img_left {background-image: url('../img/ja.png');background-size: contain;}
-.labolatory_nav_img_left {background-image: url('../img/labolatory.png');background-size: contain;}
-.scroll_nav_img_left {background-image: url('../img/saint-tropez.jpg');}
+.about_nav_img_left {background-image: url('../img/ja.png');}
+.labolatory_nav_img_left {background-image: url('../img/labolatory.png');}
+.scroll_nav_img_left {background-image: url('../img/saint-tropez1.jpg');}
 .draw_nav_img_left {background-image: url('../img/eyes.png');}
-.stan_nav_img_left {background-image: url('../img/monster.png');background-size: contain; height: 60vh; top: 20vh;}
-.imi_nav_img_left {background-image: url('../img/cpk.jpg');background-size: contain; height: 60vh; top: 20vh;}
-.fw_nav_img_left {background-image: url('../img/python1.png'); background-size: contain; height: 60vh; top: 20vh;}
-.contact_nav_img_left {background-image: url('../img/mailbox.png'); background-size: contain; height: 60vh; top: 20vh;}
+.stan_nav_img_left {background-image: url('../img/monster.png'); height: 60vh; top: 20vh;}
+.imi_nav_img_left {background-image: url('../img/cpk.jpg'); height: 60vh; top: 20vh;}
+.fw_nav_img_left {background-image: url('../img/python1.png'); height: 60vh; top: 20vh;}
+.contact_nav_img_left {background-image: url('../img/mailbox.png'); height: 60vh; top: 20vh;}
 
 /*section_1*/
 
@@ -286,14 +286,35 @@ cursor: pointer;
 }
 
 #desk_wrap_scroll {
-overflow-y: scroll;
 overflow-x: hidden;
 z-index: 1;
 }
 
+#desk_wrap_scroll p {
+width: 100%;
+color: black;
+font-size: 30px;
+text-align: center;
+line-height: 43.45vh;
+height: 43.45vh;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+opacity:0;
+transition: all 1s ease-out;
+overflow-y: hidden;
+transform:translateX(50px);
+text-shadow: 2px 2px 4px white;
+}
+#you_see {background-image: url('../img/st1.jpg');}
+#things_happen {background-image: url('../img/st2.jpg');}
+#when_you_scroll {background-image: url('../img/st3.jpg');margin-bottom: 0px;}
+
+.show_saint_tropez {opacity: 1 !important; transform:translateX(0) !important}
+
 #paralax_img_desk {
 height: 50vh;
-background-image: url('../img/saint-tropez.jpg');
+background-image: url('../img/saint-tropez1.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
@@ -423,14 +444,35 @@ bottom: 2vh;
 }
 
 #tablet_wrap_scroll {
-overflow-y: scroll;
 overflow-x: hidden;
 z-index: 3;
 }
 
+#tablet_wrap_scroll p {
+width: 100%;
+color: black;
+font-size: 15px;
+text-align: center;
+line-height: 19.5vh;
+height: 19.5vh;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+opacity:0;
+transition: all 1s ease-out;
+overflow-y: hidden;
+transform:translateX(50px);
+text-shadow: 2px 2px 4px white;
+}
+
+
+#you_see_tablet {background-image: url('../img/st1.jpg');}
+#things_happen_tablet {background-image: url('../img/st2.jpg');}
+#when_you_scroll_tablet {background-image: url('../img/st3.jpg');margin-bottom: 0px;}
+
 #paralax_img_tablet {
 height: 22vh;
-background-image: url('../img/saint-tropez.jpg');
+background-image: url('../img/saint-tropez1.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
@@ -475,6 +517,8 @@ background: black;
 background-image: url('../img/home1.png');
 background-size: calc(50vw - 60px);
 background-repeat: no-repeat;
+background-position-y: 95%;
+background-position-x: 50vw;
 background-position-y: bottom 60px;
 background-position-x: right 60px;
 }
@@ -543,7 +587,7 @@ background-size: contain;
 background-image: url('../img/poststamp.png');
 top: 15px;
 right: 15px;
-z-index: 1;
+z-index: 1 !important;
 }
 #icon_stamp {
 background-image: url('../img/stamp.png');
@@ -580,6 +624,7 @@ width: 63%;
 background: #e7e6aa;
 color: black;
 border-color: #898666;
+font-family: 'Space Mono';
 }
 .message {
 position: absolute;
@@ -590,12 +635,13 @@ height: 11vw;
 background: #e7e6aa;
 color: black;
 border-color: #898666;
+font-family: 'Space Mono';
 }
 
 /*basic web frame*/
 
 #text_wrap_right {
-position: fixed;
+position: absolute;
 left: 60vw;
 bottom: 120px;
 top: 120px;
@@ -722,10 +768,10 @@ z-index: 2;
 .top_all_stat_num {color: rgb(3,75,210)}
 
 #counting_left_black {
-position: fixed; 
-width: 100%; 
-height: 100vh; 
-background: black; 
+position: fixed;
+width: 100%;
+height: 100vh;
+background: black;
 z-index: 9999;
 right: -100%;
 }
@@ -750,28 +796,104 @@ height: calc(100% - 120px * 2);}
 .right_text {font-size: 35px}
 }
 
-
+/*small Desktop*/
+@media (min-width: 1026px) {
+#small_screen {display: none}
+#small_img {display: none}
+#small_bc_color {display: none}
+}
 
 /*small Desktop*/
-@media (min-width: 992px) and (max-width: 1200px) {
-
-
+@media (max-width: 1025px) {
+#hide {display: none}
+#small_screen {
+position: absolute;
+width: 100%;
+height: 100%;
+text-align: center;
+}
+#small_screen p {
+color: rgb(255,215,0);
+margin-left: 20vw;
+margin-right: 20vw;
+font-size: 2.5vh;
+}
+#small_screen h1 {
+color: rgb(216,19,35);
+margin-left: 20vw;
+margin-right: 20vw;
+font-size: 7vh;
+}
+#small_screen h3 {
+color: rgb(248,100,31);
+margin-left: 20vw;
+margin-right: 20vw;
+font-size: 3vh;
+}
+#small_bc_color {
+position: absolute;
+width: 100%;
+height: 100%;
+background: black;
+}
+#small_img {
+position: absolute;
+background-image: url('../img/ja.png');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+width: 100%;
+height: 100%;
+opacity: 0.25;
+}
+#wider {
+width: 150px;
+height: 60px;
+border: 2px solid white;
+margin: auto;
+border-radius: 7pt 7pt 0 0;
+}
+.wider_dot {
+position: absolute;
+margin-top: 3px;
+margin-left: 3px;
+width: 10px;
+height: 10px;
+border-radius: 100%;
+background: white;
+display: table-cell;
+}
+#wider_2 {
+margin-left: 16px;
+}
+#wider_3 {
+margin-left: 29px;
+}
+#wider_arrow_holder {
+position: absolute;
+margin-top: 16px;
+width: inherit;
+border-top: 2px solid white;
+height: 44px;
+}
+.fa {
+color: white;
+}
+#left_arrow {
+position: absolute;
+left: 3px;
+width: 50px;
+height: 44px;
+font-size: 20px;
+}
+#right_arrow {
+position: absolute;
+right: 3px;
+width: 50px;
+height: 44px;
+font-size: 20px;
 }
 
-
-/*iPad*/
-@media (min-width: 768px) and (max-width: 992px) {
-
-
-}
-
-
-
-/*iPhone*/
-@media only screen and (max-width: 768px) {
-
-
-}
 
 
 

@@ -15,10 +15,11 @@
 
         <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 
         <script src="{% static "jquery/modernizr-2.8.3-respond-1.4.2.min.js" %}"></script>
+        <script src="https://use.fontawesome.com/116e10d08c.js"></script>
     </head>
 
 
@@ -26,6 +27,8 @@
 <body>
 
 <!--navigation-->
+
+<div id='hide'>
 
     <div id="nav_wrap">
 
@@ -71,7 +74,7 @@
 
     <div id="sec1_wrap">
 
-        <p id='last_upadate'>LAST UPDATE: <b>MARCH 2017</b></p>
+        <p id='last_upadate'>LAST UPDATE: <b>APRIL 2017</b></p>
         <p class='rotation' id='seb_geb'>SEBASTIAN GĘBALA</b></p>
         <p class='rotation' id='web_dev'>WEB DEVELOPER</b></p>
 
@@ -149,13 +152,21 @@
 		<div style="visibility:hidden" id="tablet" class="desktop"><div id="red_tablet_click"></div></div>
 		<div style="visibility:hidden" id="phone"><div id="red_phone_click"></div></div>
 
-		<div style="visibility:hidden; font-size:200px" id="desk_wrap_scroll" class="desk_wrap_common scrollContainer">
+		<div style="visibility:hidden; font-size:200px" id="desk_wrap_scroll" class="desk_wrap_common scroll_magic">
 		    <div id="paralax_img_desk"></div>
-		    <div id="desk_wrap_scroll_desk">a b c d e f g h j k l</div>
+		    <div id="desk_wrap_scroll">
+		        <p id='you_see'>You See?</p>
+		        <p id='things_happen'>Things Happen</p>
+		        <p id='when_you_scroll'>When You Scroll</p>
+		    </div>
 		</div>
-		<div style="visibility:hidden; font-size:150px" id="tablet_wrap_scroll" class="tablet_wrap_common">
+		<div style="visibility:hidden; font-size:150px" id="tablet_wrap_scroll" class="tablet_wrap_common scroll_magic_tablet">
 		    <div id="paralax_img_tablet"></div>
-		    <div id="desk_wrap_scroll_tablet">a b c d e f g h j k l</div>
+		    <div id="tablet_wrap_scroll">
+		        <p id='you_see_tablet'>You See?</p>
+		        <p id='things_happen_tablet'>Things Happen</p>
+		        <p id='when_you_scroll_tablet'>When You Scroll</p>
+		    </div>
 		</div>
 		<div style="visibility:hidden" id="phone_wrap_scroll" class="phone_wrap_common"></div>
 
@@ -330,7 +341,7 @@
 </div>
 
 <div id="counting_left_black">
-	
+
 		<div style="visibility:hidden" class="nav_img_all about_nav_img_left"></div>
         <div style="visibility:hidden" class="nav_img_all labolatory_nav_img_left"></div>
         <div style="visibility:hidden" class="nav_img_all scroll_nav_img_left"></div>
@@ -359,7 +370,24 @@
 
 
 
+</div>
 
+<div id='small_bc_color'></div>
+<div id='small_img'></div>
+<div id='small_screen'>
+<h1>To small!</h1>
+<h3>MAKE YOUR BROWSER WINDOW WIDER</h3>
+<p>What is this? The internet for ants? If you’re really an ant, please forgive my but my site is to art-farty to be displayed in your small window. If you’re NOT an ant, please use your computer like any normal sized species.</p>
+<div id='wider'>
+    <div class='wider_dot' id='wider_1'></div>
+    <div class='wider_dot' id='wider_2'></div>
+    <div class='wider_dot' id='wider_3'></div>
+    <div id='wider_arrow_holder'>
+        <div id='left_arrow'><i class="fa fa-long-arrow-left fa-2x" aria-hidden="true"></i></div>
+        <div id='right_arrow'><i class="fa fa-long-arrow-right fa-2x" aria-hidden="true"></i></div>
+    </div>
+</div>
+</div>
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
