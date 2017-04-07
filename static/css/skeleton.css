@@ -26,7 +26,7 @@ border-radius: 7pt;
 /*navigation button*/
 #fa-bars {position: fixed; top: 30px; right: 30px; width: 60px; height: 60px; z-index: 9999; cursor: pointer;}
 
-/* navigation site */
+/* navigation site ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #nav_wrap {
 z-index: 9998;
@@ -70,7 +70,7 @@ left: 0px;
 .fw_nav_img_left {background-image: url('../img/python1.png'); height: 60vh; top: 20vh;}
 .contact_nav_img_left {background-image: url('../img/mailbox.png'); height: 60vh; top: 20vh;}
 
-/*section_1*/
+/*section_1-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #sec1_wrap {
 position: absolute;
@@ -145,7 +145,7 @@ z-index: 1;
 #poly11, #poly12, #poly13, #poly14 {visibility: hidden;}
 
 
-/*seconde page (section_2)*/
+/*seconde page (section_2)----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 .labolatory_main {
 position: absolute;
@@ -285,10 +285,7 @@ border: 1px solid blue;
 cursor: pointer;
 }
 
-#desk_wrap_scroll {
-overflow-x: hidden;
-z-index: 1;
-}
+#desk_wrap_scroll {overflow-x: hidden;z-index: 1;}
 
 #desk_wrap_scroll p {
 width: 100%;
@@ -319,51 +316,17 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 }
-
-#chat1 {
-background-image: url('../img/eyes1.png');
-}
-
-#chat2 {
-background-image: url('../img/eyes.png');
-}
-
-#chat3 {
-background-image: url('../img/chat.jpg');
-}
-
-#chat4 {
-background-image: url('../img/eyes1.png');
-}
-
-#chat5 {
-background-image: url('../img/eyes.png');
-}
-
-#chat6 {
-background-image: url('../img/chat.jpg');
-}
-
-#chat7 {
-background-image: url('../img/eyes1.png');
-}
-
-#chat8 {
-background-image: url('../img/eyes.png');
-}
-
-#chat9 {
-background-image: url('../img/chat.jpg');
-}
-
-#desk_wrap_draw {
-background: white;
-}
-
-#desk_wrap_stan {
-overflow: hidden;
-background: #ede26b;
-}
+#chat1 {background-image: url('../img/eyes1.png');}
+#chat2 {background-image: url('../img/eyes.png');}
+#chat3 {background-image: url('../img/chat.jpg');}
+#chat4 {background-image: url('../img/eyes1.png');}
+#chat5 {background-image: url('../img/eyes.png');}
+#chat6 {background-image: url('../img/chat.jpg');}
+#chat7 {background-image: url('../img/eyes1.png');}
+#chat8 {background-image: url('../img/eyes.png');}
+#chat9 {background-image: url('../img/chat.jpg');}
+#desk_wrap_draw {background: white;}
+#desk_wrap_stan {overflow: hidden;background: #ede26b;}
 
 .desk_wrap_stan_img_common {
 position: absolute;
@@ -391,62 +354,21 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 }
-
-.monster_1 {
-background-image: url('../img/monster.png');
-}
-
+.monster_1 {background-image: url('../img/monster.png');}
 .monstersea, .monstersea_tablet, .monstersea_phone {
 background-image: url('../img/monstersea.png');
 background-size: contain;
 }
-
-.waves_1 {
-background-image: url('../img/waves.png');
-}
-
-.waves_2 {
-background-image: url('../img/waves.png');
-bottom: 5vh;
-}
-
-.waves_3 {
-background-image: url('../img/waves.png');
-bottom: 10vh;
-}
-
-.waves_4 {
-background-image: url('../img/waves.png');
-}
-
-.waves_5 {
-background-image: url('../img/waves.png');
-bottom: 2vh;
-}
-
-.waves_6 {
-background-image: url('../img/waves.png');
-bottom: 4vh;
-}
-
-.waves_7 {
-background-image: url('../img/waves.png');
-}
-
-.waves_8 {
-background-image: url('../img/waves.png');
-bottom: 1vh;
-}
-
-.waves_9 {
-background-image: url('../img/waves.png');
-bottom: 2vh;
-}
-
-#tablet_wrap_scroll {
-overflow-x: hidden;
-z-index: 3;
-}
+.waves_1 {background-image: url('../img/waves.png');}
+.waves_2 {background-image: url('../img/waves.png');bottom: 5vh;}
+.waves_3 {background-image: url('../img/waves.png');bottom: 10vh;}
+.waves_4 {background-image: url('../img/waves.png');}
+.waves_5 {background-image: url('../img/waves.png');bottom: 2vh;}
+.waves_6 {background-image: url('../img/waves.png');bottom: 4vh;}
+.waves_7 {background-image: url('../img/waves.png');}
+.waves_8 {background-image: url('../img/waves.png');bottom: 1vh;}
+.waves_9 {background-image: url('../img/waves.png');bottom: 2vh;}
+#tablet_wrap_scroll {overflow-x: hidden;z-index: 3;}
 
 #tablet_wrap_scroll p {
 width: 100%;
@@ -464,12 +386,9 @@ overflow-y: hidden;
 transform:translateX(50px);
 text-shadow: 2px 2px 4px white;
 }
-
-
 #you_see_tablet {background-image: url('../img/st1.jpg');}
 #things_happen_tablet {background-image: url('../img/st2.jpg');}
 #when_you_scroll_tablet {background-image: url('../img/st3.jpg');margin-bottom: 0px;}
-
 #paralax_img_tablet {
 height: 22vh;
 background-image: url('../img/saint-tropez1.jpg');
@@ -477,35 +396,13 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 }
+#desk_wrap_scroll_tablet {background: white;}
+#tablet_wrap_draw {margin-left: 1.2vh;background: white;}
+#tablet_wrap_stan {overflow: hidden;background: #ede26b;}
+#phone_wrap_draw {background: white;}
+#phone_wrap_stan {overflow: hidden;background: #ede26b;}
 
-#desk_wrap_scroll_tablet {
-background: white;
-}
-
-#tablet_wrap_draw {
-margin-left: 1.2vh;
-background: white;
-}
-
-#tablet_wrap_stan {
-overflow: hidden;
-background: #ede26b;
-}
-
-#phone_wrap_scroll {
-background: blue;
-}
-
-#phone_wrap_draw {
-background: white;
-}
-
-#phone_wrap_stan {
-overflow: hidden;
-background: #ede26b;
-}
-
-/*contact (section_3)*/
+/*contact (section_3)-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 #contact_wrap {
@@ -637,7 +534,7 @@ border-color: #898666;
 font-family: 'Space Mono';
 }
 
-/*basic web frame*/
+/*basic web frame-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 #text_wrap_right {
 position: absolute;
@@ -790,19 +687,19 @@ bottom: calc(120px);
 width: 3px;
 height: calc(100% - 120px * 2);}
 
-/*huge Desktop*/
+/*huge Desktop-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media (min-width: 1500px) {
 .right_text {font-size: 35px}
 }
 
-/*small Desktop*/
+/*small Desktop---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media (min-width: 1026px) {
 #small_screen {display: none}
 #small_img {display: none}
 #small_bc_color {display: none}
 }
 
-/*small Desktop*/
+/*small Desktop---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media (max-width: 1025px) {
 #hide {display: none}
 #small_screen {
@@ -892,24 +789,3 @@ width: 50px;
 height: 44px;
 font-size: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

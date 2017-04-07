@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
@@ -46,11 +46,11 @@ def base(request):
 					<a style="color: rgb(216,19,35);
 								position: absolute;
 								top: 10px;
-								left: 10px;" 
+								left: 10px;"
 							href="http://amator.pythonanywhere.com/"><i style="cursor: pointer" class="fa fa-refresh fa-2x" aria-hidden="true"></i></a>
-					<a style="outline:none; 
-							color: rgb(216,19,35); 
-							font-family: 'Oswald'; 
+					<a style="outline:none;
+							color: rgb(216,19,35);
+							font-family: 'Oswald';
 							text-decoration: none;
 							position: absolute;
 							left: 50px;

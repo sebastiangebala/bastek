@@ -276,7 +276,6 @@
 
 	tlBase
 		.to(section1, 1, {ease:Power0.easeNone, autoAlpha: 0.175, x: 150})
-
 		.to(lastUpdate, 0.5, {autoAlpha: 1}, '-=1')
 		.fromTo(lastUpdate, 3, {rotationX: '90deg'}, {rotationX: '0deg', ease:Elastic.easeOut.config(3,0.5)})
 		.to(sebGeb, 0.5, {autoAlpha: 1}, '-=3.5')
@@ -288,7 +287,6 @@
 		.to(countingBottom, 1, {autoAlpha: 1}, '-=3')
 		.to(mainText, 1, {autoAlpha: 1}, '-=3')
 		.from(mainText, 1, {x: 100}, '-=3')
-
 		.to(faBars, 0.5, {autoAlpha: 1, ease:Power2.easeOut}, '-=2')
 		.from(faBars, 2, {x: 100, ease:Elastic.easeOut.config(2,0.5)}, '-=2')
 		.to(btn1, 0.5, {autoAlpha: 1, ease:Power2.easeOut}, '-=2')
@@ -296,6 +294,7 @@
 		.from(btn1, 2, {y: 100, ease:Elastic.easeOut.config(2,0.5)}, '-=2')
 		.to(top1, 0.5, {autoAlpha: 1}, '-=2')
 		.from(top1, 2, {x: -100, ease:Elastic.easeOut.config(2,0.5)}, '-=2')
+
         .addPause()
 
         .to(sec1Wrap, 2, {y: "-100%", ease:Power4.easeInOut})
@@ -330,40 +329,28 @@
 
         .to(peLab, 1, {autoAlpha: 0})
         .to(peLab2, 1, {autoAlpha: 0}, '-=1')
-
         .to(titLab, 1, {autoAlpha: 0})
         .to(titLab, 1, {y: 30}, '-=1')
         .to(titScroll, 1, {autoAlpha: 1, color: 'black', ease:Power0.easeNone}, '-=1')
         .fromTo(titScroll, 1, {y: 30}, {y: 0}, '-=1')
         .to(top2, 1, {autoAlpha: 0}, '-=1')
 		.to(top3, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
-
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
-
 		.to(desktop, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 		.to(allWrapScroll, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 		.from(desk, 1, {left: '60vh', ease:Power0.easeNone}, '-=1')
 		.from(tablet, 1, {left: '10vh', ease:Power0.easeNone}, '-=1')
 		.from(deskWrapScroll, 1, {left: '60vh', ease:Power0.easeNone}, '-=1')
 		.from(tabletWrapScroll, 1, {left: '10vh', ease:Power0.easeNone}, '-=1')
-
-
-
 		.to(labAll, 1, {autoAlpha: 0}, '-=1')
-
 		.to(peOneLeft, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
         .to(peOneRight, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 
-
-
-
         .addPause()
-
 
         .to(peOneLeft, 1, {autoAlpha: 0})
         .to(peOneRight, 1, {autoAlpha: 0}, '-=1')
-
         .to(peTwoLeft, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
         .to(peTwoRight, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
         .to(titScroll, 1, {autoAlpha: 0}, '-=1')
@@ -372,10 +359,8 @@
         .fromTo(titDraw, 1, {y: 30}, {y: 0}, '-=1')
         .to(top3, 1, {autoAlpha: 0}, '-=1')
 		.to(top4, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
-
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
-
 		.to(allWrapScroll, 1, {autoAlpha: 0, ease:Power0.easeNone}, '-=1')
 		.to(allWrapDraw, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 		.to(tablet, 1, {left: '90vh', ease:Power0.easeNone}, '-=1')
@@ -391,7 +376,6 @@
 
         .to(peTwoLeft, 1, {autoAlpha: 0})
         .to(peTwoRight, 1, {autoAlpha: 0}, '-=1')
-
         .to(peThreeLeft, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
         .to(peThreeRight, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
         .to(titDraw, 1, {autoAlpha: 0}, '-=1')
@@ -400,10 +384,8 @@
         .fromTo(titStan, 1, {y: 30}, {y: 0}, '-=1')
         .to(top4, 1, {autoAlpha: 0}, '-=1')
 		.to(top5, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
-
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
-
 		.to(allWrapDraw, 1, {autoAlpha: 0, ease:Power0.easeNone}, '-=1')
 		.to(allWrapStan, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
 		.to(tablet, 1, {left: '105vh', ease:Power0.easeNone}, '-=1')
@@ -420,7 +402,6 @@
         .to(conWrap, 1, {y: "-100%", ease:Power4.easeOut}, '-=1')
         .to(peThreeLeft, 1, {autoAlpha: 0}, '-=1')
         .to(peThreeRight, 1, {autoAlpha: 0}, '-=1')
-
         .to(peImiLeft, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
         .to(peImiRight, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
         .to(titStan, 1, {autoAlpha: 0}, '-=1')
@@ -432,15 +413,11 @@
 		.to(countingBottom, 1, {borderTop: '3px solid white', ease:Power0.easeNone}, '-=1')
 		.to(drawnLine, 1, {background: 'white', ease:Power0.easeNone}, '-=1')
 		.to(bottom8, 1, {color: 'white', ease:Power0.easeNone}, '-=1')
-
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineCenter, 1, {autoAlpha: 1, ease:Power2.easeOut}, '-=1')
-
 		.to(iconWrapImi, 1, {autoAlpha: 1}, "-=1")
-
 		.to(titWrapPe, 1, {textShadow: "none"}, "-=1")
-
 		.to(textWrapRight, 1, {left: "calc(50vw + 60px)"}, "-=1")
 		.to(rightText, 1, {color: "white", background: 'none', borderTop: 'none', borderLeft: 'none', borderRight: 'none', borderRadius: '0pt', borderBottom: '3px solid rgb(255,215,0)'}, "-=1")
 
@@ -448,8 +425,6 @@
 
         .to(peImiLeft, 1, {autoAlpha: 0})
         .to(peImiRight, 1, {autoAlpha: 0}, '-=1')
-
-
         .to(peFwLeft, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
         .to(peFwRight, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
         .to(titImi, 1, {autoAlpha: 0}, '-=1')
@@ -458,10 +433,8 @@
         .fromTo(titFw, 1, {y: 30}, {y: 0}, '-=1')
         .to(top6, 1, {autoAlpha: 0}, '-=1')
 		.to(top7, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
-
 		.to(drawnLineBottomLeft, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
 		.to(drawnLineBottomRight, 1, {width:"calc(50% - 200px * 1.5)", ease:Power2.easeOut}, '-=1')
-
 		.to(iconWrapImi, 1, {autoAlpha: 0}, "-=1")
         .to(iconWrapFw, 1, {autoAlpha: 1}, "-=1")
 
@@ -469,23 +442,19 @@
 
         .to(peFwLeft, 1, {autoAlpha: 0})
         .to(peFwRight, 1, {autoAlpha: 0}, '-=1')
-
         .to(titFw, 1, {autoAlpha: 0}, '-=1')
         .to(titFw, 1, {y: 30}, '-=1')
         .to(titContact, 1, {autoAlpha: 1, color: 'white', ease:Power0.easeNone}, '-=1')
         .fromTo(titContact, 1, {y: 30}, {y: 0}, '-=1')
         .to(top7, 1, {autoAlpha: 0}, '-=1')
 		.to(top8, 1, {autoAlpha: 1, ease:Power0.easeNone}, '-=1')
-
 		.to(textLeft, 1, {autoAlpha: 0}, '-=1')
 		.to(textRight, 1, {autoAlpha: 0}, '-=1')
 		.to(iconWrapFw, 1, {autoAlpha: 0}, "-=1")
-
 		.to(iconWrapContact, 1, {autoAlpha: 1}, '-=1')
 		.to(postBoxWrap, 1, {autoAlpha: 1}, '-=1')
 		.to(iconPoststamp, 1, {autoAlpha: 0}, '-=1')
 		.to(iconStamp, 1, {autoAlpha: 0}, '-=1')
-
 		.to(drawnLineBottomLeft, 1, {width:"50%", ease:Power2.easeOut})
 		.to(drawnLineBottomRight, 1, {width:"50%", ease:Power2.easeOut}, '-=1')
 
@@ -1554,22 +1523,3 @@
 	});
 
 })(jQuery);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
